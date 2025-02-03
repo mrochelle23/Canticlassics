@@ -1,10 +1,10 @@
-# Team Name
+# Boostrapers
 
-Project description (~1 Paragraph)
+The Boostrapers Team will redesign the Canti Classics website. Our goal is to modernize the website, enhance user experience, and add new features as per the client’s requirements. The redesign will focus on usability, accessibility, and functionality while maintaining the essence of the Canti Classics brand.
 
 # Team Members and Roles
 
-* Member 1 (Role 1, Role 2)
+* Mikhai Rochelle (Team Leader, Full-Stack Developer)
 * Member 2 (Role 3, Role 4)
 * Member 3 (Role 5, Role 6)
 
