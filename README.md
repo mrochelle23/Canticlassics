@@ -6,7 +6,7 @@ The Boostrapers Team will redesign the Canti Classics website. Our goal is to mo
 
 * [Mikhai Rochelle](https://github.com/mrochelle23/CIS350-HW2-Rochelle) (Team Leader, Full-Stack Developer)
 * [Kyle Raskay] (Full-Stack Developer)
-* Member 3 (Role 5, Role 6)
+* [Joan Felber](https://github.com/DJessT/CIS350-HW2-felber) (UX/UI Design Leader & Back End Developer)
 
 # Prerequisites
 
