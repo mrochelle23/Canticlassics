@@ -22,8 +22,8 @@ Hold a team meeting at least once a week in some format. Copy the following temp
 
 # Discussion Summary:
 1. Project Timeline:
-- Phase 1 is on track, and deliverables are expected to be completed by the end of the week.
-- Adjustments needed for Phase 2 milestones to accommodate UI redesign.
+    - Phase 1 is on track, and deliverables are expected to be completed by the end of the week.
+    - Adjustments needed for Phase 2 milestones to accommodate UI redesign.
 
 # Action Items:
 
