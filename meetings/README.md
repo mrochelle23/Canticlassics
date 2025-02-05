@@ -38,7 +38,7 @@ Hold a team meeting at least once a week in some format. Copy the following temp
 - Discuss Phase 1 of Functional Specification
 - Discuss Phase 1 of Wireframe
 
-Notes:
+# Notes:
 - We agreed that the Pacman game was not feasible for our objectives. After discussing and reviewing a variety of ideas, everyone concurred on the need to redesign and update an 18-year-old website, Canticlassics. Consequently, we shifted our project focus from developing a Mackinac Pacman game to enhancing the Canticlassics website. 
 - We talked about functional specifications: what they are, how they work, and how to create them. Additionally, we discussed wireframes, their purpose, and how to develop them. We set up accounts on Figma and created a collaborative team document. 
 - Lastly, we agreed to meet on Jan 21, 2025, after class at 9:45 AM to further discuss functional specifications and wireframes.
