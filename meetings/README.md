@@ -11,9 +11,9 @@ Facilitator: Mikhai Rochelle
 Note-taker: Mikhai Rochelle
 
 # Attendees:
-Kyle Raskay (Full-Stack Developer)
-Mikhai Rochelle (Full-Stack Developer & Team Leader)
-Joan Felber (UX/UI Design Leader & Back End Developer)
+- Kyle Raskay (Full-Stack Developer)
+- Mikhai Rochelle (Full-Stack Developer & Team Leader)
+- Joan Felber (UX/UI Design Leader & Back End Developer)
 
 # Agenda:
 Discuss Pacman grid
