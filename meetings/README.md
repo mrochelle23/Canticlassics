@@ -38,7 +38,7 @@
 - We talked about functional specifications: what they are, how they work, and how to create them. Additionally, we discussed wireframes, their purpose, and how to develop them. We set up accounts on Figma and created a collaborative team document. 
 - Lastly, we agreed to meet on Jan 21, 2025, after class at 9:45 AM to further discuss functional specifications and wireframes.
 
-
+---
 
 # Meeting Notes
 **Date:** January 21, 2025<br>
