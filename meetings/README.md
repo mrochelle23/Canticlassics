@@ -4,11 +4,11 @@ Hold a team meeting at least once a week in some format. Copy the following temp
 
 
 # Meeting Notes
-Date: January 20, 2025
-Time: 1:00 - 2:00 PM
-Location: Slack Huddle
-Facilitator: Mikhai Rochelle
-Note-taker: Mikhai Rochelle
+**Date:** January 20, 2025
+**Time:** 1:00 - 2:00 PM
+**Location:** Slack Huddle
+**Facilitator:** Mikhai Rochelle
+**Note-taker:** Mikhai Rochelle
 
 # Attendees:
 - Kyle Raskay (Full-Stack Developer)
@@ -16,14 +16,14 @@ Note-taker: Mikhai Rochelle
 - Joan Felber (UX/UI Design Leader & Back End Developer)
 
 # Agenda:
-Discuss Pacman grid
-Review Project Timeline
-Discuss Potential Ideas
+1. Discuss Pacman grid
+2. Review Project Timeline
+3. Discuss Potential Ideas
 
 # Discussion Summary:
-Project Timeline:
-Phase 1 is on track, and deliverables are expected to be completed by the end of the week.
-Adjustments needed for Phase 2 milestones to accommodate UI redesign.
+1. Project Timeline:
+○ Phase 1 is on track, and deliverables are expected to be completed by the end of the week.
+○ Adjustments needed for Phase 2 milestones to accommodate UI redesign.
 
 # Action Items:
 
