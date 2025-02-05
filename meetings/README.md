@@ -25,16 +25,13 @@ Project Timeline:
 Phase 1 is on track, and deliverables are expected to be completed by the end of the week.
 Adjustments needed for Phase 2 milestones to accommodate UI redesign.
 
-# Action Items:
+# Action Items
 
-
-| Task | Owner | Deadline |
-  ----   -----   -------- 
-Begin Phase 1 of Functional Specification | Mikhai Rochelle |
-
-Begin Phase 1 of Functional Specification | Kyle Raskay |
-
-Begin Phase 1 of Wireframe | Joan Felber |
+| Task                              | Owner           | Deadline |
+|-----------------------------------|-----------------|----------|
+| Begin Phase 1 of Functional Specification | Mikhai Rochelle |          |
+| Begin Phase 1 of Functional Specification | Kyle Raskay     |          |
+| Begin Phase 1 of Wireframe               | Joan Felber     |          |
 
 # Next Steps:
 - Meet after class Jan 21, 2025 at 9:45 AM on Slack
