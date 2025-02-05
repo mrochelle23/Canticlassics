@@ -4,10 +4,10 @@ Hold a team meeting at least once a week in some format. Copy the following temp
 
 
 # Meeting Notes
-**Date:** January 20, 2025
-**Time:** 1:00 - 2:00 PM
-**Location:** Slack Huddle
-**Facilitator:** Mikhai Rochelle
+**Date:** January 20, 2025<br>
+**Time:** 1:00 - 2:00 PM<br>
+**Location:** Slack Huddle<br>
+**Facilitator:** Mikhai Rochelle<br>
 **Note-taker:** Mikhai Rochelle
 
 # Attendees:
@@ -22,8 +22,8 @@ Hold a team meeting at least once a week in some format. Copy the following temp
 
 # Discussion Summary:
 1. Project Timeline:
-○ Phase 1 is on track, and deliverables are expected to be completed by the end of the week.
-○ Adjustments needed for Phase 2 milestones to accommodate UI redesign.
+- Phase 1 is on track, and deliverables are expected to be completed by the end of the week.
+- Adjustments needed for Phase 2 milestones to accommodate UI redesign.
 
 # Action Items:
 
