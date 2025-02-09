@@ -72,7 +72,7 @@
 
 
 # Next Steps:
-- Meet after class Jan 23, 2025 at 11:00 AM on Slack
+- Meet after class Jan 28, 2025 at 10:00 AM at Mary Idema Pew Library (Room 005)
 - Discuss Phase 1 of Functional Specification
 - Discuss Phase 1 of Wireframe
 
@@ -81,4 +81,44 @@
 - We talked about the implementation of an AI chatbot using Flask and Node.js, a search bar, and a newsletter feature utilizing SQL or MongoDB. 
 - Additionally, we examined how to integrate SQL into Flask and assessed its practicality. 
 - We also reviewed mobile and desktop wireframes, ensuring that everyone had access to the wireframe on Figma. Resources were allocated to acquire a variety of icons to be used in the wireframe.
+
+---
+
+# Meeting Notes
+**Date:** January 28, 2025<br>
+**Time:** 10:00 AM<br>
+**Location:** Mary Idema Pew Library (Room 005)<br>
+**Facilitator:** Mikhai Rochelle<br>
+**Note-taker:** Mikhai Rochelle
+
+# Attendees:
+- Kyle Raskay (Full-Stack Developer)
+- Mikhai Rochelle (Full-Stack Developer & Team Leader)
+- Joan Felber (UX/UI Design Leader & Back End Developer)
+
+# Agenda:
+1. Go over Flask and Jinja2 Templates with Kyle and Joan
+2. Walk them through how to create a flask app with an API call (SWAPI)
+
+# Discussion Summary:
+1. Project Timeline:
+    - Phase 2 is on track, and deliverables are expected to be completed by the end of the week.
+    - Adjustments needed for Phase 2 milestones to accommodate UI redesign.
+
+# Action Items:
+
+| Task                              | Owner           | Deadline |
+|-----------------------------------|-----------------|----------|
+| Begin Phase 2 of Functional Specification | Joan Felber |          |
+
+# Next Steps:
+- Meet after class Feb 4, 2025 at 10:00 AM at Mary Idema Pew Library (Room 005)
+- Go over flask app and linking MongoDB to flask
+- Have Kyle and Joan complete a flask app project with MongoDB
+
+# Notes:
+- We discussed how a flask app worked.
+- We talked about what the html documents would look like
+- We talked about how to import/extent the base.html file into the other html files 
+- We talked about for loops and if statements in html
 
