@@ -109,7 +109,7 @@
 
 | Task                              | Owner           | Deadline |
 |-----------------------------------|-----------------|----------|
-| Begin Phase 2 of wireframe | Joan Felber |          | Feb 11, 2025  |
+| Begin Phase 2 of wireframe | Joan Felber | Feb 11, 2025  |
 
 # Next Steps:
 - Meet after class Feb 4, 2025 at 10:00 AM at Mary Idema Pew Library (Room 005)
