@@ -26,7 +26,7 @@
 |-----------------------------------|-----------------|----------|
 | Begin Phase 1 of Functional Specification | Mikhai Rochelle |          |
 | Begin Phase 1 of Functional Specification | Kyle Raskay     |          |
-| Begin Phase 1 of Wireframe               | Joan Felber     |          |
+| Begin Phase 1 of Wireframe               | Joan Felber     |    Jan 21, 2025      |
 
 # Next Steps:
 - Meet after class Jan 21, 2025 at 9:45 AM on Slack
@@ -109,7 +109,7 @@
 
 | Task                              | Owner           | Deadline |
 |-----------------------------------|-----------------|----------|
-| Begin Phase 2 of wireframe | Joan Felber |          | Feb 11, 2025
+| Begin Phase 2 of wireframe | Joan Felber |          | Feb 11, 2025  |
 
 # Next Steps:
 - Meet after class Feb 4, 2025 at 10:00 AM at Mary Idema Pew Library (Room 005)
