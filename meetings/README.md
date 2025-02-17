@@ -66,9 +66,9 @@
 
 | Task                              | Owner           | Deadline |
 |-----------------------------------|-----------------|----------|
-| Begin Phase 1 of Functional Specification | Mikhai Rochelle |          |
-| Begin Phase 1 of Functional Specification | Kyle Raskay     |          |
-| Begin Phase 1 of Wireframe               | Joan Felber     |          |
+| Continue Phase 1 of Functional Specification | Mikhai Rochelle |  Jan 28, 2025    |
+| Continue Phase 1 of Functional Specification | Kyle Raskay     |  Jan 28, 2025     |
+| Contiue Phase 1 of Wireframe               | Joan Felber     | Jan 28, 2025         |
 
 
 # Next Steps:
@@ -109,7 +109,7 @@
 
 | Task                              | Owner           | Deadline |
 |-----------------------------------|-----------------|----------|
-| Begin Phase 2 of Functional Specification | Joan Felber |          |
+| Begin Phase 2 of wireframe | Joan Felber |          | Feb 11, 2025
 
 # Next Steps:
 - Meet after class Feb 4, 2025 at 10:00 AM at Mary Idema Pew Library (Room 005)
@@ -121,4 +121,44 @@
 - We talked about what the html documents would look like
 - We talked about how to import/extent the base.html file into the other html files 
 - We talked about for loops and if statements in html
+
+---
+# Meeting Notes
+**Date:** February 4, 2025<br>
+**Time:** 10:00 AM<br>
+**Location:** Mary Idema Pew Library (Room 005)<br>
+**Facilitator:** Mikhai Rochelle<br>
+**Note-taker:** Mikhai Rochelle
+
+# Attendees:
+- Kyle Raskay (Full-Stack Developer)
+- Mikhai Rochelle (Full-Stack Developer & Team Leader)
+- Joan Felber (UX/UI Design Leader & Back End Developer)
+
+# Agenda:
+1. Go over how to set up MongoDB. 
+2. Walk them through how to integrate MongoDB in the Flask app and get user input into the database.
+
+# Discussion Summary:
+1. Project Timeline:
+    - Phase 2 of the wireframe is on track, and deliverables are expected to be completed by Tuesday, February 13, 2025.
+    - Adjustments needed for Phase 2 milestones to accommodate UI redesign and are expected to be completed by Sunday, Tuesday February 16, 2025.
+
+# Action Items:
+
+| Task                              | Owner           | Deadline |
+|-----------------------------------|-----------------|----------|
+| Continue working on phase 2 of wireframe | Joan Felber | Feb 13, 2025        |
+
+# Next Steps:
+- Meet after class Feb 11, 2025 at 10:00 AM at Mary Idema Pew Library (Room 005)
+- Go over code implementation and use cases.
+- Talk about market research, how it will be done, and the deadline. 
+
+# Notes:
+- Mikhai created a github repo of a Flask app project, which Kyle and Joan cloned.
+- Mikhai walked them through how to create a MongoDB account and get the mongo uri to connect the collection and database to Flask.  
+- There were “TODOs" that Mikhai walked Kyle and Joan through on how to create a program that takes user input (name and email) and stores that into MongoDB.
+- After the program was complete, there was a test which showed the name and email of the user populated into MongoDB.
+
 
