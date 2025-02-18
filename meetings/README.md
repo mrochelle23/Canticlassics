@@ -123,6 +123,7 @@
 - We talked about for loops and if statements in html
 
 ---
+
 # Meeting Notes
 **Date:** February 4, 2025<br>
 **Time:** 10:00 AM<br>
@@ -142,7 +143,7 @@
 # Discussion Summary:
 1. Project Timeline:
     - Phase 2 of the wireframe is on track, and deliverables are expected to be completed by Tuesday, February 13, 2025.
-    - Adjustments needed for Phase 2 milestones to accommodate UI redesign and are expected to be completed by Sunday, Tuesday February 16, 2025.
+    - Adjustments needed for Phase 2 milestones to accommodate UI redesign and are expected to be completed by Sunday, Thursday February 13, 2025.
 
 # Action Items:
 
@@ -161,4 +162,44 @@
 - There were “TODOs" that Mikhai walked Kyle and Joan through on how to create a program that takes user input (name and email) and stores that into MongoDB.
 - After the program was complete, there was a test which showed the name and email of the user populated into MongoDB.
 
+---
+
+# Meeting Notes
+**Date:** February 11, 2025<br>
+**Time:** 10:00 AM<br>
+**Location:** Mary Idema Pew Library (Room 005)<br>
+**Facilitator:** Mikhai Rochelle<br>
+**Note-taker:** Mikhai Rochelle
+
+# Attendees:
+- Kyle Raskay (Full-Stack Developer)
+- Mikhai Rochelle (Full-Stack Developer & Team Leader)
+- Joan Felber (UX/UI Design Leader & Back End Developer)
+
+# Agenda:
+1. Go over how to set up MongoDB. 
+2. Walk them through how to integrate MongoDB in the Flask app and get user input into the database.
+
+# Discussion Summary:
+1. Project Timeline:
+    - Phase 2 of the wireframe is on track, and deliverables are expected to be completed by Tuesday, February 13, 2025.
+    - Adjustments needed for Phase 2 milestones to accommodate UI redesign and are expected to be completed by Sunday, Thursday February 13, 2025.
+
+# Action Items:
+
+| Task                              | Owner           | Deadline |
+|-----------------------------------|-----------------|----------|
+| Finish phase 2 of the wireframe | Joan Felber|  Feb 13, 2025    |
+| Begin Phase 3 (Development Phase) |  Mikhai Rochelle   |  Mar 11, 2025 |
+| Begin Phase 3 (Development Phase) |   Kyle Raskay  | Mar 11, 2025  |
+
+# Next Steps:
+- Meet after class Feb 18, 2025 at 10:00 AM at Mary Idema Pew Library (Room 005)
+- Go over the requests from the client and ensure that the features can be implemented into the wireframe by the deadline.
+- Mikhai Rochelle will begin Phase 3 (Development Phase) by structuring all files needed for this project, install & activate the virtual environment, and download all necessary packages.
+
+# Notes:
+- We weny over the final steps of the wireframe.
+- We went over implementation and how to recreate our wireframe with code.
+- Mikhai Rochelle set up a collaborative database and colletion on MongoDB and tested it to make sure everyone had proper access.
 
