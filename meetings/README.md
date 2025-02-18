@@ -142,7 +142,7 @@
 
 # Discussion Summary:
 1. Project Timeline:
-    - Phase 2 of the wireframe is on track, and deliverables are expected to be completed by Tuesday, February 13, 2025.
+    - Phase 2 of the wireframe is on track, and deliverables are expected to be completed by Thursday, February 13, 2025.
     - Adjustments needed for Phase 2 milestones to accommodate UI redesign and are expected to be completed by Sunday, Thursday February 13, 2025.
 
 # Action Items:
