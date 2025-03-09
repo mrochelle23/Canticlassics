@@ -1,0 +1,141 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Events</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet grid-cell" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            .events a {
+            color: white;
+            font-family: 'Old Standard TT', serif;
+            font-weight: bold;
+            }
+
+            body {
+            padding-top: 60px;
+            }
+
+            .carousel-inner img {
+            width: 100%;
+            height: 100%;
+            }
+
+            .container {
+            margin-top: 20px;
+            position: relative;
+            background-color: #782F37;
+            }
+
+            /* Arrows positioned outside the carousel */
+            .carousel-control-prev,
+            .carousel-control-next {
+            color: red;
+            font-size: 40px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            }
+
+            .carousel-control-prev:hover,
+            .carousel-control-next:hover {
+            color: red;
+            }
+
+            .carousel-control-prev {
+            left: -50px; /* Adjust the position of the left arrow */
+            }
+
+            .carousel-control-next {
+            right: -50px; /* Adjust the position of the right arrow */
+            }
+
+            .carousel-item {
+            width: 1180px;
+            height: 750px;
+            }
+
+            .get-tickets {
+            background-color: #E3C975;
+            color: #782F37;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+            font-family: 'Old Standard TT', serif;
+            }
+            
+            h3, p {
+                font-family: 'Old Standard TT', serif;
+                color: #E3C975;
+            }
+
+            h3 {
+                text-shadow: .5px .5px black;
+            }
+
+            .date {
+                text-decoration: underline;
+            }
+
+            .d-block {
+                border: 10px black solid;
+                clip-path: polygon(0 0, 50% 0, 100% 42%, 0 42%);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container mt-4">
+            <div id="pictureCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="d-block w-100" alt="Slide 1">
+                            <h3>DOH Tour J1</h3>
+                            <p class="date">April 19, 2025 11:00AM & 12:30PM</p>
+                            <p>Detroit Opera House</p>
+                            <p>Join us for a 55-minute Detroit Opera House Highlights<br>
+                                Tour (tour locations vary subject to performance<br>
+                                schedule). These new tours are open to the public; reservations<br>
+                                are required. Tickets are available online or on the day<br>
+                                of at the Box Office (Broadway Street). $10 for adults and<br>
+                                $8 for students</p>
+                            <a href="https://cart.detroitopera.org/dohtours/5092?_gl=1*17eoxcf*_gcl_au*NzI5NjU1NjU0LjE3NDE0ODk4ODc.*_ga*MTU5NjI1NDc1Ny4xNzQxNDg5ODg4*_ga_HL9C7T5SE7*MTc0MTQ4OTg4Ny4xLjEuMTc0MTQ4OTk4MC40MC4wLjE5MTQwMzIyNjk." class="get-tickets">Get Tickets</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-block w-100" alt="Slide 2">
+                            <h3>Malandain Ballet Biarritz</h3>
+                            <p>April 26, 2025 7:30PM</p>
+                            <p>Detroit Opera House</p>
+                            <a href="https://cart.detroitopera.org/5057" class="get-tickets">Get Tickets</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-block w-100" alt="Slide 2">
+                            <h3>Robert Sims performs in concert</h3>
+                            <p>April 29th, 2025 8:00PM</p>
+                            <p>Detroit Opera House</p>
+                            <p>Robert Sims will perform Spirituals and Copland's Old<br>
+                                American Songs in tribute to internationally renowned<br>
+                                vocal pedagogue Richard Miller.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#pictureCarousel" role="button" data-slide="prev">
+                &#10094;
+            </a>
+            <a class="carousel-control-next" href="#pictureCarousel" role="button" data-slide="next">
+                &#10095;
+            </a>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+{% endblock %}
