@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <header>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canti Classics</title>
+    <style>
+      .home a {
+        color: #782F37;
+        font-family: 'Old Standard TT', serif;
+        font-weight: bold;
+        font-size: large;
+      }
+
+      .brand-name {
+        font-family: 'Old Standard TT', serif;
+      }
+
+      .events-tag a {
+        color: #782F37;
+        font-family: 'Old Standard TT', serif;
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+      
+    </style>
+  </header>
+  <body>
+    <!-- Hero Section -->
+    <div class="hero">
+      <div class="hero-left">
+          <h1 class="brand-name">Canti<br>Classics</h1>
+          <div class="divider"></div>
+          <p class="brand-description">A classical music brand dedicated to preserving, producing, and promoting exceptional recordings and archival collections.</p>
+      </div>
+      <div class="hero-right">
+          <div class="hero-image-border">
+              <img src="{{ url_for('static', filename='images/background.jpg') }}" alt="Theater Image">
+              <div class="events-tag"><a href="/events">EVENTS</a></div>
+          </div>
+      </div>
+    </div>
+
+    <section class="artist-profile">
+        <div class="artist-content">
+          <div class="artist-info-column">
+            <article class="artist-bio">
+              <h2 class="artist-name">Robert Sims</h2>
+              <p class="artist-description">
+                Gold Medal winner of the American Traditions Competition, has
+                been hailed by critics for his rich tone, energetic
+                performances, and convincing stage presence. Mr. Sims has been
+                highly praised for his moving interpretations of African
+                American spirituals, and has given numerous recitals of them
+                throughout the United States, Europe and Asia.
+              </p>
+            </article>
+          </div>
+          <div class="artist-image-column">
+            <div class="artist-image-container">
+              <img
+                src="{{ url_for('static', filename='images/robert-sims.png') }}" class="artist-image"
+                alt="Robert Sims"
+              />
+              <div class="artist-links">
+                <a href="https://www.robertsims.com" class="artist-link personal-website">
+                  Personal website
+                  <br />
+                </a>
+                <a href="/artists#robert" class="artist-link biography">Biography</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="artist-profile reverse">
+        <div class="artist-content">
+          <div class="artist-image-column">
+            <div class="artist-image-container">
+              <img
+                src="{{ url_for('static', filename='images/byron-sean.png') }}" class="artist-image"
+                alt="Byron Sean"
+              />
+              <div class="artist-links">
+                <a href="/artists#byron" class="artist-link biography">Biography</a>
+              </div>
+            </div>
+          </div>
+          <div class="artist-info-column">
+            <article class="artist-bio">
+              <h2 class="artist-name">Byron Sean</h2>
+              <p class="artist-description">
+                has performed across North America and Europe since beginning
+                piano studies at age 10 in Ohio. He then continued as a full
+                scholarship student at the University of Michigan in Ann Arbor
+                with Anton Nel as his teacher.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </body>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          if (window.location.hash) {
+              const targetElement = document.querySelector(window.location.hash);
+              if (targetElement) {
+                  setTimeout(() => {
+                      window.scrollTo({
+                          top: targetElement.offsetTop - 100, // Adjust offset for header spacing
+                          behavior: "smooth"
+                      });
+                  }, 200); // Small delay ensures the element is loaded
+              }
+          }
+      });
+    </script>        
+{% endblock %}
