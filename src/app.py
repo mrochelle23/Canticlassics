@@ -90,6 +90,81 @@ def chatbot():
     """Chatbot page"""
     return render_template('chatbot.html')
 
+# Flask-Mail configuration (replace with Canti Classics' email details)
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_PORT'] = 587
+app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USE_SSL'] = False  # Must be False for TLS
+app.config['MAIL_USERNAME'] = "k72003361@gmail.com"
+app.config['MAIL_PASSWORD'] = "rzgfnwdjddxgqhxd"  # Use the correct app password
+app.config['MAIL_NAME'] = "Canti Classics"
+sender_name = "Canti Classics"
+sender_email = "k72003361@gmail.com"
+formatted_sender = formataddr((sender_name, sender_email))
+mail = Mail(app)
+mongo.cx
+
+@app.route('/send_inquiry', methods=['POST'])
+def submit_form():
+    """Submit form page"""
+    # Get the form data
+    name = request.form["name"]
+    email = request.form["email"]
+    message = request.form["message"]
+
+    try:
+        # Send confirmation email to Canti Classics (notification)
+        msg_to_canti = Message(subject=f"New Inquiry from {name}",
+                        sender=formatted_sender,  # Replace with Canti Classics' email
+                        recipients=["k72003361@gmail.com"],
+                        body=f"New inquiry from {name} ({email}):\n\n{message}")  # Replace with Canti Classics' email
+
+        # Send confirmation email to User's Email (notification)
+        msg_to_user = Message(
+            subject="New Inquiry",
+            sender=formatted_sender,  # Replace with Canti Classics' email
+            recipients=[email],  # Use square brackets for recipients
+            html=f"""
+            <p style="color: black;">Hi {name}!</p>
+            <p style="color: black;">Thank you for sending an inquiry! We will get back to you soon.</p><br>
+            <p style="color: black;">Canti Classics Team</p>
+            <p style="color: black;">Follow Us</p>
+
+            <!-- Footer Section -->
+            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin-top: 20px; padding-top: 10px; border-top: 1px solid #ddd; background-color: #782F37;">
+                <tr>
+                    <td align="center" style="padding: 10px;">
+                        <p style="color: white; font-size: 14px; margin: 0;">Follow Us</p>
+                        <br>
+                        <a href="https://facebook.com/canticlassics" style="margin-right: 10px; text-decoration: none;">
+                            <img width="30" height="30" alt="Facebook" style="vertical-align:middle" src="https://images.meredith.com/Investopedia/Newsletters/Images/2023/04/Investopedia_Facebook_Icon.png">
+                        </a>
+                        <a href="https://instagram.com/canticlassics" style="margin-right: 10px; text-decoration: none;">
+                            <img width="30" height="30" alt="Instagram" style="vertical-align:middle" src="https://images.meredith.com/Investopedia/Newsletters/Images/2023/04/Investopedia_Instagram_Icon.png">
+                        </a>
+                        <a href="https://youtube.com/canticlassics1" style="margin-right: 10px; text-decoration: none;">
+                            <img width="30" height="30" alt="YouTube" style="vertical-align:middle" src="https://images.meredith.com/Investopedia/Newsletters/Images/2023/04/Investopedia_Youtube_Icon.png">
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" style="font-size: 12px; color: #782F37; padding: 5px;">
+                        <p style="margin: 0; color: white;">© 2025 Canti Classics. All Rights Reserved.</p>
+                        <p style="margin: 0;"><a href="http://127.0.0.1:5000/#contact"; style="color: white; text-decoration: none;">Subscribe to Our Newsletter</a></p>
+                    </td>
+                </tr>
+            </table>
+            """
+        )
+        mail.send(msg_to_canti)
+        mail.send(msg_to_user)
+        return redirect('/')
+
+    except Exception as e:
+        print(f"Full error: {e}") # log full error
+        return f"Error sending email: {str(e)}"  # In case there's an error sending the emailv
+
+
 @app.route('/add', methods=['POST'])
 def add_user():
     """Add a user to the database"""
@@ -104,7 +179,59 @@ def add_user():
         # If the email doesn't exist, proceed with adding the user
         users_collection.insert_one({'email2': email})
 
-    return redirect('/')
+    try:
+        # Send confirmation email to Canti Classics (notification)
+        msg_to_canti = Message(subject=f"Someone Signed Up For The Newsletter!",
+                        sender=formatted_sender,  # Replace with Canti Classics' email
+                        recipients=["k72003361@gmail.com"], # Replace with Canti Classics' email
+                        body=f"({email})")
+
+        # Send confirmation email to User's Email (notification)
+
+        # Send confirmation email to User's Email (notification)
+        msg_to_user = Message(
+            subject="Newsletter Confirmation",
+            sender=formatted_sender,  # Replace with Canti Classics' email
+            recipients=[email],  # Use square brackets for recipients
+            html=f"""
+            <!-- Main Email Content -->
+            <p style="color: black;">Thank you for signing up for our newsletter!</p>
+            <br>
+            <p style="color: black;">Canti Classics Team</p>
+
+            <!-- Footer Section -->
+            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin-top: 20px; padding-top: 10px; border-top: 1px solid #ddd; background-color: #782F37;">
+                <tr>
+                    <td align="center" style="padding: 10px;">
+                        <p style="color: white; font-size: 14px; margin: 0;">Follow Us</p>
+                        <br>
+                        <a href="https://facebook.com/canticlassics" style="margin-right: 10px; text-decoration: none;">
+                            <img width="30" height="30" alt="Facebook" style="vertical-align:middle" src="https://images.meredith.com/Investopedia/Newsletters/Images/2023/04/Investopedia_Facebook_Icon.png">
+                        </a>
+                        <a href="https://instagram.com/canticlassics" style="margin-right: 10px; text-decoration: none;">
+                            <img width="30" height="30" alt="Instagram" style="vertical-align:middle" src="https://images.meredith.com/Investopedia/Newsletters/Images/2023/04/Investopedia_Instagram_Icon.png">
+                        </a>
+                        <a href="https://youtube.com/canticlassics1" style="margin-right: 10px; text-decoration: none;">
+                            <img width="30" height="30" alt="YouTube" style="vertical-align:middle" src="https://images.meredith.com/Investopedia/Newsletters/Images/2023/04/Investopedia_Youtube_Icon.png">
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" style="font-size: 12px; color: #782F37; padding: 5px;">
+                        <p style="margin: 0; color: white;">© 2025 Canti Classics. All Rights Reserved.</p>
+                        <p style="margin: 0;"><a href="http://127.0.0.1:5000/unsubscribe?email={email}" style="color: white; text-decoration: none;">Unsubscribe</a></p>
+                    </td>
+                </tr>
+            </table>
+            """
+        )
+        mail.send(msg_to_canti)
+        mail.send(msg_to_user)
+        return redirect('/')
+
+    except Exception as e:
+        print(f"Full error: {e}") # log full error
+        return f"Error sending email: {str(e)}"
 
 @app.route('/unsubscribe', methods=['GET', 'POST'])
 def unsubscribe():
@@ -133,16 +260,41 @@ def confirm_unsubscribe():
         if user:
             # Delete the user's information from MongoDB
             result = users_collection.delete_one({'email2': email})
-            return render_template('unsubscribe_confirmed.html')
+            if result.deleted_count > 0:
+                msg_to_canti = Message(subject=f"No Longer Subscribed",
+                        sender=formatted_sender,  # Replace with Canti Classics' email
+                        recipients=["k72003361@gmail.com"],
+                        body=f"{email} unsubscribed from the newsletter")  # Replace with Canti Classics' email
+                mail.send(msg_to_canti)
+
+                msg_to_user = Message(
+                    subject="Unscubscribe Confirmation",
+                    sender=formatted_sender,  # Replace with Canti Classics' email
+                    recipients=[email],  # Use square brackets for recipients
+                    html=f"""
+                    <!-- Main Email Content -->
+                    <h1 style="color: black">Unsubscribe Successful</h1>
+                    <p style="color: black">You have successfully unsubscribed from our newsletter. We're sorry to see you go!</p>
+
+                    <!-- Footer Section -->
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin-top: 20px; padding-top: 10px; border-top: 1px solid #ddd; background-color: #782F37;">
+                    <tr>
+                        <td align="center" style="font-size: 12px; color: white; padding: 5px;">
+                            <p style="margin: 0; color: white">© 2025 Canti Classics. All Rights Reserved.</p>
+                            <p style="margin: 0;"><a href="http://127.0.0.1:5000/#contact" style="color: white; text-decoration: none;">Resubscribe</a></p>
+                        </td>
+                    </tr>
+                    """
+                )
+                mail.send(msg_to_user)
+                return render_template('unsubscribe_confirmed.html')
+            else:
+                return "Error: Could not delete the email."
         if not user:
             return render_template('already_unsubscribed.html')  # Display message for already unsubscribed user
-        else:
-            return "Error: Could not delete the email."
-    
-    # If email exists, proceed to delete
-    users_collection.delete_one({'email2': email})
 
     return "Error: No email provided."
+
 
 if __name__ == "__main__":
     app.run(debug=True)  # Set debug=False in production
