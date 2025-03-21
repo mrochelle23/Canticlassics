@@ -35,10 +35,10 @@ This document is a descriptive list of high-level tasks. It is divided by team m
 ### Completed Tasks
 
 1. Phase 1 Wireframe
- * designing visual layout/functionality of website
+* designing visual layout/functionality of website
 
 2. Newsletter form
- * Creation of newsletter form in HTML, MongoDB cluster for user input, and a flask route for newsletter functionality
+* Creation of newsletter form in HTML, MongoDB cluster for user input, and a flask route for newsletter functionality
 
 # Mikhai Rochelle (Tasks Completed)
 ### Uncompleted Tasks
@@ -60,5 +60,5 @@ This document is a descriptive list of high-level tasks. It is divided by team m
 *
 
 # Kyle Raskay (Tasks Completed)
-###Uncompleted Tasks
-###Completed Tasks
+### Uncompleted Tasks
+### Completed Tasks
