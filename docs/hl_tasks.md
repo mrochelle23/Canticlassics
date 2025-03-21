@@ -2,7 +2,7 @@
 
 This document is a descriptive list of high-level tasks. It is divided by team member and listed from uncomplete to completed tasks outlining the name, description, date completed/time to completion
 
-# Joan (Tasks completed)
+# Joan (Tasks completed 2/9)
 ### Uncompleted Tasks
 1. Website format translation
  * Ensure the website works seamlessly on all devices
@@ -40,3 +40,25 @@ This document is a descriptive list of high-level tasks. It is divided by team m
 2. Newsletter form
  * Creation of newsletter form in HTML, MongoDB cluster for user input, and a flask route for newsletter functionality
 
+# Mikhai Rochelle (Tasks Completed)
+### Uncompleted Tasks
+### Completed Tasks
+
+1. Phase 1 Functional specification (visual
+* Create a functional sepecification chart to frame and aid website design
+
+2. phase 2 wireframe on figma
+* Create website wireframes with different aspect ratio's from phase 1 wireframe
+
+3. Initialize project with chosen tech stack
+* using Flask for backend and HTML/CSS/JS for frontend, initialize the initial framework that the website will be built on
+
+4. configure essential dependencies and libraries
+* n/a
+
+5. setup basic routing and landing page for testing
+*
+
+# Kyle Raskay (Tasks Completed)
+###Uncompleted Tasks
+###Completed Tasks
