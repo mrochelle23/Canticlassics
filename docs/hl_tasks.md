@@ -60,5 +60,14 @@ This document is a descriptive list of high-level tasks. It is divided by team m
 *
 
 # Kyle Raskay (Tasks Completed)
-### Uncompleted Tasks
 ### Completed Tasks
+1. Implement real-time event updates and content syncing.
+2. Market Research
+3. Enable dynamic event updates with ticket links and real-time changes
+4. Add content to the archives HTML page with styling
+5. Implement dynamic event population and the AI chatbot interface.
+
+### Uncompleted Tasks
+1. Conduct cross-browser testing to ensure compatibility.
+2.Check for missing alt text, broken links, or API issues.
+
