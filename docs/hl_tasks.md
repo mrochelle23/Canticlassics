@@ -2,39 +2,8 @@
 
 This document provides a high-level overview of the current tasks for the Canti Classics website redesign project, with a breakdown of tasks assigned to each team member. The tasks are divided into completed and uncompleted categories, outlining key milestones and deadlines.
 
-# Joan (Tasks completed 2/9)
-## Uncompleted Tasks
-1. Perform load and performance testing.
-- Description: Tests to assure that the website is functioning up to standard.
-- Expected time to complete: March 25, 2025
-- Responsible: Joan
-
-2. Ensure that all new features (AI chatbot, search functionality, event updates) work locally and in the development environment.
-- Description: Ensure all new features (AI chatbot, search, event updates) work locally and in dev environment.
-- Expected time to complete: March 25, 2025
-- Responsible: Joan
-
-3. Test responsiveness on different screen sizes.
-- Description: Test responsiveness on different screen sizes to ensure functionality.
-- Expected time to complete: March 25, 2025
-- Responsible: Joan
-
-4. Provide clear setup instructions for the project, including how to run the Flask backend and React frontend.
-- Description: Provide clients with setup instructions including how to run Flask backend and React frontend.
-- Expected time to complete: March 25, 2025
-- Responsible: Joan
-
-5. Address any user-experience concerns that arise.
-- Description: Respond and fix user experience concerns that arise throughout dev/testing phases.
-- Expected time to complete: Continuous
-- Responsible: Joan
-
-6. Ensure scalability by testing with a larger dataset for events and recordings.
-- Description: Ensure scalability of Database by testing with larger datasets for event and recording.
-- Expected time to complete: March 25, 2025
-- Responsible: Joan
-
-### Completed Tasks
+# Joan
+## Completed Tasks
 1. Phase 1 Wireframe.
 - Description: Designing visual layout/functionality of the website.
 - Expected time to complete: Completed
@@ -80,56 +49,39 @@ This document provides a high-level overview of the current tasks for the Canti 
 - Expected time to complete: Completed
 - Responsible: Joan
 
-
-# Mikhai Rochelle (Tasks Completed)
 ## Uncompleted Tasks
-1. Implement HTTPS for secure connections.
-- Description: Implement HTTPS to ensure secure connections.
+1. Perform load and performance testing.
+- Description: Tests to assure that the website is functioning up to standard.
 - Expected time to complete: March 25, 2025
-- Responsible: Mikhai
+- Responsible: Joan
 
-2. Protect forms with CAPTCHA to prevent spam.
-- Description: Protect forms with CAPTCHA to prevent spam.
+2. Ensure that all new features (AI chatbot, search functionality, event updates) work locally and in the development environment.
+- Description: Ensure all new features (AI chatbot, search, event updates) work locally and in dev environment.
 - Expected time to complete: March 25, 2025
-- Responsible: Mikhai
+- Responsible: Joan
 
-3. Optimize the backend for fast response times and scalability.
-- Description: Optimize backend for fast response times and scalability.
-- Expected time to complete: April 1, 2025
-- Responsible: Mikhai
-
-4. Ensure proper security measures, including form validation and API protection.
-- Description: Implement proper security measures, including form validation and API protection.
+3. Test responsiveness on different screen sizes.
+- Description: Test responsiveness on different screen sizes to ensure functionality.
 - Expected time to complete: March 25, 2025
-- Responsible: Mikhai
+- Responsible: Joan
 
-5. Ensure frontend components (chatbot, event updates) correctly communicate with the backend API.
-- Description: Ensure frontend components (chatbot, event updates) correctly communicate with the backend API.
+4. Provide clear setup instructions for the project, including how to run the Flask backend and React frontend.
+- Description: Provide clients with setup instructions including how to run Flask backend and React frontend.
 - Expected time to complete: March 25, 2025
-- Responsible: Mikhai
+- Responsible: Joan
 
-6. Use logging tools (e.g., console.log for frontend, print() or logging in Python) to troubleshoot any issues.
-- Description: Use logging tools (e.g., console.log for frontend, print() for Python) to troubleshoot any issues.
+5. Address any user-experience concerns that arise.
+- Description: Respond and fix user experience concerns that arise throughout dev/testing phases.
 - Expected time to complete: Continuous
-- Responsible: Mikhai
+- Responsible: Joan
 
-7. Ensure all key functions are commented, especially for the chatbot integration and event handling logic.
-- Description: Ensure all key functions are commented, especially for chatbot integration and event handling logic.
+6. Ensure scalability by testing with a larger dataset for events and recordings.
+- Description: Ensure scalability of Database by testing with larger datasets for event and recording.
 - Expected time to complete: March 25, 2025
-- Responsible: Mikhai
+- Responsible: Joan
 
-8. Collect feedback from the team on the user interface and chatbot interactions.
-- Description: Collect feedback from the team on the user interface and chatbot interactions.
-- Expected time to complete: March 25, 2025
-- Responsible: Mikhai
-
-9. Continually improve code performance (e.g., optimize database queries, reduce page load times).
-- Description: Continually improve code performance (e.g., optimize database queries, reduce page load times).
-- Expected time to complete: Continuous
-- Responsible: Mikhai
-
+# Mikhai Rochelle
 ## Completed Tasks
-
 1. Phase 1 Functional specification (written).
 - Description: Create the written functional specification document for the website.
 - Expected time to complete: Completed
@@ -200,8 +152,53 @@ This document provides a high-level overview of the current tasks for the Canti 
 - Expected time to complete: Completed
 - Responsible: Mikhai
 
+## Uncompleted Tasks
+1. Implement HTTPS for secure connections.
+- Description: Implement HTTPS to ensure secure connections.
+- Expected time to complete: March 25, 2025
+- Responsible: Mikhai
 
-# Kyle Raskay (Tasks Completed)
+2. Protect forms with CAPTCHA to prevent spam.
+- Description: Protect forms with CAPTCHA to prevent spam.
+- Expected time to complete: March 25, 2025
+- Responsible: Mikhai
+
+3. Optimize the backend for fast response times and scalability.
+- Description: Optimize backend for fast response times and scalability.
+- Expected time to complete: April 1, 2025
+- Responsible: Mikhai
+
+4. Ensure proper security measures, including form validation and API protection.
+- Description: Implement proper security measures, including form validation and API protection.
+- Expected time to complete: March 25, 2025
+- Responsible: Mikhai
+
+5. Ensure frontend components (chatbot, event updates) correctly communicate with the backend API.
+- Description: Ensure frontend components (chatbot, event updates) correctly communicate with the backend API.
+- Expected time to complete: March 25, 2025
+- Responsible: Mikhai
+
+6. Use logging tools (e.g., console.log for frontend, print() or logging in Python) to troubleshoot any issues.
+- Description: Use logging tools (e.g., console.log for frontend, print() for Python) to troubleshoot any issues.
+- Expected time to complete: Continuous
+- Responsible: Mikhai
+
+7. Ensure all key functions are commented, especially for the chatbot integration and event handling logic.
+- Description: Ensure all key functions are commented, especially for chatbot integration and event handling logic.
+- Expected time to complete: March 25, 2025
+- Responsible: Mikhai
+
+8. Collect feedback from the team on the user interface and chatbot interactions.
+- Description: Collect feedback from the team on the user interface and chatbot interactions.
+- Expected time to complete: March 25, 2025
+- Responsible: Mikhai
+
+9. Continually improve code performance (e.g., optimize database queries, reduce page load times).
+- Description: Continually improve code performance (e.g., optimize database queries, reduce page load times).
+- Expected time to complete: Continuous
+- Responsible: Mikhai
+
+# Kyle Raskay 
 ## Completed Tasks
 1. Market Research.
 - Description: Conduct market research for the project.
