@@ -10,7 +10,7 @@ This document provides a high-level overview of the current tasks for the Canti 
 - Responsible: Joan
 
 2. Phase 2 wireframe on Figma.
-- Description: Create website wireframes with different aspect ratios from phase 1 wireframe.
+- Description: Create website wireframes with different aspect ratios from the phase 1 wireframe.
 - Expected time to complete: Completed
 - Responsible: Joan
 
@@ -24,9 +24,14 @@ This document provides a high-level overview of the current tasks for the Canti 
 - Expected time to complete: Completed
 - Responsible: Joan
 
+5. Retrieve all necessary photos for the website
+- Description: Retrieve all necessary photos for the HTML pages.
+- Expected time to complete: Completed
+- Responsible: Joan
+
 ## Uncompleted Tasks
 1. Perform load and performance testing.
-- Description: Tests to assure that the website is functioning up to standard.
+- Description: Tests to ensure that the website is functioning up to standard.
 - Expected time to complete: March 25, 2025
 - Responsible: Joan
 
@@ -108,6 +113,31 @@ This document provides a high-level overview of the current tasks for the Canti 
 - Expected time to complete: Completed
 - Responsible: Mikhai
 
+13. Add content to the home page with styling
+- Description: Add content and styling to the Home page.
+- Expected time to complete: Completed
+- Responsible: Mikhai
+
+14. Handle backend functionality to send the client & users confirmation emails for subscribe, unsubscribe & inquiries.
+- Description: Use Flask-Mail to handle sending emails to the client & users confirmation emails when the subscribe to the newsletter, unsubscribe from the newsletter, and send inquiries.
+- Expected time to complete: Completed
+- Responsible: Mikhai
+
+15. Create HTML pages to handle for unsubscribing, confirm unsubscribe, and already unsubscribed. Connect these to routes.
+- Description: Create HTML pages that conntec to flask routes and render the templates when the user wants to unsubscribe.
+- Expected time to complete: Completed
+- Responsible: Mikhai
+
+16. Create base.html that has all necessary functionality for HTML inheriting from it.
+- Description: Create a base.html that has the navigation bar and footer content so that the other HTML pages can inherit from it.
+- Expected time to complete: Completed
+- Responsible: Mikhai
+
+17. Create a Javascript file for functionality across all HTML pages
+- Description: Creating a Javascript file that has the functionality across all HTML pages instead of having repeated code across all HTML pages.
+- Expected time to complete: Completed
+- Repsonsible: Mikhai
+
 
 ## Uncompleted Tasks
 1. Implement HTTPS for secure connections.
@@ -169,11 +199,6 @@ This document provides a high-level overview of the current tasks for the Canti 
 
 3. Implement real-time event updates and content syncing.
 - Description: Implement synchronization of event updates in real time.
-- Expected time to complete: Completed
-- Responsible: Kyle
-
-4. Implement dynamic event population and the AI chatbot interface.
-- Description: Implement dynamic event population and integrate the chatbot interface.
 - Expected time to complete: Completed
 - Responsible: Kyle
 
