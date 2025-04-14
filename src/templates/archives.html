@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <head>
+        <!-- Meta information for responsive design and character encoding -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Archives</title>
+        <!-- External stylesheets for Bootstrap and Font Awesome -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet grid-cell" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/archives.css') }}">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    </head>
+    <header>
+        <!-- Empty header section -->
+         <!-- Inheriting from base.html -->
+    </header>
+    <div class="container2 mt-3">
+        <!-- Image and heading for Odetta and Robert Sims -->
+        <img src="{{ url_for('static', filename='images/robert-odetta.png') }}" alt="Robert Sims" class="img-fluid">
+        <h1>Odetta and <br>Robert Sims</h1>
+    </div>
+    <div class="divider3"></div>
+    <div class="container2 mt-3">
+        <div class="archive-info">
+            <!-- Description of Odetta and Robert Sims' performances -->
+            <p>The legendary, ODETTA and Robert Sims the Gold Medal Winner of the 
+                American<br>
+                Traditions Vocal Competition have joined forces in duo concert performances 
+                of spirituals, freedom songs, folk songs and work songs. Their concerts 
+                celebrate the rich history and artistry found in this important American 
+                music, and explore in song the faith, hope, joy, protest and double and 
+                triple meanings contained within.<br>
+                ODETTA, described by The New York Times as one of the most influential
+                artists of the 20th Century and honored with scores of awards, has enjoyed a
+                50 year career including movie and stage acting, story telling, singing and
+                performing protest songs for civil rights movements with Dr. Martin Luther
+                King Jr.<br>
+                Robert Sims, called by the Chicago Tribune "...Stunning, Dazzling and
+                Sublime...", is highly regarded for his "moving" and "authentic"
+                interpretations of African American spirituals and folk songs, and has given
+                recitals of spirituals throughout the United States, Europe and Asia.
+                It is no wonder why these two extraordinary artists' performances have been
+                greeted with standing ovations from San Franciso on the west coast to New
+                York' Carnegie Hall on the east coast.</p><br>
+        </div>
+    </div>
+    <div class="container2 mt-3">
+        <!-- Section for images and captions -->
+        <div class="white-screen1">
+            <p class="simon">Simon</p>
+            <img src="{{ url_for('static', filename='images/archives1.png') }}" alt="Simon, Sykes, Sims" class="img-fluid">
+        </div>
+
+        <div class="white-screen2">
+            <p class="sykes">Sykes</p>
+            <img src="{{ url_for('static', filename='images/archives2.png') }}" alt="Simon, Sykes, Sims" class="img-fluid">
+        </div>
+
+        <div class="white-screen3">
+            <p class="sims">& Sims</p>
+            <img src="{{ url_for('static', filename='images/robert-archives.png') }}" alt="Simon, Sykes, Sims" class="img-fluid">
+        </div>
+        
+        <div class="divider4"></div>
+        <div class="archive-info">
+            <!-- Description of Simon, Sykes, and Sims' performances -->
+            <p><legend style="font-size: 30px; font-weight: bold;">Simon, Sykes and Sims in “Generations”:<br>
+                A celebration of Spirituals, Copland's Old American Songs and Songs from
+                Broadway!</legend><br>
+
+                Canti Classics presents Metropolitan opera star Simon Estes, Sony recording
+                artist Jubilant Sykes and Robert Sims the Gold Medal Winner of the American
+                Traditions Vocal Competition in a concert of Spirituals, Copland's Old American
+                Songs and Songs from Broadway.<br>
+                Generations was established to celebrate and highlight the rich musical heritage
+                found in American songs, with particular emphasis on the Spiritual. This exciting
+                and unusual program highlights not only these three Artists, but three distinct
+                interpretations bringing bravura, intimacy, and profundity to the vocal music of
+                America.<br>
+                Recognized as three of America’s foremost interpreters of American music,
+                Simon, Sykes and Sims have performed all over the world, including concerts in
+                Europe, Asia and the United States at Carnegie Hall, the Kennedy Center, the
+                Ravinia Music Festival, the Tanglewood Music Festival as well as many colleges,
+                universities and performing arts venues.</p><br>
+        </div>
+    </div>
+{% endblock %}

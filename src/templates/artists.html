@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"> <!-- Set character encoding -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensure responsive design -->
+        <title>Artists</title> <!-- Page title -->
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!-- Bootstrap 4 CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!-- Duplicate Bootstrap 4 CSS -->
+        <link rel="stylesheet grid-cell" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Font Awesome 4 -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> <!-- Font Awesome 5 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!-- jQuery library -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> <!-- Bootstrap 5 CSS -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet"> <!-- Bootstrap Icons -->
+        <!-- Bootstrap JS and jQuery -->
+        <!-- jQuery (Full Version) -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery library -->
+        <!-- Popper.js -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script> <!-- Popper.js for tooltips and popovers -->
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script> <!-- Bootstrap 4 JS -->
+        <!-- Bootstrap Bundle (includes Popper.js and Bootstrap JS) -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> <!-- Bootstrap 5 Bundle -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Font Awesome 4 -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/artists.css') }}"> <!-- Custom CSS -->
+    </head>
+    
+    <header>
+        <!-- Regular Navigation Bar -->
+        <div class="nav-bar navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="hero-home" href="/"> <!-- Home link -->
+                    <div class="hero-left">
+                        <h1 class="brand-name">Canti<br>Classics</h1> <!-- Brand name -->
+                        <div class="divider"></div> <!-- Divider -->
+                    </div>
+                </a>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto"> <!-- Navigation links -->
+                        <li class="nav-item active home">
+                            <a class="nav-link" href="/">Home</a> <!-- Home link -->
+                        </li>
+                        <li class="nav-item active events">
+                            <a class="nav-link" href="/events">Events</a> <!-- Events link -->
+                        </li>
+                        <li class="nav-item active recordings">
+                            <a class="nav-link" href="/recordings">Recordings</a> <!-- Recordings link -->
+                        </li>
+                        <li class="nav-item active artists">
+                            <a class="nav-link" href="/artists">Artists</a> <!-- Artists link -->
+                        </li>
+                        <li class="nav-item active archives">
+                            <a class="nav-link" href="/archives">Archives</a> <!-- Archives link -->
+                        </li>
+                        <li class="nav-item active about-us">
+                            <a class="nav-link" href="/about">About Us</a> <!-- About Us link -->
+                        </li>
+                        <li class="nav-item active contact">
+                            <a class="nav-link" href="#contact">Contact</a> <!-- Contact link -->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Hamburger Menu -->
+        <button class="navbar-toggler" id="menu-toggle" type="button" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i> <!-- Hamburger icon -->
+        </button>
+        <a class="hero-home2" href="/"> <!-- Home link for smaller screens -->
+            <div class="hero-left2">
+                <h1 class="brand-name2">Canti<br>Classics</h1> <!-- Brand name -->
+                <div class="divider2"></div> <!-- Divider -->
+            </div>
+        </a>
+        <div id="overlay-menu" class="hidden"> <!-- Overlay menu -->
+            <ul class="overlay-nav">
+            <li><a href="/">Home</a></li> <!-- Home link -->
+            <li><a href="/events" class="events">Events</a></li> <!-- Events link -->
+            <li><a href="/recordings" class="recordings">Recordings</a></li> <!-- Recordings link -->
+            <li><a href="/artists" class="artists">Artists</a></li> <!-- Artists link -->
+            <li><a href="/archives" class="archives">Archives</a></li> <!-- Archives link -->
+            <li><a href="/about" class="about">About Us</a></li> <!-- About Us link -->
+            </ul>
+        </div>
+    </header>
+    <body>
+        <!-- white screen as the first layer -->
+    <div class="white-screen1"></div> <!-- White screen -->
+    <!-- Red box behind the image with custom shape -->
+    <div class="red-box"></div> <!-- Red box -->
+    <div class="red-box-border"></div> <!-- Red box border -->
+    <div class="red-box-border2"></div> <!-- Secondary red box border -->
+    <div class="green-box"></div> <!-- Green box -->
+    <div class="green-box-tint"></div> <!-- Green box tint -->
+    <div class="green-box-tint2"></div> <!-- Secondary green box tint -->
+    <div class="green-box-border"></div> <!-- Green box border -->
+    <div class="image-cover"></div> <!-- Image cover -->
+    <div class="image-border"></div> <!-- Image border -->
+    <div class="image-container">
+      <!-- Blue box that clips the background image -->
+      <div class="blue-box"></div> <!-- Blue box -->
+      <!-- Border at the bottom of the blue box -->
+      <div class="border-bottom"></div> <!-- Bottom border -->
+      <!-- White mask that clips the blue box -->
+      <div class="white-mask"></div> <!-- White mask -->
+      <!-- Button on top of the image -->
+      <div class="image-tint">
+        <!-- Background image -->
+        <img src="static/images/robert-sims-artists.avif" alt="Clipped Image" id="robert"> <!-- Artist image -->
+      </div>
+    </div>
+    <!-- Page content -->
+    <div class="page-content">
+      <div class="hero-left">
+        <div class="container mt-3">
+            <h1>Robert Sims</h1> <!-- Artist name -->
+            <div class="artist-info">
+                <p>Robert Sims, Gold Medal winner of the American Traditions Competition,<br>  
+                    has been hailed by critics for his rich tone, energetic performances, and convincing<br>
+                    stage presence.<br><br>
+                    
+                    <!-- Artist biography -->
+                    Mr. Sims has been highly praised for his moving interpretations of African 
+                    American spirituals, and has given numerous recitals of them throughout the 
+                    United States, Europe and Asia. He recently made his recital debut at 
+                    Carnegie Hall, and has performed in concert at Lincoln Center in New York, 
+                    the Smithsonian Institution, the Los Angeles African American Museum, Grace 
+                    Cathedral in San Francisco, the Chicago Historical Society, the Latour de 
+                    France International Music Festival in France, and the celebrated American 
+                    Church in Paris. Under the auspices of the Community Concerts and Live On 
+                    Stage Series, Sims performed more than 150 recitals throughout the United<br>
+                    States.<br><br>
+                    
+                    <!-- Additional biography details -->
+                    Robert Sims has appeared with many orchestras in this country, and toured 
+                    Japan with the Pacific Music Festival Orchestra. He was featured in a 
+                    performance of Bernstein's Opening Prayer which was televised nationally. 
+                    In 2003, Sims was the subject of a feature article in Classical Singer 
+                    Magazine highlighting his concert career.<br><br>
+                    
+                    <!-- Performance highlights -->
+                    He appeared several times in performance on the Hour of Power from the 
+                    Crystal Cathedral in Garden Grove, California which is broadcast 
+                    internationally. In 2002, he was the focus of a Public Broadcasting Service 
+                    special Artbeat Chicago. Among the summer festivals that Sims has sung at 
+                    include Chautauqua, Yachats, Grant Park, Big Arts, and the Ravinia Music 
+                    Festival. He also toured nationally in Three Generations, a celebration of 
+                    American spirituals and folk songs with George Shirley, the late William 
+                    Warfield and Benjamin Matthews.<br><br>
+                    
+                    <!-- Premiered works -->
+                    Sims premiered the spiritual suite, I'm a Soldier, for baritone and 
+                    orchestra composed for him by Lena McLin and orchestrated with Jan Bach. 
+                    The work debuted in 2002 with the Savannah Symphony Orchestra under the 
+                    baton of Chelsea Tipton.<br><br>
+                    
+                    <!-- Operatic and recording credits -->
+                    After winning the Friedrich Schorr Opera Award, Mr. Sims appeared in 
+                    Massenet's Cendrillon, which won the National Opera America Award. He made 
+                    his Goodman Theater debut in Kurt Weil's Lost In the Stars under the 
+                    direction of Frank Galati, and sang the role of Dr. Malatesta in Don 
+                    Pasquale with Opera Carolina. His other operatic credits include roles in 
+                    Romeo et Juliette and Die Zauberflöte with the Tri-Cities Opera.<br><br>
+                    
+                    <!-- Discography -->
+                    Mr. Sims' artistry is highlighted on four compact discs produced by Canti 
+                    Classics: Soul of a Singer, Sims Sings Copland and Spirituals, In The 
+                    Spirit, and Three Generations. He is also featured on two recordings: Deep 
+                    River, and Gotta Home in Dat Rock performed by Moses Hogan and his Chorale.<br><br>
+                    
+                    <!-- Education -->
+                    Robert Sims is an alumnus of Oberlin Conservatory, SUNY Binghamton, 
+                    Northwestern University, and Music Academy of the West. For more information 
+                    visit www.RobertSims.com</p><br>
+            </div>
+        </div>
+      </div>
+    </div>
+    <img class="byron-image" src="static/images/byron2.jpg" alt="Clipped Image" id="byron"> <!-- Byron's image -->
+    <div class="yellow-box"></div> <!-- Yellow box behind the image -->
+    <div class="yellow-box2"></div> <!-- Secondary yellow box -->
+    <div class="yellow-box-tint"></div> <!-- Yellow tint overlay -->
+    <div class="yellow-box-border"></div> <!-- Yellow box border -->
+    <div class="yellow-box-border2"></div> <!-- Secondary yellow box border -->
+    <div class="white-screen2"></div> <!-- White screen overlay -->
+    <div class="white-screen3"></div> <!-- Secondary white screen overlay -->
+
+    <div class="page-content2">
+        <div class="hero-left">
+          <div class="container mt-3">
+              <h1>Byron Burfurd-Phearse</h1> <!-- Artist name -->
+              <div class="artist-info"> 
+                  <p>Pianist Byron Burford-Phearse has performed across North America and Europe since  
+                      beginning piano studies at age 10 in Ohio. He then continued as a full scholarship 
+                      student at the University of Michigan in Ann Arbor with Anton Nel as his teacher.
+                      As a student at Michigan, Mr. Sean was featured on several CD recordings, 
+                      chamber music recitals, and radio programs, including a live broadcast playing 
+                      Beethoven’s Choral Fantasy on National Public Radio. Other radio spotlights 
+                      include performances from the Centre d’Arts Orford featured on CBC in Canada. 
+                      As recitalist, Mr. Sean has performed extensively across the Midwest, including 
+                      cities such as Cleveland, Chicago, and Detroit, and Ann Arbor. After graduating 
+                      Magna Cum Laude from the University of Michigan, Mr. Sean continued as a 
+                      scholarship student at the Royal Academy Music in London, England.<br><br>
+      
+                      <!-- Performance highlights -->
+                      Byron Burford-Phearse has made solo and chamber music appearances at the Hot Springs 
+                      Music Festival, the Centre d’Arts Orford in Montreal, the International Keyboard 
+                      Festival in New York City, and the Ecole Normale de Musique in Paris as part of the 
+                      European American Musical Alliance. As an accompanist, Mr. Sean has 
+                      collaborated with critically acclaimed vocalists such as Suzanna Guzman, 
+                      Alvi Powell, Patricia Prunty, Robert Sims, and Angela M. Brown. Mr. Sean has had 
+                      coaching from acclaimed pianists such as Sergei Babayan (United States), 
+                      Christopher Elton (London), Peter Eicher (Germany), Roy Howat (Scotland), 
+                      Narcis Bonet (France), and Abbey Simon.<br><br>
+      
+                      <!-- Education and future engagements -->
+                      Byron Burford-Phearse holds degrees and diplomas from the University of Michigan, the Royal 
+                      Academy of Music (London), and the Mannes College of Music in New York City. 
+                      He has currently joined Classics Abroad and will be featured once again at the 
+                      Ecole Normale de Musique in Paris in August of 2006.</p><br>
+              </div>
+          </div>
+        </div>
+
+        <footer id="contact" class="py-4">
+          <div class="container">
+              <div class="row justify-content-center">
+                  <!-- Inquiry Form -->
+                  <div class="col-md-6">
+                      <h2 class="text-center mb-4">Have any questions for us?</h2> <!-- Inquiry form heading -->
+                      <form action="/send_inquiry" method="POST">
+                          <div class="form-group">
+                              <input type="text" name="name" class="form-control" required placeholder="Name"> <!-- Name input -->
+                          </div>
+                          <div class="form-group">
+                              <input type="email" name="email" class="form-control" required placeholder="Email"> <!-- Email input -->
+                          </div>
+                          <div class="form-group textarea-container">
+                              <textarea class="form-control" name="message" id="message" required placeholder="Message" maxlength="500" oninput="updateCharacterCountAndResize()"></textarea> <!-- Message textarea -->
+                              <small id="charCount" class="char-counter">0 / 500</small> <!-- Character counter -->
+                          </div>
+                          <button type="submit">Send Message</button> <!-- Submit button -->
+                      </form>
+                  </div>
+      
+                  <!-- Contact Info & Social Media Links -->
+                  <div class="col-md-6 text-left">
+                      <h2>Or reach out to us directly:</h2> <!-- Contact info heading -->
+                      <address>
+                          <strong>Canti Classics</strong><br> <!-- Organization name -->
+                          <strong>Email:</strong> info@canticlassics.com<br> <!-- Email address -->
+                          <strong>Phone:</strong> (773) 262-9655 <!-- Phone number -->
+                      </address>
+      
+                      <!-- Social Media Links -->
+                      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                      <div class="mt-3">
+                          <a href="https://www.facebook.com/canticlassics"><i class="fa fa-facebook" style="color: white; font-size: 45px; margin-right: 10px;"></i></a> <!-- Facebook link -->
+                          <a href="https://www.instagram.com/canticlassics"><i class="fa fa-instagram" style="color: white; font-size: 45px; margin-right: 10px;"></i></a> <!-- Instagram link -->
+                          <a href="https://www.youtube.com/canticlassics1"><i class="fa fa-youtube-play" style="color: white; font-size: 45px;"></i></a> <!-- YouTube link -->
+                      </div>
+                  </div>
+              </div>
+      
+              <!-- Newsletter Section -->
+              <div class="row justify-content-center mt-4">
+                  <div class="col-md-8">
+                      <h2 class="text-center">Join our newsletter</h2> <!-- Newsletter heading -->
+                      <form action="/add" method="POST" class="d-flex justify-content-center">
+                          <input type="email" name="email2" class="form-control w-50 mr-2" required placeholder="Email"> <!-- Email input -->
+                          <button type="submit">Sign Up</button> <!-- Sign-up button -->
+                      </form>
+  
+                      <!-- Unsubscribe Button -->
+                      <p class="text-center mt-3">
+                          <a href="http://127.0.0.1:5000/unsubscribe?email={email}" 
+                          style="color: lightgray; text-decoration: none; font-size: 16px;">
+                              Unsubscribe
+                          </a>
+                      </p>
+                  </div>
+              </div>
+      
+              <!-- Footer Copyright -->
+              <div class="text-center mt-3">
+                  <p>&copy; 2025 Canti Classics. All rights reserved.</p> <!-- Copyright notice -->
+              </div>
+          </div>
+          </footer>
+          <!-- Bootstrap JS and jQuery -->
+          <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery library -->
+          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script> <!-- Popper.js -->
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script> <!-- Bootstrap 4 JS -->
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> <!-- Bootstrap 5 Bundle -->
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Font Awesome -->
+          <script src="{{ url_for('static', filename='js/base.js') }}"></script> <!-- Custom JavaScript -->
+      </div>
+    </body>
+</html>

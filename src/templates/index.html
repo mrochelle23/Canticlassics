@@ -1,122 +1,250 @@
-{% extends 'base.html' %}
-
-{% block content %}
-
-  <header>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canti Classics</title>
-    <style>
-      .home a {
-        color: #782F37;
-        font-family: 'Old Standard TT', serif;
-        font-weight: bold;
-        font-size: large;
-      }
+    <title>Home</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet grid-cell" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
-      .brand-name {
-        font-family: 'Old Standard TT', serif;
-      }
+    <!-- Additional CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
 
-      .events-tag a {
-        color: #782F37;
-        font-family: 'Old Standard TT', serif;
-        font-weight: bold;
-        text-decoration: none;
-      }
-
-      
-    </style>
-  </header>
-  <body>
-    <!-- Hero Section -->
-    <div class="hero">
-      <div class="hero-left">
-          <h1 class="brand-name">Canti<br>Classics</h1>
-          <div class="divider"></div>
-          <p class="brand-description">A classical music brand dedicated to preserving, producing, and promoting exceptional recordings and archival collections.</p>
-      </div>
-      <div class="hero-right">
-          <div class="hero-image-border">
-              <img src="{{ url_for('static', filename='images/background.jpg') }}" alt="Theater Image">
-              <div class="events-tag"><a href="/events">EVENTS</a></div>
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <header>
+    <!-- Navbar Section -->
+      <div class="nav-bar navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <!-- Collapsible Navbar -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <!-- Navigation Links -->
+              <li class="nav-item active home">
+                <a class="nav-link" href="/">Home</a>
+              </li>
+              <li class="nav-item active events">
+                <a class="nav-link" href="/events">Events</a>
+              </li>
+              <li class="nav-item active recordings">
+                <a class="nav-link" href="/recordings">Recordings</a>
+              </li>
+              <li class="nav-item active artists">
+                <a class="nav-link" href="/artists">Artists</a>
+              </li>
+              <li class="nav-item active archives">
+                <a class="nav-link" href="/archives">Archives</a>
+              </li>
+              <li class="nav-item active about-us">
+                <a class="nav-link" href="/about">About Us</a>
+              </li>
+              <li class="nav-item active contact">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+            </ul>
           </div>
+        </div>
+      </div>
+      <!-- Hamburger Menu for Mobile -->
+      <button class="navbar-toggler" id="menu-toggle" type="button" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+      </button>
+      <!-- Overlay Menu -->
+      <div id="overlay-menu" class="hidden">
+        <ul class="overlay-nav">
+          <li><a href="/" class="home">Home</a></li>
+          <li><a href="/events">Events</a></li>
+          <li><a href="/recordings">Recordings</a></li>
+          <li><a href="/artists">Artists</a></li>
+          <li><a href="/archives">Archives</a></li>
+          <li><a href="/about">About Us</a></li>
+        </ul>
+      </div>
+    </header>
+  <body>
+    <!-- Decorative Layers -->
+    <div class="white-screen1"></div>
+    <div class="red-box"></div>
+    <div class="red-box-tint"></div>
+    <div class="image-container">
+      <div class="blue-box"></div>
+      <div class="border-bottom"></div>
+      <div class="white-mask"></div>
+      <div class="image-tint">
+        <img src="static/images/background.jpg" alt="Clipped Image">
+        <a class="events-button" href="/events">EVENTS</a>
       </div>
     </div>
 
-    <section class="artist-profile">
-        <div class="artist-content">
-          <div class="artist-info-column">
-            <article class="artist-bio">
-              <h2 class="artist-name">Robert Sims</h2>
-              <p class="artist-description">
-                Gold Medal winner of the American Traditions Competition, has
-                been hailed by critics for his rich tone, energetic
-                performances, and convincing stage presence. Mr. Sims has been
-                highly praised for his moving interpretations of African
-                American spirituals, and has given numerous recitals of them
-                throughout the United States, Europe and Asia.
-              </p>
-            </article>
-          </div>
-          <div class="artist-image-column">
-            <div class="artist-image-container">
-              <img
-                src="{{ url_for('static', filename='images/robert-sims.png') }}" class="artist-image"
-                alt="Robert Sims"
-              />
-              <div class="artist-links">
-                <a href="https://www.robertsims.com" class="artist-link personal-website">
-                  Personal website
-                  <br />
-                </a>
-                <a href="/artists#robert" class="artist-link biography">Biography</a>
-              </div>
-            </div>
-          </div>
-        </div>
+    <!-- Hero Section -->
+    <div class="page-content">
+      <div class="hero-left">
+        <h1 class="brand-name">Canti<br>Classics</h1>
+        <div class="divider"></div>
+        <p class="brand-description">
+          We are an artist-focused classical music brand<br>
+          dedicated to preserving and promoting<br>
+          exceptional artistry and archival collections
+        </p>
+      </div>
+
+      <!-- Separator Section -->
+      <section class="separator-section">
+        <div class="separator-symbol">~</div>
+        <div class="separator-symbol2">~</div>
+        <div class="separator-symbol-reverse">~</div>
+        <div class="separator-symbol-reverse2">~</div>
+        <p class="separator-info">Striving to promote up and coming<br>
+          performing artist and composers</p>
+        <div class="separator-symbol-reverse3">~</div>
+        <div class="separator-symbol-reverse4">~</div>
+        <div class="separator-symbol3">~</div>
+        <div class="separator-symbol4">~</div>
       </section>
 
-      <section class="artist-profile reverse">
-        <div class="artist-content">
-          <div class="artist-image-column">
-            <div class="artist-image-container">
-              <img
-                src="{{ url_for('static', filename='images/byron-sean.png') }}" class="artist-image"
-                alt="Byron Sean"
-              />
-              <div class="artist-links">
-                <a href="/artists#byron" class="artist-link biography">Biography</a>
+      <!-- Artist Profiles -->
+      <div class="profile-container">
+        <!-- Artist 1 -->
+        <section class="artist-profile">
+          <div class="artist-content">
+            <div class="artist-info-column">
+              <article class="artist-bio">
+                <h2 class="artist-name">Robert Sims</h2>
+                <p class="artist-description">
+                  Gold Medal winner of the American Traditions Competition, has
+                  been hailed by critics for his rich tone, energetic
+                  performances, and convincing stage presence. Mr. Sims has been
+                  highly praised for his moving interpretations of African
+                  American spirituals, and has given numerous recitals of them
+                  throughout the United States, Europe and Asia.
+                </p>
+              </article>
+            </div>
+            <div class="artist-image-column">
+              <div class="artist-image-container">
+                <img
+                  src="{{ url_for('static', filename='images/robert-sims.png') }}" class="artist-image"
+                  alt="Robert Sims"
+                />
+                <div class="artist-links">
+                  <a href="https://www.robertsims.com" class="artist-link personal-website">
+                    Personal website
+                    <br />
+                  </a>
+                  <a href="/artists#robert" class="artist-link biography">Biography</a>
+                </div>
               </div>
             </div>
           </div>
-          <div class="artist-info-column">
-            <article class="artist-bio">
-              <h2 class="artist-name">Byron Sean</h2>
-              <p class="artist-description">
-                has performed across North America and Europe since beginning
-                piano studies at age 10 in Ohio. He then continued as a full
-                scholarship student at the University of Michigan in Ann Arbor
-                with Anton Nel as his teacher.
-              </p>
-            </article>
+        </section>
+
+        <!-- Artist 2 -->
+        <section class="artist-profile reverse">
+          <div class="artist-content">
+            <div class="artist-image-column">
+              <div class="artist-image-container">
+                <img
+                  src="{{ url_for('static', filename='images/byron-sean.png') }}" class="artist-image"
+                  alt="Byron Sean"
+                />
+                <div class="artist-links">
+                  <a href="/artists#byron" class="artist-link biography">Biography</a>
+                </div>
+              </div>
+            </div>
+            <div class="artist-info-column">
+              <article class="artist-bio">
+                <h2 class="artist-name">Byron Burfurd-Phearse</h2>
+                <p class="artist-description">
+                  has performed across North America and Europe since beginning
+                  piano studies at age 10 in Ohio. He then continued as a full
+                  scholarship student at the University of Michigan in Ann Arbor
+                  with Anton Nel as his teacher.
+                </p>
+              </article>
+            </div>
           </div>
+        </section>
+      </div>
+
+      <!-- Footer Section -->
+      <footer id="contact" class="py-4">
+        <div class="container">
+            <div class="row justify-content-center">
+                <!-- Inquiry Form -->
+                <div class="col-md-6">
+                    <h2 class="text-center mb-4">Have any questions for us?</h2>
+                    <form action="/send_inquiry" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="name" class="form-control" required placeholder="Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control" required placeholder="Email">
+                        </div>
+                        <div class="form-group textarea-container">
+                            <textarea class="form-control" name="message" id="message" required placeholder="Message" maxlength="500" oninput="updateCharacterCountAndResize()"></textarea>
+                            <small id="charCount" class="char-counter">0 / 500</small>
+                        </div>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+    
+                <!-- Contact Info & Social Media Links -->
+                <div class="col-md-6 text-left">
+                    <h2>Or reach out to us directly:</h2>
+                    <address>
+                        <strong>Canti Classics</strong><br>
+                        <strong>Email:</strong> info@canticlassics.com<br>
+                        <strong>Phone:</strong> (773) 262-9655
+                    </address>
+    
+                    <!-- Social Media Links -->
+                    <div class="mt-3">
+                        <a href="https://www.facebook.com/canticlassics"><i class="fa fa-facebook" style="color: white; font-size: 45px; margin-right: 10px;"></i></a>
+                        <a href="https://www.instagram.com/canticlassics"><i class="fa fa-instagram" style="color: white; font-size: 45px; margin-right: 10px;"></i></a>
+                        <a href="https://www.youtube.com/canticlassics1"><i class="fa fa-youtube-play" style="color: white; font-size: 45px;"></i></a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Newsletter Section -->
+            <div class="row justify-content-center mt-4">
+                <div class="col-md-8">
+                    <h2 class="text-center">Join our newsletter</h2>
+                    <form action="/add" method="POST" class="d-flex justify-content-center">
+                        <input type="email" name="email2" class="form-control w-50 mr-2" required placeholder="Email">
+                        <button type="submit">Sign Up</button>
+                    </form>
+
+                    <!-- Unsubscribe Link -->
+                    <p class="text-center mt-3">
+                        <a href="http://127.0.0.1:5000/unsubscribe?email={email}" 
+                        style="color: lightgray; text-decoration: none; font-size: 16px;">
+                            Unsubscribe
+                        </a>
+                    </p>
+                </div>
+            </div>
+    
+            <!-- Footer Copyright -->
+            <div class="text-center mt-3">
+                <p>&copy; 2025 Canti Classics. All rights reserved.</p>
+            </div>
         </div>
-      </section>
-    </body>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-          if (window.location.hash) {
-              const targetElement = document.querySelector(window.location.hash);
-              if (targetElement) {
-                  setTimeout(() => {
-                      window.scrollTo({
-                          top: targetElement.offsetTop - 100, // Adjust offset for header spacing
-                          behavior: "smooth"
-                      });
-                  }, 200); // Small delay ensures the element is loaded
-              }
-          }
-      });
-    </script>        
-{% endblock %}
+      </footer>
+
+      <!-- Additional Scripts -->
+      <script src="{{ url_for('static', filename='js/base.js') }}"></script>
+    </div>
+  </body>
+</html>

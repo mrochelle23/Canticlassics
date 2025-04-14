@@ -1,68 +1,74 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Base</title>
-        <title>{% block title %}Canti Classics{% endblock %}</title>
-        <link rel="stylesheet" href="/static/css/styles.css">
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <link rel="stylesheet grid-cell" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <style>
-
-            .contact a:hover {
-                color: #782F37;
-                font-family: 'Old Standard TT', serif;
-                font-weight: bold;
-                font-size: large;
-            }
-        </style>
+        {% block title %}<title>Base</title>{% endblock %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     </head>
     <header>
-        <div class="navbar navbar-expand-lg navbar=light" style="background-color: white;">
-            <div class="container" style="margin: 50px;">
-                <button class="navbar-toggler" type="buttong" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ml-auto" >
-                        <li class="nav-item active home">
-                            <a class="nav-link" href="/">Home</a>
-                        </li>
-                        <li class="nav-item active events">
-                            <a class="nav-link" href="/events">Events</a>
-                        </li>
-                        <li class="nav-item active recordings">
-                            <a class="nav-link" href="/recordings">Recordings</a>
-                        </li>
-                        <li class="nav-item active artists">
-                            <a class="nav-link" href="/artists">Artists</a>
-                        </li>
-                        <li class="nav-item active archives">
-                            <a class="nav-link" href="/archives">Archives</a>
-                        </li>
-                        <li class="nav-item active about-us">
-                            <a class="nav-link" href="/about">About Us</a>
-                        </li>
-                        <li class="nav-item active contact">
-                            <a class="nav-link" href="#contact">Contact</a>
-                        </li>
-                    </ul>
+        {% block header %}
+            <!-- Regular Navigation Bar -->
+            <div class="nav-bar navbar navbar-expand-lg navbar-light">
+                <div class="container">
+                    <a class="hero-home" href="/">
+                        <div class="hero-left">
+                            <h1 class="brand-name">Canti<br>Classics</h1>
+                            <div class="divider"></div>
+                        </div>
+                    </a>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item active home">
+                                <a class="nav-link" href="/">Home</a>
+                            </li>
+                            <li class="nav-item active events">
+                                <a class="nav-link" href="/events">Events</a>
+                            </li>
+                            <li class="nav-item active recordings">
+                                <a class="nav-link" href="/recordings">Recordings</a>
+                            </li>
+                            <li class="nav-item active artists">
+                                <a class="nav-link" href="/artists">Artists</a>
+                            </li>
+                            <li class="nav-item active archives">
+                                <a class="nav-link" href="/archives">Archives</a>
+                            </li>
+                            <li class="nav-item active about-us">
+                                <a class="nav-link" href="/about">About Us</a>
+                            </li>
+                            <li class="nav-item active contact">
+                                <a class="nav-link" href="#contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
+            <!-- Hamburger Menu -->
+            <button class="navbar-toggler" id="menu-toggle" type="button" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <a class="hero-home2" href="/">
+                <div class="hero-left2">
+                    <h1 class="brand-name2">Canti<br>Classics</h1>
+                    <div class="divider2"></div>
+                </div>
+            </a>
+            <div id="overlay-menu" class="hidden">
+                <ul class="overlay-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/events" class="events">Events</a></li>
+                <li><a href="/recordings" class="recordings">Recordings</a></li>
+                <li><a href="/artists">Artists</a></li>
+                <li><a href="/archives" class="archives">Archives</a></li>
+                <li><a href="/about" class="about">About Us</a></li>
+                </ul>
+            </div>
+        {% endblock %}
     </header>
-
-    <!-- This is where child templates inject their content -->
-    <body class="base-body">
-        <main>
-            {% block content %}
-            {% endblock %}
-        </main>
-
+    <body>
+        {% block content %}
+        {% endblock %}
+    </body>
         <footer id="contact" class="py-4">
             <div class="container">
                 <div class="row justify-content-center">
@@ -124,86 +130,24 @@
         
                 <!-- Footer Copyright -->
                 <div class="text-center mt-3">
-                    <p>&copy; 2025 Canti Classics. All rights reserved.</p>
+                    <p class="copy-right">&copy; 2025 Canti Classics. All rights reserved.</p>
                 </div>
             </div>
         </footer>
-    </body>
 
-    <!-- Bootstrap JS and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+        <!-- Bootstrap JS and jQuery -->
+        <!-- jQuery (Full Version) -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- Popper.js -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+        <!-- Bootstrap Bundle (includes Popper.js and Bootstrap JS) -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="{{ url_for('static', filename='js/base.js') }}"></script>
 
-    <script>
-        // Function to update character count and resize the textarea
-        function updateCharacterCountAndResize() {
-            var messageBox = document.getElementById("message");
-            var charCount = document.getElementById("charCount");
-
-            // Show the character counter when the user starts typing
-            if (messageBox.value.length > 0) {
-                charCount.style.display = "block";
-            } else {
-                charCount.style.display = "none";
-            }
-
-            // Update the character count
-            charCount.textContent = messageBox.value.length + " / 500";
-
-            // Resize the textarea based on the content
-            messageBox.style.height = 'auto'; // Reset the height to auto
-            messageBox.style.height = (messageBox.scrollHeight) + 'px'; // Set height based on content
-        }
-
-        window.addEventListener('DOMContentLoaded', (event) => {
-        // Check if the page has been loaded with the #contact hash
-        if (window.location.hash === "#contact") {
-            // Remove the hash from the URL to prevent auto-scrolling
-            history.replaceState(null, null, window.location.pathname);
-
-            // Scroll to the footer smoothly after a slight delay
-            setTimeout(function() {
-                const footer = document.getElementById('contact');
-                if (footer) {
-                    // Custom smooth scroll function
-                    smoothScrollTo(footer, 700); // 5000 is the duration in milliseconds (5 seconds)
-                }
-            }, 500);  // Delay scroll for 500ms after page load (adjust as necessary)
-        }
-
-        // Add event listener for the Contact button click
-        const contactButton = document.querySelector('a[href="#contact"]');
-        if (contactButton) {
-            contactButton.addEventListener('click', function(event) {
-                event.preventDefault(); // Prevent default action (jumping directly to the section)
-                
-                const footer = document.getElementById('contact');
-                if (footer) {
-                    smoothScrollTo(footer, 700); // Smooth scroll to the footer
-                }
-            });
-        }
-    });
-
-    // Custom smooth scroll function
-    function smoothScrollTo(target, duration) {
-        const start = window.scrollY || window.pageYOffset;
-        const end = target.getBoundingClientRect().top + start;
-        const change = end - start;
-        const startTime = performance.now();
-
-        function animateScroll(currentTime) {
-            const elapsedTime = currentTime - startTime;
-            const progress = Math.min(elapsedTime / duration, 1);
-            window.scrollTo(0, start + change * progress);
-
-            if (elapsedTime < duration) {
-                requestAnimationFrame(animateScroll);
-            }
-        }
-
-        requestAnimationFrame(animateScroll);
-    }
-    </script>
+        <!-- Bootstrap JS and Popper.js -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </html>
