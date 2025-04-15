@@ -89,8 +89,8 @@ This section documents the test cases to validate both functional and non-functi
 
 This section links to relevant artifacts such as diagrams, mockups, and documentation.
 
-* [Object Diagram (UML)](artifacts/object_diagram/object_diagram.png)
-* [Use Case Diagram](artifacts/use_case_diagram/use_case.png)
-* [Wireframes](artifacts/wireframes/)
+* [Object Diagram (UML)](object_diagram/object_diagram.png)
+* [Use Case Diagram](use_case_diagram/use_case.png)
+* [Wireframes (Figma)](https://www.figma.com/design/0Xzhok5Oy4v0Unploml0uV/Laptop-Wireframe?node-id=0-1&p=f&t=iGpN02jtw0xpjcEC-0)
 * [README Documentation](README.md)
 
