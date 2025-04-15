@@ -203,3 +203,258 @@
 - We went over implementation and how to recreate our wireframe with code.
 - Mikhai Rochelle set up a collaborative database and colletion on MongoDB and tested it to make sure everyone had proper access.
 
+---
+
+# Meeting Notes
+**Date:** February 18, 2025<br>
+**Time:** 10:00 AM<br>
+**Location:** Mary Idema Pew Library (Room 005)<br>
+**Facilitator:** Mikhai Rochelle<br>  
+**Note-taker:** Mikhai Rochelle
+  
+# Attendees:
+- Kyle Raskay (Full-Stack Developer)  
+- Mikhai Rochelle (Full-Stack Developer & Team Leader)  
+- Joan Felber (UX/UI Design & Back End Developer)  
+
+# Agenda  
+1. Finish phase 2 of wireframe  
+2. Begin Phase 3 (Development Phase)  
+
+# Discussion Summary
+1. Project Timeline:
+    - Phase 2 of the wireframe is on track, and deliverables are expected to be completed by Tuesday, February 11, 2025.  
+    - Adjustments needed for Phase 2 milestones to accommodate UI redesign and are expected to be completed by Sunday, February 16, 2025.  
+
+# Action Items
+| Task                          | Owner          | Deadline       |
+|------------------------------|----------------|----------------|
+| Finish phase 2 of wireframe  | Joan Felber    | Feb 13, 2025   |
+| Begin Phase 3 (Development)  | Mikhai Rochelle| Mar 11, 2025   |
+| Begin Phase 3 (Development)  | Kyle Raskay    | Mar 11, 2025   |
+
+# Next Steps 
+- Meet after class on February 11, 2025, at 10:00 AM at the Mary Idema Pew Library (Room 005).  
+- Go over code implementation and use cases.  
+- Talk about market research, how it will be done, and the deadline.  
+
+# Notes 
+- Joan has finalized the wireframe.
+- Development Phase will begin.   
+
+---
+
+# Meeting Notes
+**Date:** February 18, 2025<br>
+**Time:** 10:00 AM<br>
+**Location:** Mary Idema Pew Library (Room 005)<br>
+**Facilitator:** Mikhai Rochelle<br>  
+**Note-taker:** Mikhai Rochelle
+
+# Attendees:
+ 
+- Kyle Raskay (Full-Stack Developer)  
+- Mikhai Rochelle (Full-Stack Developer & Team Leader)  
+- Joan Felber (UX/UI Design & Back End Developer)  
+
+# Agenda 
+1. Create routes for the app.py file  
+2. Install all packages and environments needed for the project  
+3. Set up MongoDB cluster  
+4. Connect MongoDB to flask app.py  
+
+# Discussion Summary
+1. Project Timeline:
+    - Phase 1 of the Development is on track, and deliverables are expected to be completed by Tuesday, March 18, 2025.  
+
+# Action Items
+| Task                                                  | Owner          | Deadline       |
+|-------------------------------------------------------|----------------|----------------|
+| Create routes for the app.py file                     | Joan Felber    | Feb 13, 2025   |
+| Install packages & environments; MongoDB setup        | Joan Felber    | Feb 13, 2025   |
+| Connect MongoDB to flask app.py                       | Joan Felber    | Feb 13, 2025   |
+| Create events html page with styling                  | Mikhai Rochelle| Mar 11, 2025   |
+| Create events html page with styling                  | Kyle Raskay    | Mar 11, 2025   |
+
+# Next Steps 
+- Meet after class on February 25, 2025, at 10:00 AM at the Mary Idema Pew Library (Room 005).  
+- Go over code implementation and use cases.  
+- Talk about market research, how it will be done, and the deadline.  
+
+# Notes
+- Development officially underway. 
+- Mikhai and Kyle begin front-end layout work.
+
+---
+
+# Meeting Notes
+**Date:** February 18, 2025<br>
+**Time:** 10:00 AM<br>
+**Location:** Mary Idema Pew Library (Room 005)<br>
+**Facilitator:** Mikhai Rochelle<br>  
+**Note-taker:** Mikhai Rochelle
+
+# Attendees:
+- Kyle Raskay (Full-Stack Developer)  
+- Mikhai Rochelle (Full-Stack Developer & Team Leader)  
+- Joan Felber (UX/UI Design & Back End Developer)  
+
+# Agenda 
+1. Create index.html with styling  
+2. Create events.html with styling  
+3. Create recordings.html with styling  
+4. Create artists.html with styling  
+5. Create archives.html with styling  
+6. Create about-us.html with styling  
+
+# Discussion Summary
+1. Project Timeline:
+    - Phase 1 of Development is on track, expected to complete by March 18, 2025.  
+    - Kyle rejoined the project with his tasks reassigned to him.  
+    - Encountered issues with the chatbot functionality.  
+
+# Action Items 
+| Task                            | Owner          | Deadline       |
+|---------------------------------|----------------|----------------|
+| Create index.html, recordings, artists, archives     | Joan Felber    | Feb 13, 2025   |
+| Create events.html, about-us.html                    | Mikhai Rochelle| Mar 11, 2025   |
+| Support on events/about-us pages                     | Kyle Raskay    | Mar 11, 2025   |
+
+# Next Steps  
+- Meet after class March 18, 2025, at 10:00 AM.  
+- Continue chatbot debugging.  
+- Review code and market research.  
+
+# Notes
+- Most HTML structure built out.
+- Kyle is now back on task. 
+- Chatbot proving problematic—currently not functional without payment.
+
+---
+
+# Meeting Notes
+**Date:** February 18, 2025<br>
+**Time:** 10:00 AM<br>
+**Location:** Mary Idema Pew Library (Room 005)<br>
+**Facilitator:** Mikhai Rochelle<br>  
+**Note-taker:** Mikhai Rochelle 
+
+# Attendees:
+- Kyle Raskay (Full-Stack Developer)  
+- Mikhai Rochelle (Full-Stack Developer & Team Leader)  
+- Joan Felber (UX/UI Design & Back End Developer)  
+
+# Agenda  
+1. Test responsiveness on different screen sizes  
+2. Begin writing unit tests  
+3. Cross-browser testing  
+4. Performance testing  
+5. Comment all key functions  
+6. Use logging tools to troubleshoot  
+7. Address UX issues  
+
+# Discussion Summary
+1. Project Timeline:
+    - Development complete except chatbot.  
+    - Testing phase begins.  
+
+# Action Items 
+| Task                                                 | Owner          | Deadline       |
+|------------------------------------------------------|----------------|----------------|
+| Test responsiveness, UX issues, performance testing  | Joan Felber    | Feb 13, 2025   |
+| Comment key functions, add logging                   | Joan Felber    | Feb 13, 2025   |
+| Cross-browser testing                                | Mikhai Rochelle| Mar 11, 2025   |
+| General testing support                              | Kyle Raskay    | Mar 11, 2025   |
+
+**Next Steps:**  
+- Meet after class March 25, 2025, at 10:00 AM.  
+- Finalize chatbot and testing.  
+- Begin code review.  
+
+# Notes 
+- Project entering testing phase. 
+- Focus on usability, error tracking, and multi-device performance.
+- Backend logs and UI logs being added.
+
+---
+
+# Meeting Notes
+**Date:** February 18, 2025<br>
+**Time:** 10:00 AM<br>
+**Location:** Mary Idema Pew Library (Room 005)<br>
+**Facilitator:** Mikhai Rochelle<br>  
+**Note-taker:** Mikhai Rochelle 
+
+# Attendees: 
+- Kyle Raskay (Full-Stack Developer)  
+- Mikhai Rochelle (Full-Stack Developer & Team Leader)  
+- Joan Felber (UX/UI Design & Back End Developer)  
+
+# Agenda 
+1. Optimize code  
+2 Optimize backend for speed and scalability  
+
+# Discussion Summary
+1. Project Timeline: 
+    - Testing (except chatbot) is complete  
+    - Optimization phase begins  
+
+# Action Items 
+| Task                                           | Owner          | Deadline       |
+|------------------------------------------------|----------------|----------------|
+| Optimize backend (speed/scalability)           | Joan Felber    | Feb 13, 2025   |
+| Optimize frontend code                         | Mikhai Rochelle| Mar 11, 2025   |
+| Support & debugging                            | Kyle Raskay    | Mar 11, 2025   |
+
+# Next Steps  
+- Meet after class April 1, 2025, at 10:00 AM.  
+- Begin final QA.  
+
+# Notes 
+- Codebase is complete. 
+- Now focused on performance. 
+- Backend queries and response times being improved. 
+- Team prepping for launch.
+
+---
+
+# Meeting Notes
+**Date:** February 18, 2025<br>
+**Time:** 10:00 AM<br>
+**Location:** Mary Idema Pew Library (Room 005)<br>
+**Facilitator:** Mikhai Rochelle<br>  
+**Note-taker:** Mikhai Rochelle 
+
+# Attendees:
+- Kyle Raskay (Full-Stack Developer)  
+- Mikhai Rochelle (Full-Stack Developer & Team Leader)  
+- Joan Felber (UX/UI Design & Back End Developer)  
+
+# Agenda  
+1. Re-test post optimization  
+2. Continue chatbot integration  
+3. Conduct spell check  
+
+# Discussion Summary
+1. Project Timeline:
+    - Development and testing (except chatbot) are complete  
+    - Final touch-ups and cleanup in progress  
+
+# Action Items
+| Task                                                       | Owner          | Deadline       |
+|------------------------------------------------------------|----------------|----------------|
+| Retest responsiveness, performance, UX                     | Joan Felber    | Feb 13, 2025   |
+| Continue chatbot integration                               | Joan Felber    | Feb 13, 2025   |
+| Cross-browser testing, spell check, accessibility review   | Mikhai Rochelle| Mar 11, 2025   |
+| Final frontend QA                                          | Kyle Raskay    | Mar 11, 2025   |
+
+# Next Steps  
+- Meet after class April 8, 2025, at 10:00 AM.  
+- Finalize chatbot.  
+- Launch-ready review.  
+
+# Notes 
+- Polishing phase. 
+- Chatbot still unresolved due to payment restrictions.
+- Team refining pages, fixing typos, and ensuring accessibility compliance.
+
