@@ -89,6 +89,9 @@ This section documents the test cases to validate both functional and non-functi
 
 This section links to relevant artifacts such as diagrams, mockups, and documentation.
 
-* [Object Diagram (UML)](object_diagram/object_diagram.pdf)
-* [Use Case Diagram](use_case_diagram/extended_use_case_description.md)
-* [Wireframes (Figma)](https://www.figma.com/design/0Xzhok5Oy4v0Unploml0uV/Laptop-Wireframe?node-id=0-1&p=f&t=iGpN02jtw0xpjcEC-0)
+* [Extended Use Case Descritpion](artifacts/use_case_diagram/extended_use_case_description.md)
+* [UML Diagram](artifacts/use_case_diagram/UML-Diagram)
+* [Object Diagram (UML)](artifacts/object_diagram/object_diagram.pdf)
+* [Sequence Diagram](artifacts/sequence_diagream/sequence_diagram.pdf)
+* [Jira Board](https://boostrapers.atlassian.net/jira/software/projects/BT/boards/2)
+* [Wireframe (Figma)](https://www.figma.com/design/0Xzhok5Oy4v0Unploml0uV/Laptop-Wireframe?node-id=0-1&p=f&t=iGpN02jtw0xpjcEC-0)
