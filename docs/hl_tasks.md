@@ -140,47 +140,42 @@ This document provides a high-level overview of the current tasks for the Canti 
 
 
 ## Uncompleted Tasks
-1. Implement HTTPS for secure connections.
-- Description: Implement HTTPS to ensure secure connections.
-- Expected time to complete: March 25, 2025
-- Responsible: Mikhai
-
-2. Optimize the backend for fast response times and scalability.
+1. Optimize the backend for fast response times and scalability.
 - Description: Optimize backend for fast response times and scalability.
 - Expected time to complete: April 1, 2025
 - Responsible: Mikhai
 
-3. Ensure proper security measures, including form validation and API protection.
+2. Ensure proper security measures, including form validation and API protection.
 - Description: Implement proper security measures, including form validation and API protection.
 - Expected time to complete: March 25, 2025
 - Responsible: Mikhai
 
-4. Ensure frontend components (chatbot, event updates) correctly communicate with the backend API.
+3. Ensure frontend components (chatbot, event updates) correctly communicate with the backend API.
 - Description: Ensure frontend components (chatbot, event updates) correctly communicate with the backend API.
 - Expected time to complete: March 25, 2025
 - Responsible: Mikhai
 
-5. Use logging tools (e.g., console.log for frontend, print() or logging in Python) to troubleshoot any issues.
+4. Use logging tools (e.g., console.log for frontend, print() or logging in Python) to troubleshoot any issues.
 - Description: Use logging tools (e.g., console.log for frontend, print() for Python) to troubleshoot any issues.
 - Expected time to complete: Continuous
 - Responsible: Mikhai
 
-6. Ensure all key functions are commented.
+5. Ensure all key functions are commented.
 - Description: Ensure all key functions are commented.
 - Expected time to complete: March 25, 2025
 - Responsible: Mikhai
 
-7. Collect feedback from the team on the user interface.
+6. Collect feedback from the team on the user interface.
 - Description: Collect feedback from the team on the user interface and chatbot interactions.
 - Expected time to complete: March 25, 2025
 - Responsible: Mikhai
 
-8. Continually improve code performance (e.g., optimize database queries, reduce page load times).
+7. Continually improve code performance (e.g., optimize database queries, reduce page load times).
 - Description: Continually improve code performance (e.g., optimize database queries, reduce page load times).
 - Expected time to complete: Continuous
 - Responsible: Mikhai
 
-9. Write the first half of the unit test script
+8. Write the first half of the unit test script
 - Description: Write unit tests in python
 - Expected time to complete: Completed
 - Responsible: Mikhai
