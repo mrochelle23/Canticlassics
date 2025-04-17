@@ -38,7 +38,7 @@ except Exception as e:
 
 #Initializes a connection to the flask_db Database
 app.config["MONGO_URI"] = MONGO_URI
-mongo = PyMongo(app, MONGO_URI, connectTimeoutMS=3000)
+mongo = PyMongo(app, MONGO_URI)
 
 ############################################################
 # ROUTES
