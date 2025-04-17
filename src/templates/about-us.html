@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"> <!-- Set character encoding -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensure responsive design -->
+        <title>About us</title> <!-- Page title -->
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!-- Bootstrap 4 -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!-- Duplicate Bootstrap 4 -->
+        <link rel="stylesheet grid-cell" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Font Awesome 4 -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> <!-- Font Awesome 5 -->
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!-- jQuery -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> <!-- Bootstrap 5 -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet"> <!-- Bootstrap Icons -->
+        <!-- Bootstrap JS and jQuery -->
+        <!-- jQuery (Full Version) -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery -->
+        <!-- Popper.js -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script> <!-- Popper.js -->
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script> <!-- Bootstrap 4 JS -->
+        <!-- Bootstrap Bundle (includes Popper.js and Bootstrap JS) -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> <!-- Bootstrap 5 Bundle -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Font Awesome 4 -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/about-us.css') }}"> <!-- Custom CSS -->
+    </head>
+    <header>
+        <!-- Regular Navigation Bar -->
+      <div class="nav-bar navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active home">
+                <a class="nav-link" href="/">Home</a> <!-- Home link -->
+              </li>
+              <li class="nav-item active events">
+                <a class="nav-link" href="/events">Events</a> <!-- Events link -->
+              </li>
+              <li class="nav-item active recordings">
+                <a class="nav-link" href="/recordings">Recordings</a> <!-- Recordings link -->
+              </li>
+              <li class="nav-item active artists">
+                <a class="nav-link" href="/artists">Artists</a> <!-- Artists link -->
+              </li>
+              <li class="nav-item active archives">
+                <a class="nav-link" href="/archives">Archives</a> <!-- Archives link -->
+              </li>
+              <li class="nav-item active about-us">
+                <a class="nav-link" href="/about">About Us</a> <!-- About Us link -->
+              </li>
+              <li class="nav-item active contact">
+                <a class="nav-link" href="#contact">Contact</a> <!-- Contact link -->
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Hamburger Menu -->
+      <button class="navbar-toggler" id="menu-toggle" type="button" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i> <!-- Hamburger icon -->
+      </button>
+      <div id="overlay-menu" class="hidden">
+        <ul class="overlay-nav">
+          <li><a href="/" class="home">Home</a></li> <!-- Home link -->
+          <li><a href="/events">Events</a></li> <!-- Events link -->
+          <li><a href="/recordings">Recordings</a></li> <!-- Recordings link -->
+          <li><a href="/artists">Artists</a></li> <!-- Artists link -->
+          <li><a href="/archives">Archives</a></li> <!-- Archives link -->
+          <li><a href="/about" class="about-us">About Us</a></li> <!-- About Us link -->
+        </ul>
+      </div>
+    </header>
+    <body>
+        <div class="page-content">
+            <div class="hero-left">
+                <h1 class="brand-name">Canti<br>Classics</h1> <!-- Display brand name -->
+            <div class="divider"></div> <!-- Decorative divider -->
+            </div>
+
+            <div class="container-about-us mt-3">
+                <h1>Our Story</h1> <!-- Section title -->
+                <div class="about-info">
+                    <p>Canti Classics was founded with a deep passion for
+                        preserving and celebrating the timeless beauty of classical
+                        music. Rooted in a commitment to artistry and excellence,
+                        we have built a platform that connects audiences with
+                        renowned musicians, historical recordings, and upcoming
+                        performances. Over the years, we’ve grown into a trusted
+                        resource for classical music enthusiasts, offering a curated
+                        experience that honors tradition while embracing modern
+                        innovation.</p><br> <!-- Description of the organization's story -->
+                </div>
+            </div>
+
+            <div class="container2-about-us mt-3">
+                <h1>Our Mission</h1> <!-- Section title -->
+                <div class="about-info2">
+                    <p>Canti Classics is dedicated to preserving and promoting
+                        the rich heritage of classical music. Our mission is to
+                        connect audiences with the timeless artistry of great
+                        musicians, past and present, through curated recordings,
+                        insightful archives, and engaging performances. We strive
+                        to celebrate and sustain classical music’s legacy, making it
+                        more accessible to listeners, scholars, and performers
+                        worldwide.</p><br> <!-- Description of the organization's mission -->
+                </div>
+            </div>
+
+            <footer id="contact" class="py-4">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <!-- Inquiry Form -->
+                        <div class="col-md-6">
+                            <h2 class="text-center mb-4">Have any questions for us?</h2> <!-- Inquiry form title -->
+                            <form action="/send_inquiry" method="POST">
+                                <div class="form-group">
+                                    <input type="text" name="name" class="form-control" required placeholder="Name"> <!-- Name input -->
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="email" class="form-control" required placeholder="Email"> <!-- Email input -->
+                                </div>
+                                <div class="form-group textarea-container">
+                                    <textarea class="form-control" name="message" id="message" required placeholder="Message" maxlength="500" oninput="updateCharacterCountAndResize()"></textarea> <!-- Message input -->
+                                    <small id="charCount" class="char-counter">0 / 500</small> <!-- Character counter -->
+                                </div>
+                                <button type="submit">Send Message</button> <!-- Submit button -->
+                            </form>
+                        </div>
+            
+                        <!-- Contact Info & Social Media Links -->
+                        <div class="col-md-6 text-left">
+                            <h2>Or reach out to us directly:</h2> <!-- Contact info title -->
+                            <address>
+                                <strong>Canti Classics</strong><br> <!-- Organization name -->
+                                <strong>Email:</strong> info@canticlassics.com<br> <!-- Email address -->
+                                <strong>Phone:</strong> (773) 262-9655 <!-- Phone number -->
+                            </address>
+            
+                            <!-- Social Media Links directly under contact info -->
+                            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                            <div class="mt-3">
+                                <a href="https://www.facebook.com/canticlassics"><i class="fa fa-facebook" style="color: white; font-size: 45px; margin-right: 10px;"></i></a> <!-- Facebook link -->
+                                <a href="https://www.instagram.com/canticlassics"><i class="fa fa-instagram" style="color: white; font-size: 45px; margin-right: 10px;"></i></a> <!-- Instagram link -->
+                                <a href="https://www.youtube.com/canticlassics1"><i class="fa fa-youtube-play" style="color: white; font-size: 45px;"></i></a> <!-- YouTube link -->
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Newsletter Section (Horizontal Layout) -->
+                    <div class="row justify-content-center mt-4">
+                        <div class="col-md-8">
+                            <h2 class="text-center">Join our newsletter</h2> <!-- Newsletter title -->
+                            <form action="/add" method="POST" class="d-flex justify-content-center">
+                                <input type="email" name="email2" class="form-control w-50 mr-2" required placeholder="Email"> <!-- Email input -->
+                                <button type="submit">Sign Up</button> <!-- Sign-up button -->
+                            </form>
+        
+                            <!-- Unsubscribe Button Below -->
+                            <p class="text-center mt-3">
+                                <a href="http://127.0.0.1:5000/unsubscribe?email={email}" 
+                                style="color: lightgray; text-decoration: none; font-size: 16px;">
+                                    Unsubscribe
+                                </a> <!-- Unsubscribe link -->
+                            </p>
+                        </div>
+                    </div>
+            
+                    <!-- Footer Copyright -->
+                    <div class="text-center mt-3">
+                        <p>&copy; 2025 Canti Classics. All rights reserved.</p> <!-- Copyright notice -->
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <!-- white screen as the first layer -->
+        <div class="white-screen1"></div> <!-- Decorative white screen -->
+        <!-- Red box behind the image with custom shape -->
+        <div class="red-box"></div> <!-- Decorative red box -->
+        <div class="red-box-tint"></div> <!-- Tint for the red box -->
+        <div class="image-container">
+            <!-- Blue box that clips the background image -->
+            <div class="blue-box"></div> <!-- Decorative blue box -->
+            <!-- Border at the bottom of the blue box -->
+            <div class="border-bottom"></div> <!-- Decorative border -->
+            <!-- White mask that clips the blue box -->
+            <div class="white-mask"></div> <!-- Decorative white mask -->
+            <!-- Button on top of the image -->
+            <div class="image-tint">
+                <!-- Background image -->
+                <img src="static/images/recordings-background.jpg" alt="Clipped Image"> <!-- Background image -->
+            </div>
+        </div>
+        
+        <img class="about-image" src="static/images/about2.jpg" alt="Clipped Image"> <!-- About page image -->
+        <div class="yellow-box"></div> <!-- Decorative yellow box -->
+        <div class="yellow-box2"></div> <!-- Additional yellow box -->
+        <div class="yellow-box-tint"></div> <!-- Tint for the yellow box -->
+        <div class="yellow-box-border"></div> <!-- Border for the yellow box -->
+        <div class="yellow-box-border2"></div> <!-- Additional border for the yellow box -->
+        <div class="white-screen2"></div> <!-- Second decorative white screen -->
+    </body>
+    <!-- Bootstrap JS and jQuery -->
+    <!-- jQuery (Full Version) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Include jQuery library -->
+    <!-- Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script> <!-- Include Popper.js for tooltips and popovers -->
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script> <!-- Include Bootstrap 4 JavaScript -->
+    <!-- Bootstrap Bundle (includes Popper.js and Bootstrap JS) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> <!-- Include Bootstrap 5 JavaScript bundle -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Include Font Awesome 4 for icons -->
+    <script src="{{ url_for('static', filename='js/base.js') }}"></script> <!-- Include custom JavaScript file -->
+</html>
