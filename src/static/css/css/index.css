@@ -1,0 +1,3669 @@
+/* Show the regular navigation bar by default */
+.nav-bar {
+    display: block; /* Regular navigation bar is visible */
+}
+
+/* Hide the hamburger menu and overlay by default */
+.navbar-toggler,
+#overlay-menu {
+    display: none; /* Hamburger menu and overlay are hidden */
+}
+
+/* Hamburger Menu Button */
+.navbar-toggler {
+    position: absolute; /* Position the button absolutely */
+    top: -150px; /* Place it off-screen initially */
+    right: 10px; /* Align it to the right */
+    z-index: 1100; /* Ensure it appears above other elements */
+    background: none; /* Remove background */
+    border: none; /* Remove border */
+    cursor: pointer; /* Change cursor to pointer */
+    font-size: 24px; /* Adjust size of the icon */
+    color: black; /* Default color */
+    transition: color 0.3s ease-in-out; /* Smooth color transition */
+}
+
+/* Ensure the Font Awesome icon inside the button is always visible */
+.navbar-toggler i {
+    color: #782F37; /* Default color for the icon */
+    transition: color 0.3s ease-in-out; /* Smooth color transition */
+}
+
+/* Change the icon color when the menu is toggled */
+.navbar-toggler.open i {
+    color: #782F37; /* Change to a specific color when the menu is open */
+}
+
+/* Transform Hamburger to X */
+.navbar-toggler.open .navbar-toggler-icon {
+    background-color: transparent; /* Hide the middle line */
+}
+
+.navbar-toggler.open .navbar-toggler-icon::before {
+    transform: rotate(45deg) translate(5px, 5px); /* Rotate and position the top line */
+    background-color: white; /* Change color to white */
+}
+
+.navbar-toggler.open .navbar-toggler-icon::after {
+    transform: rotate(-45deg) translate(5px, -5px); /* Rotate and position the bottom line */
+    background-color: white; /* Change color to white */
+}
+
+/* Fullscreen Overlay Menu */
+#overlay-menu {
+    position: fixed; /* Fix the menu to the viewport */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Cover the full width */
+    height: 100%; /* Cover the full height */
+    background-color: white; /* Set background color */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    z-index: 1050; /* Ensure it appears above other elements */
+    transition: all 0.3s ease-in-out; /* Smooth transition for visibility */
+}
+
+/* Hidden state for the overlay menu */
+#overlay-menu.hidden {
+    transform: translateY(-100%); /* Move the menu off-screen */
+    opacity: 0; /* Make it invisible */
+    pointer-events: none; /* Disable interactions */
+}
+
+/* Styling for the overlay menu list */
+#overlay-menu ul {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    text-align: center; /* Center-align the text */
+}
+
+/* Add spacing between overlay menu items */
+#overlay-menu ul li {
+    margin: 20px 0; /* Add vertical spacing */
+}
+
+/* Style the overlay menu links */
+#overlay-menu ul li a {
+    color: black; /* Set text color */
+    font-size: 24px; /* Adjust font size */
+    font-weight: bold; /* Make text bold */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Highlight the "Home" link in the overlay menu */
+#overlay-menu ul li .home {
+    color: #782F37; /* Set a specific color for the "Home" link */
+}
+
+/* Hover effect for overlay menu links */
+#overlay-menu ul li a:hover {
+    color: #E3C975; /* Change color on hover */
+}
+
+.collapse .navbar-nav .home .nav-link {
+    color: #782F37; /* Set color for events link */
+    font-family: 'Old Standard TT', serif; /* Set font family */
+    font-weight: bold; /* Set font weight */
+}
+/* General body styling */
+body {
+    margin: 0; /* Remove default margin */
+    background-color: white; /* Set background color to white */
+    display: flex; /* Use flexbox for layout */
+    justify-content: flex-end; /* Align content to the right */
+    height: auto; /* Allow height to adjust automatically */
+    align-items: center; /* Center content vertically */
+    position: relative; /* Set position for child elements */
+}
+
+/* White screen overlay */
+.white-screen1 {
+    position: absolute; /* Position the overlay absolutely */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Cover the full width */
+    height: 100%; /* Cover the full height */
+    background-color: white; /* Set background color to white */
+    z-index: 0; /* Set as the first layer */
+    pointer-events: none; /* Disable interactions */
+}
+
+/* Navigation bar styling */
+.nav-bar {
+    position: absolute; /* Position the navbar absolutely */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Cover the full width */
+    background-color: white; /* Set background color to white */
+    padding: 20px; /* Add padding */
+    z-index: 1; /* Set as the second layer */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); /* Define custom shape */
+    margin-bottom: 80px; /* Add bottom margin */
+}
+
+/* Navigation bar list styling */
+.nav-bar ul {
+    position: absolute; /* Position the list absolutely */
+    top: 30%; /* Position it vertically */
+    left: 48%; /* Center it horizontally */
+    list-style-type: none; /* Remove default list styling */
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+    color: black; /* Set text color */
+}
+
+/* Navigation bar list item styling */
+.nav-bar ul li {
+    text-decoration: none; /* Remove underline */
+    color: black; /* Set text color */
+    padding: 10px 20px; /* Add padding */
+}
+
+/* Navigation bar link styling */
+.nav-bar li a {
+    text-decoration: none; /* Remove underline */
+    color: black; /* Set text color */
+    font-size: 20px; /* Set font size */
+    padding: 10px 20px; /* Add padding */
+}
+
+/* Hover effect for the "Contact" link */
+.nav-item.contact .nav-link:hover {
+    color: #782F37 !important; /* Change text color on hover */
+    font-family: 'Old Standard TT', serif; /* Set font family */
+    font-weight: bold; /* Make text bold */
+}
+
+/* Red box background styling */
+.red-box {
+    position: absolute; /* Position the red box absolutely */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Cover the full width */
+    height: 100%; /* Cover the full height */
+    background-color: #E3C975; /* Set red box color */
+    z-index: 2; /* Set as the third layer */
+    clip-path: polygon(0 0, 45% 0, 82% 94%, 0 94%); /* Define custom shape */
+    pointer-events: none; /* Disable interactions */
+}
+
+/* Semi-transparent overlay on the red box */
+.red-box-tint {
+    position: absolute; /* Position the overlay absolutely */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Cover the full width */
+    height: 100%; /* Cover the full height */
+    background-color: rgba(0, 0, 0, 0.3); /* Add semi-transparent dark overlay */
+    z-index: 3; /* Set as the fourth layer */
+    clip-path: polygon(0 0, 45% 0, 82% 94%, 0 94%); /* Match the red box */
+    pointer-events: none; /* Disable interactions */
+}
+
+/* Background image styling */
+.image-container img {
+    position: absolute; /* Position the image absolutely */
+    top: 1%; /* Add slight top margin */
+    left: 0; /* Align to the left */
+    width: 100%; /* Ensure image is 100% width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Display as a block element */
+    z-index: 4 !important; /* Set as the fifth layer */
+    transition: filter 0.3s ease; /* Add smooth transition on hover */
+    clip-path: polygon(0 12%, 100% 12%, 100% 91%, 0 91%); /* Clip the image */
+}
+
+/* Darken the image on hover */
+.image-tint:hover img {
+    filter: brightness(0.7); /* Reduce brightness on hover */
+}
+
+/* Button on top of the background image */
+.events-button {
+    position: absolute; /* Position the button absolutely */
+    top: 50%; /* Center vertically */
+    left: 85%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for precise centering */
+    padding: 15px 30px; /* Add padding */
+    font-size: 60px; /* Set font size */
+    background-color: #E3C975; /* Button background color */
+    color: #782F37; /* Button text color */
+    border: 2px solid #782F37; /* Add border */
+    font-family: 'Old Standard TT', serif; /* Set font family */
+    font-weight: bold; /* Set font weight */
+    border-radius: 5px; /* Add rounded corners */
+    cursor: pointer; /* Change cursor to pointer */
+    z-index: 10; /* Set as the sixth layer */
+    transition: background-color 0.3s, transform 0.3s; /* Add smooth transitions */
+    text-decoration: none; /* Remove underline */
+    pointer-events: auto; /* Enable interactions */
+}
+
+/* Hover effect for the button */
+.events-button:hover {
+    background-color: #782F37; /* Change background color on hover */
+    transform: translate(-50%, -50%) scale(1.1); /* Scale up on hover */
+    text-decoration: none; /* Remove underline */
+    color: #782F37; /* Keep text color consistent */
+}
+
+/* Hover effect for the button inside the image tint */
+.image-tint:hover .events-button {
+    background-color: #E3C975; /* Change background color on hover */
+    transform: translate(-50%, -50%) scale(1.1); /* Scale up on hover */
+}
+
+/* Blue box background styling */
+.blue-box {
+    position: absolute; /* Position the blue box absolutely */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Cover the full width */
+    height: 100%; /* Cover the full height */
+    background-color: #E3C975; /* Set blue box color */
+    z-index: 6; /* Set as the seventh layer */
+    clip-path: polygon(0 0, 43% 0, 82% 94%, 0 94%); /* Match the red box */
+    pointer-events: none; /* Disable interactions */
+}
+
+/* Bottom border styling */
+.border-bottom {
+    position: absolute; /* Position the border absolutely */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Cover the full width */
+    height: 100%; /* Cover the full height */
+    background-color: #E3C975; /* Set border color */
+    z-index: 7; /* Set as the eighth layer */
+    clip-path: polygon(80% 94%, 100% 94%, 100% 91.7%, 80% 91.7%); /* Match the red box */
+    pointer-events: none; /* Disable interactions */
+}
+
+/* White mask styling */
+.white-mask {
+    position: absolute; /* Position the white mask absolutely */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Cover the full width */
+    height: 100%; /* Cover the full height */
+    background-color: white; /* Set white mask color */
+    z-index: 8; /* Set as the ninth layer */
+    clip-path: polygon(0 0, 41.5% 0, 83% 100%, 0 100%); /* Match the red box */
+    pointer-events: none; /* Disable interactions */
+}
+
+/* Page content container */
+.page-content {
+    position: absolute; /* Position the content absolutely */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Cover the full width */
+    height: 100%; /* Cover the full height */
+    z-index: 9; /* Set as the tenth layer */
+    pointer-events: none; /* Disable interactions */
+}
+
+/* Hero section styling */
+.hero-left {
+    flex: 1; /* Allow the hero section to grow */
+    padding: 10% 5%; /* Add padding */
+}
+
+/* Hero section heading styling */
+.page-content h1 {
+    font-size: 250px; /* Set font size */
+    font-weight: bold; /* Set font weight */
+    margin-bottom: 10px; /* Add bottom margin */
+    color: #782F37; /* Set text color */
+    text-shadow: 3px 3px 0px #E3C975; /* Add text shadow */
+    font-family: 'Old Standard TT', serif; /* Set font family */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack elements vertically */
+}
+
+/* Brand description styling */
+.brand-description {
+    position: absolute; /* Position the description absolutely */
+    top: 30; /* Adjust top position */
+    left: 0; /* Align to the left */
+    margin-top: 100px; /* Add top margin */
+    margin-left: 20px; /* Add left margin */
+    font-size: 40px; /* Set font size */
+    color: #782F37; /* Set text color */
+    font-family: 'Old Standard TT', serif; /* Set font family */
+    display: flex; /* Use flexbox for layout */
+}
+
+/* Divider styling */
+.divider {
+    position: absolute; /* Position the divider absolutely */
+    top: 20; /* Adjust top position */
+    left: 0; /* Align to the left */
+    width: 1050px; /* Set width */
+    height: 80px; /* Set height */
+    background-color: #782F37; /* Set divider color */
+    margin-bottom: 20px; /* Add bottom margin */
+    clip-path: polygon(0 0, 93% 0, 100% 100%, 0% 100%); /* Define custom shape */
+    border-bottom: 8px solid #E3C975; /* Add bottom border */
+}
+
+/* Enable scrolling */
+html, body {
+    overflow: auto; /* Allow scrolling */
+    min-height: 100vh; /* Ensure full content visibility */
+}
+
+/* Separator sections container */
+.separator-section {
+    margin-top: 660px; /* Add spacing above the separator section */
+    position: relative; /* Position relative for child elements */
+}
+
+/* Main separator symbol */
+.separator-symbol {
+    transform: rotate(-0.0009993530981313888rad); /* Slight rotation */
+    color: #782F37; /* Dark red color */
+    font-size: 220px; /* Large font size */
+    font-family: "Old Standard TT"; /* Serif font */
+    font-weight: italic; /* Italic text */
+    text-align: center; /* Center-align text */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    z-index: 10; /* Layer priority */
+    position: absolute; /* Position absolutely within the container */
+    bottom: 0; /* Align to the bottom */
+    left: 46%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust position for centering */
+}
+
+/* Secondary separator symbol */
+.separator-symbol2 {
+    transform: rotate(-0.0009993530981313888rad); /* Slight rotation */
+    color: #E3C975; /* Light gold color */
+    font-size: 190px; /* Slightly smaller font size */
+    font-family: "Old Standard TT"; /* Serif font */
+    font-weight: italic; /* Italic text */
+    text-align: center; /* Center-align text */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    z-index: 11; /* Higher layer priority */
+    position: absolute; /* Position absolutely within the container */
+    bottom: 35%; /* Position slightly above the main symbol */
+    left: 46%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust position for centering */
+}
+
+/* Reversed main separator symbol */
+.separator-symbol-reverse {
+    transform: rotate(-0.0009993530981313888rad); /* Slight rotation */
+    color: #782F37; /* Dark red color */
+    font-size: 220px; /* Large font size */
+    font-family: "Old Standard TT"; /* Serif font */
+    font-weight: italic; /* Italic text */
+    text-align: center; /* Center-align text */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    z-index: 11; /* Higher layer priority */
+    position: absolute; /* Position absolutely within the container */
+    bottom: 0%; /* Align to the bottom */
+    left: 53.100%; /* Offset horizontally */
+    transform: translate(-50%, -50%) scaleX(-1); /* Flip horizontally */
+}
+
+/* Reversed secondary separator symbol */
+.separator-symbol-reverse2 {
+    transform: rotate(-0.0009993530981313888rad); /* Slight rotation */
+    color: #E3C975; /* Light gold color */
+    font-size: 190px; /* Slightly smaller font size */
+    font-family: "Old Standard TT"; /* Serif font */
+    font-weight: italic; /* Italic text */
+    text-align: center; /* Center-align text */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    z-index: 11; /* Higher layer priority */
+    position: absolute; /* Position absolutely within the container */
+    bottom: 35%; /* Position slightly above the reversed main symbol */
+    left: 53.100%; /* Offset horizontally */
+    transform: translate(-50%, -50%) scaleX(-1); /* Flip horizontally */
+}
+
+/* Separator information text */
+.separator-info {
+    font-size: 40px; /* Font size for the text */
+    color: #782F37; /* Dark red color */
+    font-family: "Old Standard TT", serif; /* Serif font */
+    text-align: center; /* Center-align text */
+    margin-top: 20px; /* Add spacing above the text */
+}
+
+/* Main separator symbol at the top */
+.separator-symbol3 {
+    transform: rotate(-0.0009993530981313888rad); /* Slight rotation */
+    color: #782F37; /* Dark red color */
+    font-size: 220px; /* Large font size */
+    font-family: "Old Standard TT"; /* Serif font */
+    font-weight: italic; /* Italic text */
+    text-align: center; /* Center-align text */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    z-index: 10; /* Layer priority */
+    position: absolute; /* Position absolutely within the container */
+    top: 200%; /* Position at the top */
+    left: 53.100%; /* Offset horizontally */
+    transform: translate(-50%, -50%); /* Adjust position for centering */
+}
+
+/* Secondary separator symbol at the top */
+.separator-symbol4 {
+    transform: rotate(-0.0009993530981313888rad); /* Slight rotation */
+    color: #E3C975; /* Light gold color */
+    font-size: 190px; /* Slightly smaller font size */
+    font-family: "Old Standard TT"; /* Serif font */
+    font-weight: italic; /* Italic text */
+    text-align: center; /* Center-align text */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    z-index: 11; /* Higher layer priority */
+    position: absolute; /* Position absolutely within the container */
+    top: 200%; /* Position at the top */
+    left: 53.100%; /* Offset horizontally */
+    transform: translate(-50%, -50%); /* Adjust position for centering */
+}
+
+/* Reversed main separator symbol at the top */
+.separator-symbol-reverse3 {
+    transform: rotate(-0.0009993530981313888rad); /* Slight rotation */
+    color: #782F37; /* Dark red color */
+    font-size: 220px; /* Large font size */
+    font-family: "Old Standard TT"; /* Serif font */
+    font-weight: italic; /* Italic text */
+    text-align: center; /* Center-align text */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    z-index: 11; /* Higher layer priority */
+    position: absolute; /* Position absolutely within the container */
+    top: 200%; /* Position at the top */
+    left: 46%; /* Offset horizontally */
+    transform: translate(-50%, -50%) scaleX(-1); /* Flip horizontally */
+}
+
+/* Reversed secondary separator symbol at the top */
+.separator-symbol-reverse4 {
+    transform: rotate(-0.0009993530981313888rad); /* Slight rotation */
+    color: #E3C975; /* Light gold color */
+    font-size: 190px; /* Slightly smaller font size */
+    font-family: "Old Standard TT"; /* Serif font */
+    font-weight: italic; /* Italic text */
+    text-align: center; /* Center-align text */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    z-index: 11; /* Higher layer priority */
+    position: absolute; /* Position absolutely within the container */
+    top: 200%; /* Position at the top */
+    left: 46%; /* Offset horizontally */
+    transform: translate(-50%, -50%) scaleX(-1); /* Flip horizontally */
+}
+
+/* Container for artist profiles */
+.profile-container {
+    margin-top: 400px; /* Add spacing above the container */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    flex-direction: column; /* Stack items vertically */
+    width: 100%; /* Full width */
+    margin-bottom: 40px; /* Add spacing below the container */
+}
+
+/* Individual artist profile */
+.artist-profile {
+    width: 700px; /* Set width */
+    max-width: 100%; /* Ensure it doesn't exceed the container width */
+    margin-bottom: 120px; /* Add spacing below each profile */
+}
+
+/* Reversed layout for artist profile */
+.artist-profile.reverse {
+    width: 670px; /* Slightly smaller width */
+    max-width: 100%; /* Ensure it doesn't exceed the container width */
+}
+
+/* Content inside the artist profile */
+.artist-content {
+    gap: 20px; /* Add spacing between content items */
+    display: flex; /* Use flexbox for layout */
+}
+
+/* Column for artist information */
+.artist-info-column {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: stretch; /* Stretch items to fill the column */
+    line-height: normal; /* Set normal line height */
+    width: 54%; /* Set width */
+    margin-left: 0px; /* No left margin */
+}
+
+/* Adjustments for reversed layout */
+.artist-profile.reverse .artist-info-column {
+    width: 50%; /* Adjust width */
+    margin-left: 20px; /* Add left margin */
+}
+
+/* Artist biography text */
+.artist-bio {
+    color: rgba(0, 0, 0, 1); /* Set text color */
+    font-size: 28px; /* Set font size */
+    font-family: "Old Standard TT", serif; /* Set font family */
+    font-weight: 400; /* Set font weight */
+    text-align: right; /* Align text to the right */
+    margin-top: 78px; /* Add spacing above the biography */
+}
+
+/* Adjustments for reversed layout */
+.artist-profile.reverse .artist-bio {
+    text-align: left; /* Align text to the left */
+    margin-top: 141px; /* Add more spacing above the biography */
+}
+
+/* Artist name styling */
+.artist-name {
+    font-size: 48px; /* Set font size */
+    color: rgba(120, 47, 55, 1); /* Set text color */
+    margin-bottom: 20px; /* Add spacing below the name */
+}
+
+/* Artist description styling */
+.artist-description {
+    font-size: 22px; /* Set font size */
+}
+
+/* Column for artist image */
+.artist-image-column {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: stretch; /* Stretch items to fill the column */
+    line-height: normal; /* Set normal line height */
+    width: 46%; /* Set width */
+    margin-left: 20px; /* Add left margin */
+}
+
+/* Adjustments for reversed layout */
+.artist-profile.reverse .artist-image-column {
+    width: 50%; /* Adjust width */
+    margin-left: 0; /* Remove left margin */
+}
+
+/* Container for artist image */
+.artist-image-container {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    border-radius: 8px; /* Add rounded corners */
+    position: relative; /* Position relative for child elements */
+    aspect-ratio: 0.859; /* Set aspect ratio */
+    flex-grow: 1; /* Allow the container to grow */
+    font-family: "Old Standard TT", serif; /* Set font family */
+    font-size: 20px; /* Set font size */
+    color: rgba(120, 47, 55, 1); /* Set text color */
+    font-weight: 400; /* Set font weight */
+    text-align: center; /* Center-align text */
+    overflow: hidden; /* Hide overflow content */
+    cursor: pointer; /* Change cursor to pointer */
+    max-height: 400px; /* Set maximum height */
+}
+
+/* Adjustments for reversed layout */
+.artist-profile.reverse .artist-image-container {
+    border-radius: 8px; /* Add rounded corners */
+    flex-grow: 1; /* Allow the container to grow */
+    padding-left: 1px; /* Add left padding */
+    padding-right: 1px; /* Add right padding */
+    font-family: "Old Standard TT", serif; /* Set font family */
+    font-size: 20px; /* Set font size */
+    color: rgba(120, 47, 55, 1); /* Set text color */
+    font-weight: 400; /* Set font weight */
+    white-space: nowrap; /* Prevent text wrapping */
+    text-align: center; /* Center-align text */
+    line-height: 3; /* Set line height */
+    width: 100%; /* Full width */
+    overflow: hidden; /* Hide overflow content */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+/* Artist image styling */
+.artist-image {
+    position: absolute; /* Position absolutely within the container */
+    inset: 0; /* Cover the entire container */
+    height: 100%; /* Full height */
+    width: 100%; /* Full width */
+    object-fit: cover; /* Ensure the image covers the container */
+    object-position: center; /* Center the image */
+}
+
+/* Container for artist links */
+.artist-links {
+    position: absolute; /* Position absolutely within the container */
+    inset: 0; /* Cover the entire container */
+    border-radius: 8px; /* Add rounded corners */
+    background-color: rgba(55, 55, 55, 0); /* Transparent background */
+    display: flex; /* Use flexbox for layout */
+    padding-left: 40px; /* Add left padding */
+    padding-right: 40px; /* Add right padding */
+    padding-top: 0; /* No top padding */
+    padding-bottom: 0; /* No bottom padding */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    opacity: 0; /* Initially hidden */
+    pointer-events: auto; /* Enable interactions */
+}
+
+/* Adjustments for reversed layout */
+.artist-profile.reverse .artist-links {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    border-radius: 8px; /* Add rounded corners */
+    position: absolute; /* Position absolutely within the container */
+    inset: 0; /* Cover the entire container */
+    padding-left: 40px; /* Add left padding */
+    padding-right: 40px; /* Add right padding */
+    padding-top: 0; /* No top padding */
+    padding-bottom: 0; /* No bottom padding */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    opacity: 0; /* Initially hidden */
+}
+
+/* Hover effect for artist links */
+.artist-image-container:hover .artist-links {
+    background-color: rgba(55, 55, 55, 0.72); /* Add semi-transparent background */
+    opacity: 1; /* Make links visible */
+}
+
+/* Adjustments for reversed layout on hover */
+.artist-profile.reverse .artist-image-container:hover .artist-links {
+    background-color: rgba(55, 55, 55, 0.72); /* Add semi-transparent background */
+    opacity: 1; /* Make links visible */
+}
+
+/* Styling for individual artist links */
+.artist-link {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color */
+}
+
+/* Styling for personal website link */
+.personal-website {
+    border-radius: 8px; /* Add rounded corners */
+    background-color: rgba(227, 201, 117, 1); /* Set background color */
+    border-color: rgba(120, 47, 55, 1); /* Set border color */
+    border-style: solid; /* Set border style */
+    border-width: 2px; /* Set border width */
+    width: 147px; /* Set width */
+    max-width: 100%; /* Ensure it doesn't exceed the container width */
+    padding-left: 37px; /* Add left padding */
+    padding-right: 37px; /* Add right padding */
+    padding-top: 6px; /* Add top padding */
+    padding-bottom: 6px; /* Add bottom padding */
+    line-height: 20px; /* Set line height */
+    display: block; /* Display as a block element */
+    transform: translateY(20px); /* Move down slightly */
+    transition: transform 0.3s ease; /* Smooth transition for transform */
+}
+
+/* Hover effect for personal website link */
+.artist-image-container:hover .personal-website {
+    transform: translateY(0); /* Move back to original position */
+    text-decoration: none; /* Remove underline */
+    color: #782F37; /* Change text color */
+}
+
+/* Styling for biography button */
+.biography {
+    z-index: 10; /* Set layer priority */
+    border-radius: 8px; /* Add rounded corners */
+    background-color: rgba(227, 201, 117, 1); /* Set background color */
+    border-color: rgba(120, 47, 55, 1); /* Set border color */
+    border-style: solid; /* Set border style */
+    border-width: 2px; /* Set border width */
+    margin-top: 39px; /* Add spacing above the button */
+    margin-bottom: -34px; /* Add negative spacing below the button */
+    width: 147px; /* Set width */
+    max-width: 100%; /* Ensure it doesn't exceed the container width */
+    padding-left: 30px; /* Add left padding */
+    padding-right: 30px; /* Add right padding */
+    padding-bottom: 32px; /* Add bottom padding */
+    white-space: nowrap; /* Prevent text wrapping */
+    line-height: 3; /* Set line height */
+    padding-top: -6px; /* Add negative top padding */
+    display: block; /* Display as a block element */
+    transform: translateY(20px); /* Move down slightly */
+    transition: transform 0.3s ease 0.1s; /* Smooth transition for transform */
+}
+
+/* Hover effect for biography button */
+.artist-image-container:hover .biography {
+    transform: translateY(0); /* Move back to original position */
+    text-decoration: none; /* Remove underline */
+    color: #782F37; /* Change text color */
+}
+
+/* Adjustments for reversed layout */
+.artist-profile.reverse .biography {
+    position: relative; /* Position relative for child elements */
+    z-index: 10; /* Set layer priority */
+    border-radius: 8px; /* Add rounded corners */
+    background-color: #E3C975; /* Set background color */
+    border-color: #782F37; /* Set border color */
+    border-style: solid; /* Set border style */
+    border-width: 2px; /* Set border width */
+    margin-bottom: -46px; /* Add negative spacing below the button */
+    width: 142px; /* Set width */
+    max-width: 100%; /* Ensure it doesn't exceed the container width */
+    padding-left: 27px; /* Add left padding */
+    padding-right: 27px; /* Add right padding */
+    padding-bottom: 30px; /* Add bottom padding */
+    padding-top: -5px; /* Add negative top padding */
+    transform: translateY(20px); /* Move down slightly */
+    transition: transform 0.3s ease; /* Smooth transition for transform */
+}
+
+/* Hover effect for reversed layout biography button */
+.artist-profile.reverse .artist-image-container:hover .biography {
+    transform: translateY(0); /* Move back to original position */
+}
+
+/* Footer styling */
+footer {
+    background-color: #782F37; /* Set background color */
+    color: white; /* Set text color */
+    padding: 20px; /* Add padding */
+    z-index: 11 !important; /* Set layer priority */
+    pointer-events: auto; /* Enable interactions */
+}
+
+/* General container styling */
+.container {
+    margin: auto; /* Center the container */
+    padding: 20px; /* Add padding */
+}
+
+/* Button styling */
+button {
+    background-color: #E3C975; /* Set background color */
+}
+
+/* Media query for screens with a maximum width of 1920px and a maximum height of 934px */
+@media (max-width: 1920px) and (max-height: 934px) {
+    /* Hide the hamburger menu */
+    .navbar-toggler {
+        display: none;
+    }
+
+    /* Divider adjustments */
+    .divider2 {
+        width: 0;
+        height: 0;
+    }
+
+    /* Show the regular navigation bar */
+    .nav-bar {
+        display: block;
+    }
+
+    /* White mask layer adjustments */
+    .white-mask {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 101%; /* Slightly extend the height */
+        background-color: white; /* White mask */
+        z-index: 8; /* Ninth layer */
+        clip-path: polygon(0 0, 41.5% 0, 83% 100%, 0 100%); /* Match the red box */
+        pointer-events: none; 
+    }
+
+    /* Blue box background adjustments */
+    .blue-box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #E3C975; /* Blue box */
+        z-index: 6; /* Seventh layer */
+        clip-path: polygon(0 0, 43% 0, 84% 99%, 0 99%); /* Match the red box */
+        pointer-events: none; 
+    }
+
+    /* Red box background adjustments */
+    .red-box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #E3C975; /* Red box */
+        z-index: 2; /* Third layer */
+        clip-path: polygon(0 0, 44.5% 0, 84% 99%, 0 99%); /* Custom shape */
+        pointer-events: none; 
+    }
+
+    /* Semi-transparent overlay on the red box */
+    .red-box-tint {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent dark overlay */
+        z-index: 3; /* Fourth layer */
+        clip-path: polygon(0 0, 44.5% 0, 84% 99%, 0 99%); /* Match the red box */
+        pointer-events: none; 
+    }
+
+    /* Bottom border adjustments */
+    .border-bottom {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 107%; /* Slightly extend the height */
+        background-color: #E3C975; /* White mask */
+        z-index: 7; /* Eighth layer */
+        clip-path: polygon(80% 94%, 100% 94%, 100% 91.7%, 80% 91.7%); /* Match the red box */
+        pointer-events: none; 
+    }
+}
+
+/* Media query for screens with a maximum width of 1280px and a maximum height of 832px */
+@media (max-width: 1280px) and (max-height: 832px) {
+    /* Hide the hamburger menu */
+    .navbar-toggler {
+        display: none; /* Hamburger menu is hidden */
+    }
+
+    /* Divider adjustments */
+    .divider2 {
+        width: 0; /* Remove the divider width */
+        height: 0; /* Remove the divider height */
+    }
+
+    /* Show the regular navigation bar */
+    .nav-bar {
+        display: block; /* Display the navigation bar */
+    }
+
+    /* Adjust spacing between navigation items */
+    .nav-bar ul li {
+        margin: 0 0px; /* Remove margin between items */
+        padding: 0px 10px; /* Add padding between items */
+    }
+
+    /* Adjust font size for navigation links */
+    .nav-bar ul li a {
+        font-size: 16px; /* Reduce font size for smaller screens */
+    }
+
+    /* General body styling */
+    body {
+        margin: 0; /* Remove default margin */
+        background-color: white; /* Set background color to white */
+        display: flex; /* Use flexbox for layout */
+        justify-content: flex-end; /* Align content to the right */
+        height: auto; /* Allow height to adjust automatically */
+        align-items: center; /* Center content vertically */
+        position: relative; /* Set position for child elements */
+    }
+
+    /* White screen overlay */
+    .white-screen1 {
+        position: absolute; /* Position the overlay absolutely */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+        width: 100%; /* Cover the full width */
+        height: 100%; /* Cover the full height */
+        background-color: white; /* Set background color to white */
+        z-index: 0; /* Set as the first layer */
+        pointer-events: none; /* Disable interactions */
+    }
+
+    /* Red box background adjustments */
+    .red-box {
+        position: absolute; /* Position the red box absolutely */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+        width: 100%; /* Cover the full width */
+        height: 100%; /* Cover the full height */
+        background-color: #E3C975; /* Set red box color */
+        z-index: 2; /* Set as the third layer */
+        clip-path: polygon(0 0, 45% 0, 81.5% 87%, 0 87%); /* Define custom shape */
+        pointer-events: none; /* Disable interactions */
+    }
+
+    /* Semi-transparent overlay on the red box */
+    .red-box-tint {
+        position: absolute; /* Position the overlay absolutely */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+        width: 100%; /* Cover the full width */
+        height: 100%; /* Cover the full height */
+        background-color: rgba(0, 0, 0, 0.3); /* Add semi-transparent dark overlay */
+        z-index: 3; /* Set as the fourth layer */
+        clip-path: polygon(0 0, 45% 0, 81.5% 87%, 0 87%); /* Match the red box shape */
+        pointer-events: none; /* Disable interactions */
+    }
+
+    /* Background image adjustments */
+    .image-container img {
+        position: absolute; /* Position the image absolutely */
+        top: 1%; /* Add slight top margin */
+        left: 0; /* Align to the left */
+        width: 105%; /* Slightly increase the width */
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Display as a block element */
+        z-index: 4 !important; /* Set as the fifth layer */
+        transition: filter 0.3s ease; /* Add smooth transition on hover */
+        clip-path: polygon(0 12%, 100% 12%, 100% 100%, 0 100%); /* Clip the image */
+    }
+
+    /* Darken the image on hover */
+    .image-tint:hover img {
+        filter: brightness(0.7); /* Reduce brightness on hover */
+    }
+
+    /* Button on top of the background image */
+    .events-button {
+        position: absolute; /* Position the button absolutely */
+        top: 50%; /* Center vertically */
+        left: 82%; /* Center horizontally */
+        transform: translate(-50%, -50%); /* Adjust for precise centering */
+        padding: 15px 30px; /* Add padding */
+        font-size: 60px; /* Set font size */
+        background-color: #E3C975; /* Set button background color */
+        color: #782F37; /* Set button text color */
+        border: 2px solid #782F37; /* Add border */
+        font-family: 'Old Standard TT', serif; /* Set font family */
+        font-weight: bold; /* Set font weight */
+        border-radius: 5px; /* Add rounded corners */
+        cursor: pointer; /* Change cursor to pointer */
+        z-index: 10; /* Set as the sixth layer */
+        transition: background-color 0.3s, transform 0.3s; /* Add smooth transitions */
+        text-decoration: none; /* Remove underline */
+        pointer-events: auto; /* Enable interactions */
+    }
+
+    /* Hover effect for the button */
+    .events-button:hover {
+        background-color: #782F37; /* Change background color on hover */
+        transform: translate(-50%, -50%) scale(1.1); /* Scale up on hover */
+        text-decoration: none; /* Remove underline */
+        color: #782F37; /* Keep text color consistent */
+    }
+
+    /* Hover effect for the button inside the image tint */
+    .image-tint:hover .events-button {
+        background-color: #E3C975; /* Change background color on hover */
+        transform: translate(-50%, -50%) scale(1.1); /* Scale up on hover */
+    }
+
+    /* Blue box background adjustments */
+    .blue-box {
+        position: absolute; /* Position the blue box absolutely */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+        width: 100%; /* Cover the full width */
+        height: 100%; /* Cover the full height */
+        background-color: #E3C975; /* Set blue box color */
+        z-index: 6; /* Set as the seventh layer */
+        clip-path: polygon(0 0, 43% 0, 79.5% 87%, 0 87%); /* Match the red box shape */
+        pointer-events: none; /* Disable interactions */
+    }
+
+    /* Bottom border adjustments */
+    .border-bottom {
+        position: absolute; /* Position the border absolutely */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+        width: 100%; /* Cover the full width */
+        height: 100%; /* Cover the full height */
+        background-color: #E3C975; /* Set border color */
+        z-index: 7; /* Set as the eighth layer */
+        clip-path: polygon(77% 85%, 100% 85%, 100% 87.3%, 77% 87.3%); /* Match the red box shape */
+        pointer-events: none; /* Disable interactions */
+    }
+
+    /* White mask adjustments */
+    .white-mask {
+        position: absolute; /* Position the white mask absolutely */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+        width: 100%; /* Cover the full width */
+        height: 100%; /* Cover the full height */
+        background-color: white; /* Set white mask color */
+        z-index: 8; /* Set as the ninth layer */
+        clip-path: polygon(0 0, 41.5% 0, 83% 100%, 0 100%); /* Match the red box shape */
+        pointer-events: none; /* Disable interactions */
+    }
+
+    /* Page content container */
+    .page-content {
+        position: absolute; /* Position the content absolutely */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+        width: 100%; /* Cover the full width */
+        height: 100%; /* Cover the full height */
+        z-index: 9; /* Set as the tenth layer */
+        pointer-events: none; /* Disable interactions */
+    }
+
+    /* Hero section adjustments */
+    .hero-left {
+        flex: 1; /* Allow the hero section to grow */
+        padding: 8% 5%; /* Add padding */
+    }
+
+    /* Hero section heading adjustments */
+    .page-content h1 {
+        font-size: 190px; /* Reduce font size */
+        font-weight: bold; /* Set font weight */
+        margin-bottom: 10px; /* Add bottom margin */
+        color: #782F37; /* Set text color */
+        text-shadow: 3px 3px 0px #E3C975; /* Add text shadow */
+        font-family: 'Old Standard TT', serif; /* Set font family */
+        display: flex; /* Use flexbox for layout */
+        flex-direction: column; /* Stack elements vertically */
+    }
+
+    /* Brand description adjustments */
+    .brand-description {
+        position: absolute; /* Position the description absolutely */
+        top: 30; /* Add top margin */
+        left: 0; /* Align to the left */
+        margin-top: 100px; /* Add top margin */
+        margin-left: 20px; /* Add left margin */
+        font-size: 35px; /* Reduce font size */
+        color: #782F37; /* Set text color */
+        font-family: 'Old Standard TT', serif; /* Set font family */
+        display: flex; /* Use flexbox for layout */
+    }
+
+    /* Divider adjustments */
+    .divider {
+        position: absolute; /* Position the divider absolutely */
+        top: 20; /* Add top margin */
+        left: 0; /* Align to the left */
+        width: 810px; /* Reduce width */
+        height: 80px; /* Set height */
+        background-color: #782F37; /* Set divider color */
+        margin-bottom: 20px; /* Add bottom margin */
+        clip-path: polygon(0 0, 93% 0, 100% 100%, 0% 100%); /* Define custom shape */
+        border-bottom: 8px solid #E3C975; /* Add bottom border */
+    }
+
+    /* Enable scrolling */
+    html, body {
+        overflow: auto; /* Allow scrolling */
+        min-height: 100vh; /* Ensure full content visibility */
+    }
+    
+    /* Separator sections container */
+    .separator-section {
+        margin-top: 660px; /* Add spacing above the separator section */
+        position: relative; /* Position relative for child elements */
+    }
+
+    /* Main separator symbol */
+    .separator-symbol {
+        transform: rotate(-0.0009993530981313888rad); /* Slight rotation */
+        color: #782F37; /* Dark red color */
+        font-size: 220px; /* Large font size */
+        font-family: "Old Standard TT"; /* Serif font */
+        font-weight: italic; /* Italic text */
+        text-align: center; /* Center-align text */
+        display: flex; /* Use flexbox for layout */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        z-index: 10; /* Layer priority */
+        position: absolute; /* Position absolutely within the container */
+        bottom: 0; /* Align to the bottom */
+        left: 46%; /* Center horizontally */
+        transform: translate(-50%, -50%); /* Adjust position for centering */
+    }
+
+    /* Secondary separator symbol */
+    .separator-symbol2 {
+        transform: rotate(-0.0009993530981313888rad); /* Slight rotation */
+        color: #E3C975; /* Light gold color */
+        font-size: 190px; /* Slightly smaller font size */
+        font-family: "Old Standard TT"; /* Serif font */
+        font-weight: italic; /* Italic text */
+        text-align: center; /* Center-align text */
+        display: flex; /* Use flexbox for layout */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        z-index: 11; /* Higher layer priority */
+        position: absolute; /* Position absolutely within the container */
+        bottom: 35%; /* Position slightly above the main symbol */
+        left: 46%; /* Center horizontally */
+        transform: translate(-50%, -50%); /* Adjust position for centering */
+    }
+
+    /* Reversed main separator symbol */
+    .separator-symbol-reverse {
+        transform: rotate(-0.0009993530981313888rad); /* Slight rotation */
+        color: #782F37; /* Dark red color */
+        font-size: 220px; /* Large font size */
+        font-family: "Old Standard TT"; /* Serif font */
+        font-weight: italic; /* Italic text */
+        text-align: center; /* Center-align text */
+        display: flex; /* Use flexbox for layout */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        z-index: 11; /* Higher layer priority */
+        position: absolute; /* Position absolutely within the container */
+        bottom: 0%; /* Align to the bottom */
+        left: 56.100%; /* Offset horizontally */
+        transform: translate(-50%, -50%) scaleX(-1); /* Flip horizontally */
+    }
+
+    /* Reversed secondary separator symbol */
+    .separator-symbol-reverse2 {
+        transform: rotate(-0.0009993530981313888rad); /* Slight rotation */
+        color: #E3C975; /* Light gold color */
+        font-size: 190px; /* Slightly smaller font size */
+        font-family: "Old Standard TT"; /* Serif font */
+        font-weight: italic; /* Italic text */
+        text-align: center; /* Center-align text */
+        display: flex; /* Use flexbox for layout */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        z-index: 11; /* Higher layer priority */
+        position: absolute; /* Position absolutely within the container */
+        bottom: 35%; /* Position slightly above the reversed main symbol */
+        left: 56.100%; /* Offset horizontally */
+        transform: translate(-50%, -50%) scaleX(-1); /* Flip horizontally */
+    }
+
+    /* Separator information text */
+    .separator-info {
+        font-size: 40px; /* Font size for the text */
+        color: #782F37; /* Dark red color */
+        font-family: "Old Standard TT", serif; /* Serif font */
+        text-align: center; /* Center-align text */
+        margin-top: 20px; /* Add spacing above the text */
+    }
+
+    /* Main separator symbol at the top */
+    .separator-symbol3 {
+        transform: rotate(-0.0009993530981313888rad); /* Slight rotation */
+        color: #782F37; /* Dark red color */
+        font-size: 220px; /* Large font size */
+        font-family: "Old Standard TT"; /* Serif font */
+        font-weight: italic; /* Italic text */
+        text-align: center; /* Center-align text */
+        display: flex; /* Use flexbox for layout */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        z-index: 10; /* Layer priority */
+        position: absolute; /* Position absolutely within the container */
+        top: 200%; /* Position at the top */
+        left: 56.100%; /* Offset horizontally */
+        transform: translate(-50%, -50%); /* Adjust position for centering */
+    }
+
+    /* Secondary separator symbol at the top */
+    .separator-symbol4 {
+        transform: rotate(-0.0009993530981313888rad); /* Slight rotation */
+        color: #E3C975; /* Light gold color */
+        font-size: 190px; /* Slightly smaller font size */
+        font-family: "Old Standard TT"; /* Serif font */
+        font-weight: italic; /* Italic text */
+        text-align: center; /* Center-align text */
+        display: flex; /* Use flexbox for layout */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        z-index: 11; /* Higher layer priority */
+        position: absolute; /* Position absolutely within the container */
+        top: 200%; /* Position at the top */
+        left: 56.100%; /* Offset horizontally */
+        transform: translate(-50%, -50%); /* Adjust position for centering */
+    }
+
+    /* Reversed main separator symbol at the top */
+    .separator-symbol-reverse3 {
+        transform: rotate(-0.0009993530981313888rad); /* Slight rotation */
+        color: #782F37; /* Dark red color */
+        font-size: 220px; /* Large font size */
+        font-family: "Old Standard TT"; /* Serif font */
+        font-weight: italic; /* Italic text */
+        text-align: center; /* Center-align text */
+        display: flex; /* Use flexbox for layout */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        z-index: 11; /* Higher layer priority */
+        position: absolute; /* Position absolutely within the container */
+        top: 200%; /* Position at the top */
+        left: 46%; /* Offset horizontally */
+        transform: translate(-50%, -50%) scaleX(-1); /* Flip horizontally */
+    }
+
+    /* Reversed secondary separator symbol at the top */
+    .separator-symbol-reverse4 {
+        transform: rotate(-0.0009993530981313888rad); /* Slight rotation */
+        color: #E3C975; /* Light gold color */
+        font-size: 190px; /* Slightly smaller font size */
+        font-family: "Old Standard TT"; /* Serif font */
+        font-weight: italic; /* Italic text */
+        text-align: center; /* Center-align text */
+        display: flex; /* Use flexbox for layout */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        z-index: 11; /* Higher layer priority */
+        position: absolute; /* Position absolutely within the container */
+        top: 200%; /* Position at the top */
+        left: 46%; /* Offset horizontally */
+        transform: translate(-50%, -50%) scaleX(-1); /* Flip horizontally */
+    }
+    
+    /* Container for artist profiles */
+    .profile-container {
+        margin-top: 400px; /* Add spacing above the container */
+        display: flex; /* Use flexbox for layout */
+        justify-content: center; /* Center content horizontally */
+        align-items: center; /* Center content vertically */
+        flex-direction: column; /* Stack items vertically */
+        width: 100%; /* Full width */
+        margin-bottom: 40px; /* Add spacing below the container */
+    }
+
+    /* Individual artist profile */
+    .artist-profile {
+        width: 700px; /* Set width */
+        max-width: 100%; /* Ensure it doesn't exceed the container width */
+        margin-bottom: 120px; /* Add spacing below each profile */
+    }
+
+    /* Reversed layout for artist profile */
+    .artist-profile.reverse {
+        width: 670px; /* Slightly smaller width */
+        max-width: 100%; /* Ensure it doesn't exceed the container width */
+    }
+
+    /* Content inside the artist profile */
+    .artist-content {
+        gap: 20px; /* Add spacing between content items */
+        display: flex; /* Use flexbox for layout */
+    }
+
+    /* Column for artist information */
+    .artist-info-column {
+        display: flex; /* Use flexbox for layout */
+        flex-direction: column; /* Stack items vertically */
+        align-items: stretch; /* Stretch items to fill the column */
+        line-height: normal; /* Set normal line height */
+        width: 54%; /* Set width */
+        margin-left: 0px; /* No left margin */
+    }
+
+    /* Adjustments for reversed layout */
+    .artist-profile.reverse .artist-info-column {
+        width: 50%; /* Adjust width */
+        margin-left: 20px; /* Add left margin */
+    }
+
+    /* Artist biography text */
+    .artist-bio {
+        color: rgba(0, 0, 0, 1); /* Set text color */
+        font-size: 28px; /* Set font size */
+        font-family: "Old Standard TT", serif; /* Set font family */
+        font-weight: 400; /* Set font weight */
+        text-align: right; /* Align text to the right */
+        margin-top: 78px; /* Add spacing above the biography */
+    }
+
+    /* Adjustments for reversed layout */
+    .artist-profile.reverse .artist-bio {
+        text-align: left; /* Align text to the left */
+        margin-top: 141px; /* Add more spacing above the biography */
+    }
+
+    /* Artist name styling */
+    .artist-name {
+        font-size: 48px; /* Set font size */
+        color: rgba(120, 47, 55, 1); /* Set text color */
+        margin-bottom: 20px; /* Add spacing below the name */
+    }
+
+    /* Artist description styling */
+    .artist-description {
+        font-size: 22px; /* Set font size */
+    }
+
+    /* Column for artist image */
+    .artist-image-column {
+        display: flex; /* Use flexbox for layout */
+        flex-direction: column; /* Stack items vertically */
+        align-items: stretch; /* Stretch items to fill the column */
+        line-height: normal; /* Set normal line height */
+        width: 46%; /* Set width */
+        margin-left: 20px; /* Add left margin */
+    }
+
+    /* Adjustments for reversed layout */
+    .artist-profile.reverse .artist-image-column {
+        width: 50%; /* Adjust width */
+        margin-left: 0; /* Remove left margin */
+    }
+
+    /* Container for artist image */
+    .artist-image-container {
+        display: flex; /* Use flexbox for layout */
+        flex-direction: column; /* Stack items vertically */
+        border-radius: 8px; /* Add rounded corners */
+        position: relative; /* Position relative for child elements */
+        aspect-ratio: 0.859; /* Set aspect ratio */
+        flex-grow: 1; /* Allow the container to grow */
+        font-family: "Old Standard TT", serif; /* Set font family */
+        font-size: 20px; /* Set font size */
+        color: rgba(120, 47, 55, 1); /* Set text color */
+        font-weight: 400; /* Set font weight */
+        text-align: center; /* Center-align text */
+        overflow: hidden; /* Hide overflow content */
+        cursor: pointer; /* Change cursor to pointer */
+        max-height: 400px; /* Set maximum height */
+    }
+
+    /* Adjustments for reversed layout */
+    .artist-profile.reverse .artist-image-container {
+        border-radius: 8px; /* Add rounded corners */
+        flex-grow: 1; /* Allow the container to grow */
+        padding-left: 1px; /* Add left padding */
+        padding-right: 1px; /* Add right padding */
+        font-family: "Old Standard TT", serif; /* Set font family */
+        font-size: 20px; /* Set font size */
+        color: rgba(120, 47, 55, 1); /* Set text color */
+        font-weight: 400; /* Set font weight */
+        white-space: nowrap; /* Prevent text wrapping */
+        text-align: center; /* Center-align text */
+        line-height: 3; /* Set line height */
+        width: 100%; /* Full width */
+        overflow: hidden; /* Hide overflow content */
+        cursor: pointer; /* Change cursor to pointer */
+    }
+
+    /* Artist image styling */
+    .artist-image {
+        position: absolute; /* Position absolutely within the container */
+        inset: 0; /* Cover the entire container */
+        height: 100%; /* Full height */
+        width: 100%; /* Full width */
+        object-fit: cover; /* Ensure the image covers the container */
+        object-position: center; /* Center the image */
+    }
+
+    /* Container for artist links */
+    .artist-links {
+        position: absolute; /* Position absolutely within the container */
+        inset: 0; /* Cover the entire container */
+        border-radius: 8px; /* Add rounded corners */
+        background-color: rgba(55, 55, 55, 0); /* Transparent background */
+        display: flex; /* Use flexbox for layout */
+        padding-left: 40px; /* Add left padding */
+        padding-right: 40px; /* Add right padding */
+        padding-top: 0; /* No top padding */
+        padding-bottom: 0; /* No bottom padding */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        justify-content: center; /* Center items vertically */
+        transition: background-color 0.3s ease; /* Smooth transition for background color */
+        opacity: 0; /* Initially hidden */
+        pointer-events: auto; /* Enable interactions */
+    }
+
+    /* Adjustments for reversed layout */
+    .artist-profile.reverse .artist-links {
+        display: flex; /* Use flexbox for layout */
+        flex-direction: column; /* Stack items vertically */
+        border-radius: 8px; /* Add rounded corners */
+        position: absolute; /* Position absolutely within the container */
+        inset: 0; /* Cover the entire container */
+        padding-left: 40px; /* Add left padding */
+        padding-right: 40px; /* Add right padding */
+        padding-top: 0; /* No top padding */
+        padding-bottom: 0; /* No bottom padding */
+        align-items: center; /* Center items horizontally */
+        justify-content: center; /* Center items vertically */
+        transition: background-color 0.3s ease; /* Smooth transition for background color */
+        opacity: 0; /* Initially hidden */
+    }
+
+    /* Hover effect for artist links */
+    .artist-image-container:hover .artist-links {
+        background-color: rgba(55, 55, 55, 0.72); /* Add semi-transparent background */
+        opacity: 1; /* Make links visible */
+    }
+
+    /* Adjustments for reversed layout on hover */
+    .artist-profile.reverse .artist-image-container:hover .artist-links {
+        background-color: rgba(55, 55, 55, 0.72); /* Add semi-transparent background */
+        opacity: 1; /* Make links visible */
+    }
+
+    /* Styling for individual artist links */
+    .artist-link {
+        text-decoration: none; /* Remove underline */
+        color: inherit; /* Inherit text color */
+    }
+
+    /* Styling for personal website link */
+    .personal-website {
+        border-radius: 8px; /* Add rounded corners */
+        background-color: rgba(227, 201, 117, 1); /* Set background color */
+        border-color: rgba(120, 47, 55, 1); /* Set border color */
+        border-style: solid; /* Set border style */
+        border-width: 2px; /* Set border width */
+        width: 147px; /* Set width */
+        max-width: 100%; /* Ensure it doesn't exceed the container width */
+        padding-left: 37px; /* Add left padding */
+        padding-right: 37px; /* Add right padding */
+        padding-top: 6px; /* Add top padding */
+        padding-bottom: 6px; /* Add bottom padding */
+        line-height: 20px; /* Set line height */
+        display: block; /* Display as a block element */
+        transform: translateY(20px); /* Move down slightly */
+        transition: transform 0.3s ease; /* Smooth transition for transform */
+    }
+
+    /* Hover effect for personal website link */
+    .artist-image-container:hover .personal-website {
+        transform: translateY(0); /* Move back to original position */
+        text-decoration: none; /* Remove underline */
+        color: #782F37; /* Change text color */
+    }
+
+    /* Styling for biography button */
+    .biography {
+        z-index: 10; /* Set layer priority */
+        border-radius: 8px; /* Add rounded corners */
+        background-color: rgba(227, 201, 117, 1); /* Set background color */
+        border-color: rgba(120, 47, 55, 1); /* Set border color */
+        border-style: solid; /* Set border style */
+        border-width: 2px; /* Set border width */
+        margin-top: 39px; /* Add spacing above the button */
+        margin-bottom: -34px; /* Add negative spacing below the button */
+        width: 147px; /* Set width */
+        max-width: 100%; /* Ensure it doesn't exceed the container width */
+        padding-left: 30px; /* Add left padding */
+        padding-right: 30px; /* Add right padding */
+        padding-bottom: 32px; /* Add bottom padding */
+        white-space: nowrap; /* Prevent text wrapping */
+        line-height: 3; /* Set line height */
+        padding-top: -6px; /* Add negative top padding */
+        display: block; /* Display as a block element */
+        transform: translateY(20px); /* Move down slightly */
+        transition: transform 0.3s ease 0.1s; /* Smooth transition for transform */
+    }
+
+    /* Hover effect for biography button */
+    .artist-image-container:hover .biography {
+        transform: translateY(0); /* Move back to original position */
+        text-decoration: none; /* Remove underline */
+        color: #782F37; /* Change text color */
+    }
+
+    /* Adjustments for reversed layout */
+    .artist-profile.reverse .biography {
+        position: relative; /* Position relative for child elements */
+        z-index: 10; /* Set layer priority */
+        border-radius: 8px; /* Add rounded corners */
+        background-color: #E3C975; /* Set background color */
+        border-color: #782F37; /* Set border color */
+        border-style: solid; /* Set border style */
+        border-width: 2px; /* Set border width */
+        margin-bottom: -46px; /* Add negative spacing below the button */
+        width: 142px; /* Set width */
+        max-width: 100%; /* Ensure it doesn't exceed the container width */
+        padding-left: 27px; /* Add left padding */
+        padding-right: 27px; /* Add right padding */
+        padding-bottom: 30px; /* Add bottom padding */
+        padding-top: -5px; /* Add negative top padding */
+        transform: translateY(20px); /* Move down slightly */
+        transition: transform 0.3s ease; /* Smooth transition for transform */
+    }
+
+    /* Hover effect for reversed layout biography button */
+    .artist-profile.reverse .artist-image-container:hover .biography {
+        transform: translateY(0); /* Move back to original position */
+    }
+
+    /* Footer styling */
+    footer {
+        background-color: #782F37; /* Set background color */
+        color: white; /* Set text color */
+        padding: 20px; /* Add padding */
+        z-index: 11; /* Set layer priority */
+        pointer-events: auto; /* Enable interactions */
+    }
+
+    /* General container styling */
+    .container {
+        margin: auto; /* Center the container */
+        padding: 20px; /* Add padding */
+    }
+
+    /* Button styling */
+    button {
+        background-color: #E3C975; /* Set background color */
+    }
+}
+
+/* Media query for screens with a maximum width of 1024px and a maximum height of 1368px */
+@media (max-width: 1024px) and (max-height: 1368px) {
+    /* Hide the regular navigation bar */
+    .nav-bar {
+        display: none;
+    }
+
+    /* Show the hero section navigation */
+    .nav-bar .container .hero-home {
+        display: block;
+    }
+
+    /* Show the hamburger menu */
+    .navbar-toggler {
+        display: block;
+        position: absolute;
+        top: 30px; /* Position the hamburger menu */
+        right: 10px;
+        z-index: 1100;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 35px; /* Adjust size of the icon */
+        color: black; /* Default color */
+        transition: color 0.3s ease-in-out;
+    }
+
+    /* Adjust the position of the overlay menu */
+    #overlay-menu ul {
+        position: absolute;
+        top: 10%;
+        left: 38%; /* Center the menu */
+    }
+
+    /* Style the overlay menu links */
+    #overlay-menu ul li a {
+        color: black;
+        font-size: 50px; /* Increase font size for better visibility */
+        font-weight: bold;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    /* Add spacing between overlay menu items */
+    #overlay-menu ul li {
+        margin: 30px 0;
+    }
+
+    /* General body styling */
+    body {
+        margin: 0;
+        background-color: white;
+        display: flex;
+        justify-content: flex-end; /* Align the image to the right */
+        height: auto;
+        align-items: center;
+        position: relative;
+    }
+
+    /* White screen overlay */
+    .white-screen1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        z-index: 0; /* First layer */
+        pointer-events: none;
+    }
+
+    /* Red box background adjustments */
+    .red-box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #E3C975; /* Red box */
+        z-index: 2; /* Third layer */
+        clip-path: polygon(0 0, 42% 0, 72% 50%, 0 50%); /* Custom shape */
+        pointer-events: none;
+    }
+
+    /* Semi-transparent overlay on the red box */
+    .red-box-tint {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent dark overlay */
+        z-index: 3; /* Fourth layer */
+        clip-path: polygon(0 0, 42% 0, 72% 50%, 0 50%); /* Match the red box */
+        pointer-events: none;
+    }
+
+    /* Background image adjustments */
+    .image-container img {
+        position: absolute;
+        top: 1%;
+        left: 0;
+        width: 136%; /* Increase width for better fit */
+        height: auto;
+        display: block;
+        z-index: 4 !important; /* Fifth layer */
+        transition: filter 0.3s ease; /* Smooth transition on hover */
+        clip-path: polygon(0 12%, 100% 12%, 100% 91%, 0 91%); /* Clip the image */
+    }
+
+    /* Darken the image on hover */
+    .image-tint:hover img {
+        filter: brightness(0.7); /* Reduce brightness on hover */
+    }
+
+    /* Button on top of the background image */
+    .events-button {
+        position: absolute;
+        top: 30%; /* Adjust vertical position */
+        left: 80%; /* Adjust horizontal position */
+        transform: translate(-50%, -50%); /* Center the button */
+        padding: 15px 30px;
+        font-size: 50px; /* Adjust font size */
+        background-color: #E3C975; /* Button background color */
+        color: #782F37; /* Button text color */
+        border: 2px solid #782F37; /* Add border */
+        font-family: 'Old Standard TT', serif;
+        font-weight: bold;
+        border-radius: 5px; /* Add rounded corners */
+        cursor: pointer;
+        z-index: 10; /* Sixth layer */
+        transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+        text-decoration: none;
+        pointer-events: auto;
+    }
+
+    /* Hover effect for the button */
+    .events-button:hover {
+        background-color: #782F37; /* Change background color on hover */
+        transform: translate(-50%, -50%) scale(1.1); /* Scale up on hover */
+        text-decoration: none;
+        color: #782F37; /* Keep text color consistent */
+    }
+
+    /* Hover effect for the button inside the image tint */
+    .image-tint:hover .events-button {
+        background-color: #E3C975; /* Change background color on hover */
+        transform: translate(-50%, -50%) scale(1.1); /* Scale up on hover */
+    }
+
+    /* Blue box background adjustments */
+    .blue-box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #E3C975; /* Blue box */
+        z-index: 6; /* Seventh layer */
+        clip-path: polygon(9% 0, 40% 0, 71% 50%, 0 50%); /* Match the red box */
+        pointer-events: none;
+    }
+
+    /* Bottom border adjustments */
+    .border-bottom {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #E3C975; /* Border color */
+        z-index: 7; /* Eighth layer */
+        clip-path: polygon(50% 50%, 100% 50%, 100% 51.3%, 50% 51.3%); /* Match the red box */
+        pointer-events: none;
+    }
+
+    /* White mask adjustments */
+    .white-mask {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: white; /* White mask */
+        z-index: 8; /* Ninth layer */
+        clip-path: polygon(0 0, 38% 0, 100% 100%, 0 100%); /* Match the red box */
+        pointer-events: none;
+    }
+
+    /* Page content container */
+    .page-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9; /* Tenth layer */
+        pointer-events: none;
+    }
+
+    /* Hero section adjustments */
+    .hero-left {
+        flex: 1;
+        padding: 10% 2%; /* Adjust padding */
+    }
+
+    /* Hero section heading adjustments */
+    .page-content h1 {
+        font-size: 120px; /* Adjust font size */
+        font-weight: bold;
+        margin-bottom: 10px; /* Add bottom margin */
+        color: #782F37; /* Text color */
+        text-shadow: 3px 3px 0px #E3C975; /* Add text shadow */
+        font-family: 'Old Standard TT', serif;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Brand description adjustments */
+    .brand-description {
+        position: absolute;
+        top: 30; /* Adjust top position */
+        left: 0;
+        margin-top: 100px; /* Add top margin */
+        margin-left: 20px; /* Add left margin */
+        font-size: 30px; /* Adjust font size */
+        color: #782F37; /* Text color */
+        font-family: 'Old Standard TT', serif;
+        display: flex;
+    }
+
+    /* Divider adjustments */
+    .divider {
+        position: absolute;
+        top: 20; /* Adjust top position */
+        left: 0;
+        width: 500px; /* Adjust width */
+        height: 80px; /* Adjust height */
+        background-color: #782F37; /* Divider color */
+        margin-bottom: 20px; /* Add bottom margin */
+        clip-path: polygon(0 0, 93% 0, 100% 100%, 0% 100%); /* Define custom shape */
+        border-bottom: 8px solid #E3C975; /* Add bottom border */
+    }
+
+    /* Enable scrolling */
+    html, body {
+        overflow: auto; /* Allow scrolling */
+        min-height: 100vh; /* Ensure full content visibility */
+    }
+    
+    /* Separator sections container */
+    .separator-section {
+        margin-top: 660px; /* Add spacing above the separator section */
+        position: relative; /* Position relative for child elements */
+    }
+
+    /* Main separator symbol */
+    .separator-symbol {
+        transform: rotate(-0.0009993530981313888rad); /* Slight rotation */
+        color: #782F37; /* Dark red color */
+        font-size: 220px; /* Large font size */
+        font-family: "Old Standard TT"; /* Serif font */
+        font-weight: italic; /* Italic text */
+        text-align: center; /* Center-align text */
+        display: flex; /* Use flexbox for layout */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        z-index: 10; /* Layer priority */
+        position: absolute; /* Position absolutely within the container */
+        bottom: 0; /* Align to the bottom */
+        left: 45%; /* Center horizontally */
+        transform: translate(-50%, -50%); /* Adjust position for centering */
+    }
+
+    /* Secondary separator symbol */
+    .separator-symbol2 {
+        transform: rotate(-0.0009993530981313888rad); /* Slight rotation */
+        color: #E3C975; /* Light gold color */
+        font-size: 190px; /* Slightly smaller font size */
+        font-family: "Old Standard TT"; /* Serif font */
+        font-weight: italic; /* Italic text */
+        text-align: center; /* Center-align text */
+        display: flex; /* Use flexbox for layout */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        z-index: 11; /* Higher layer priority */
+        position: absolute; /* Position absolutely within the container */
+        bottom: 35%; /* Position slightly above the main symbol */
+        left: 45%; /* Center horizontally */
+        transform: translate(-50%, -50%); /* Adjust position for centering */
+    }
+
+    /* Reversed main separator symbol */
+    .separator-symbol-reverse {
+        transform: rotate(-0.0009993530981313888rad); /* Slight rotation */
+        color: #782F37; /* Dark red color */
+        font-size: 220px; /* Large font size */
+        font-family: "Old Standard TT"; /* Serif font */
+        font-weight: italic; /* Italic text */
+        text-align: center; /* Center-align text */
+        display: flex; /* Use flexbox for layout */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        z-index: 11; /* Higher layer priority */
+        position: absolute; /* Position absolutely within the container */
+        bottom: 0%; /* Align to the bottom */
+        left: 57.100%; /* Offset horizontally */
+        transform: translate(-50%, -50%) scaleX(-1); /* Flip horizontally */
+    }
+
+    /* Reversed secondary separator symbol */
+    .separator-symbol-reverse2 {
+        transform: rotate(-0.0009993530981313888rad); /* Slight rotation */
+        color: #E3C975; /* Light gold color */
+        font-size: 190px; /* Slightly smaller font size */
+        font-family: "Old Standard TT"; /* Serif font */
+        font-weight: italic; /* Italic text */
+        text-align: center; /* Center-align text */
+        display: flex; /* Use flexbox for layout */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        z-index: 11; /* Higher layer priority */
+        position: absolute; /* Position absolutely within the container */
+        bottom: 35%; /* Position slightly above the reversed main symbol */
+        left: 57.100%; /* Offset horizontally */
+        transform: translate(-50%, -50%) scaleX(-1); /* Flip horizontally */
+    }
+
+    /* Separator information text */
+    .separator-info {
+        font-size: 40px; /* Font size for the text */
+        color: #782F37; /* Dark red color */
+        font-family: "Old Standard TT", serif; /* Serif font */
+        text-align: center; /* Center-align text */
+        margin-top: 20px; /* Add spacing above the text */
+    }
+
+    /* Main separator symbol at the top */
+    .separator-symbol3 {
+        transform: rotate(-0.0009993530981313888rad); /* Slight rotation */
+        color: #782F37; /* Dark red color */
+        font-size: 220px; /* Large font size */
+        font-family: "Old Standard TT"; /* Serif font */
+        font-weight: italic; /* Italic text */
+        text-align: center; /* Center-align text */
+        display: flex; /* Use flexbox for layout */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        z-index: 10; /* Layer priority */
+        position: absolute; /* Position absolutely within the container */
+        top: 200%; /* Position at the top */
+        left: 57.100%; /* Offset horizontally */
+        transform: translate(-50%, -50%); /* Adjust position for centering */
+    }
+
+    /* Secondary separator symbol at the top */
+    .separator-symbol4 {
+        transform: rotate(-0.0009993530981313888rad); /* Slight rotation */
+        color: #E3C975; /* Light gold color */
+        font-size: 190px; /* Slightly smaller font size */
+        font-family: "Old Standard TT"; /* Serif font */
+        font-weight: italic; /* Italic text */
+        text-align: center; /* Center-align text */
+        display: flex; /* Use flexbox for layout */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        z-index: 11; /* Higher layer priority */
+        position: absolute; /* Position absolutely within the container */
+        top: 200%; /* Position at the top */
+        left: 57.100%; /* Offset horizontally */
+        transform: translate(-50%, -50%); /* Adjust position for centering */
+    }
+
+    /* Reversed main separator symbol at the top */
+    .separator-symbol-reverse3 {
+        transform: rotate(-0.0009993530981313888rad); /* Slight rotation */
+        color: #782F37; /* Dark red color */
+        font-size: 220px; /* Large font size */
+        font-family: "Old Standard TT"; /* Serif font */
+        font-weight: italic; /* Italic text */
+        text-align: center; /* Center-align text */
+        display: flex; /* Use flexbox for layout */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        z-index: 11; /* Higher layer priority */
+        position: absolute; /* Position absolutely within the container */
+        top: 200%; /* Position at the top */
+        left: 45%; /* Offset horizontally */
+        transform: translate(-50%, -50%) scaleX(-1); /* Flip horizontally */
+    }
+
+    /* Reversed secondary separator symbol at the top */
+    .separator-symbol-reverse4 {
+        transform: rotate(-0.0009993530981313888rad); /* Slight rotation */
+        color: #E3C975; /* Light gold color */
+        font-size: 190px; /* Slightly smaller font size */
+        font-family: "Old Standard TT"; /* Serif font */
+        font-weight: italic; /* Italic text */
+        text-align: center; /* Center-align text */
+        display: flex; /* Use flexbox for layout */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        z-index: 11; /* Higher layer priority */
+        position: absolute; /* Position absolutely within the container */
+        top: 200%; /* Position at the top */
+        left: 45%; /* Offset horizontally */
+        transform: translate(-50%, -50%) scaleX(-1); /* Flip horizontally */
+    }
+    
+    /* Container for artist profiles */
+    .profile-container {
+        margin-top: 400px; /* Add spacing above the container */
+        display: flex; /* Use flexbox for layout */
+        justify-content: center; /* Center content horizontally */
+        align-items: center; /* Center content vertically */
+        flex-direction: column; /* Stack items vertically */
+        width: 100%; /* Full width */
+        margin-bottom: 40px; /* Add spacing below the container */
+    }
+
+    /* Individual artist profile */
+    .artist-profile {
+        width: 700px; /* Set width */
+        max-width: 100%; /* Ensure it doesn't exceed the container width */
+        margin-bottom: 120px; /* Add spacing below each profile */
+    }
+
+    /* Reversed layout for artist profile */
+    .artist-profile.reverse {
+        width: 670px; /* Slightly smaller width */
+        max-width: 100%; /* Ensure it doesn't exceed the container width */
+    }
+
+    /* Content inside the artist profile */
+    .artist-content {
+        gap: 20px; /* Add spacing between content items */
+        display: flex; /* Use flexbox for layout */
+    }
+
+    /* Column for artist information */
+    .artist-info-column {
+        display: flex; /* Use flexbox for layout */
+        flex-direction: column; /* Stack items vertically */
+        align-items: stretch; /* Stretch items to fill the column */
+        line-height: normal; /* Set normal line height */
+        width: 54%; /* Set width */
+        margin-left: 0px; /* No left margin */
+    }
+
+    /* Adjustments for reversed layout */
+    .artist-profile.reverse .artist-info-column {
+        width: 50%; /* Adjust width */
+        margin-left: 20px; /* Add left margin */
+    }
+
+    /* Artist biography text */
+    .artist-bio {
+        color: rgba(0, 0, 0, 1); /* Set text color */
+        font-size: 28px; /* Set font size */
+        font-family: "Old Standard TT", serif; /* Set font family */
+        font-weight: 400; /* Set font weight */
+        text-align: right; /* Align text to the right */
+        margin-top: 78px; /* Add spacing above the biography */
+    }
+
+    /* Adjustments for reversed layout */
+    .artist-profile.reverse .artist-bio {
+        text-align: left; /* Align text to the left */
+        margin-top: 141px; /* Add more spacing above the biography */
+    }
+
+    /* Artist name styling */
+    .artist-name {
+        font-size: 48px; /* Set font size */
+        color: rgba(120, 47, 55, 1); /* Set text color */
+        margin-bottom: 20px; /* Add spacing below the name */
+    }
+
+    /* Artist description styling */
+    .artist-description {
+        font-size: 22px; /* Set font size */
+    }
+
+    /* Column for artist image */
+    .artist-image-column {
+        display: flex; /* Use flexbox for layout */
+        flex-direction: column; /* Stack items vertically */
+        align-items: stretch; /* Stretch items to fill the column */
+        line-height: normal; /* Set normal line height */
+        width: 46%; /* Set width */
+        margin-left: 20px; /* Add left margin */
+    }
+
+    /* Adjustments for reversed layout */
+    .artist-profile.reverse .artist-image-column {
+        width: 50%; /* Adjust width */
+        margin-left: 0; /* Remove left margin */
+    }
+
+    /* Container for artist image */
+    .artist-image-container {
+        display: flex; /* Use flexbox for layout */
+        flex-direction: column; /* Stack items vertically */
+        border-radius: 8px; /* Add rounded corners */
+        position: relative; /* Position relative for child elements */
+        aspect-ratio: 0.859; /* Set aspect ratio */
+        flex-grow: 1; /* Allow the container to grow */
+        font-family: "Old Standard TT", serif; /* Set font family */
+        font-size: 20px; /* Set font size */
+        color: rgba(120, 47, 55, 1); /* Set text color */
+        font-weight: 400; /* Set font weight */
+        text-align: center; /* Center-align text */
+        overflow: hidden; /* Hide overflow content */
+        cursor: pointer; /* Change cursor to pointer */
+        max-height: 400px; /* Set maximum height */
+    }
+
+    /* Adjustments for reversed layout */
+    .artist-profile.reverse .artist-image-container {
+        border-radius: 8px; /* Add rounded corners */
+        flex-grow: 1; /* Allow the container to grow */
+        padding-left: 1px; /* Add left padding */
+        padding-right: 1px; /* Add right padding */
+        font-family: "Old Standard TT", serif; /* Set font family */
+        font-size: 20px; /* Set font size */
+        color: rgba(120, 47, 55, 1); /* Set text color */
+        font-weight: 400; /* Set font weight */
+        white-space: nowrap; /* Prevent text wrapping */
+        text-align: center; /* Center-align text */
+        line-height: 3; /* Set line height */
+        width: 100%; /* Full width */
+        overflow: hidden; /* Hide overflow content */
+        cursor: pointer; /* Change cursor to pointer */
+    }
+
+    /* Artist image styling */
+    .artist-image {
+        position: absolute; /* Position absolutely within the container */
+        inset: 0; /* Cover the entire container */
+        height: 100%; /* Full height */
+        width: 100%; /* Full width */
+        object-fit: cover; /* Ensure the image covers the container */
+        object-position: center; /* Center the image */
+    }
+
+    /* Container for artist links */
+    .artist-links {
+        position: absolute; /* Position absolutely within the container */
+        inset: 0; /* Cover the entire container */
+        border-radius: 8px; /* Add rounded corners */
+        background-color: rgba(55, 55, 55, 0); /* Transparent background */
+        display: flex; /* Use flexbox for layout */
+        padding-left: 40px; /* Add left padding */
+        padding-right: 40px; /* Add right padding */
+        padding-top: 0; /* No top padding */
+        padding-bottom: 0; /* No bottom padding */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        justify-content: center; /* Center items vertically */
+        transition: background-color 0.3s ease; /* Smooth transition for background color */
+        opacity: 0; /* Initially hidden */
+        pointer-events: auto; /* Enable interactions */
+    }
+
+    /* Adjustments for reversed layout */
+    .artist-profile.reverse .artist-links {
+        display: flex; /* Use flexbox for layout */
+        flex-direction: column; /* Stack items vertically */
+        border-radius: 8px; /* Add rounded corners */
+        position: absolute; /* Position absolutely within the container */
+        inset: 0; /* Cover the entire container */
+        padding-left: 40px; /* Add left padding */
+        padding-right: 40px; /* Add right padding */
+        padding-top: 0; /* No top padding */
+        padding-bottom: 0; /* No bottom padding */
+        align-items: center; /* Center items horizontally */
+        justify-content: center; /* Center items vertically */
+        transition: background-color 0.3s ease; /* Smooth transition for background color */
+        opacity: 0; /* Initially hidden */
+    }
+
+    /* Hover effect for artist links */
+    .artist-image-container:hover .artist-links {
+        background-color: rgba(55, 55, 55, 0.72); /* Add semi-transparent background */
+        opacity: 1; /* Make links visible */
+    }
+
+    /* Adjustments for reversed layout on hover */
+    .artist-profile.reverse .artist-image-container:hover .artist-links {
+        background-color: rgba(55, 55, 55, 0.72); /* Add semi-transparent background */
+        opacity: 1; /* Make links visible */
+    }
+
+    /* Styling for individual artist links */
+    .artist-link {
+        text-decoration: none; /* Remove underline */
+        color: inherit; /* Inherit text color */
+    }
+
+    /* Styling for personal website link */
+    .personal-website {
+        border-radius: 8px; /* Add rounded corners */
+        background-color: rgba(227, 201, 117, 1); /* Set background color */
+        border-color: rgba(120, 47, 55, 1); /* Set border color */
+        border-style: solid; /* Set border style */
+        border-width: 2px; /* Set border width */
+        width: 147px; /* Set width */
+        max-width: 100%; /* Ensure it doesn't exceed the container width */
+        padding-left: 37px; /* Add left padding */
+        padding-right: 37px; /* Add right padding */
+        padding-top: 6px; /* Add top padding */
+        padding-bottom: 6px; /* Add bottom padding */
+        line-height: 20px; /* Set line height */
+        display: block; /* Display as a block element */
+        transform: translateY(20px); /* Move down slightly */
+        transition: transform 0.3s ease; /* Smooth transition for transform */
+    }
+
+    /* Hover effect for personal website link */
+    .artist-image-container:hover .personal-website {
+        transform: translateY(0); /* Move back to original position */
+        text-decoration: none; /* Remove underline */
+        color: #782F37; /* Change text color */
+    }
+
+    /* Styling for biography button */
+    .biography {
+        z-index: 10; /* Set layer priority */
+        border-radius: 8px; /* Add rounded corners */
+        background-color: rgba(227, 201, 117, 1); /* Set background color */
+        border-color: rgba(120, 47, 55, 1); /* Set border color */
+        border-style: solid; /* Set border style */
+        border-width: 2px; /* Set border width */
+        margin-top: 39px; /* Add spacing above the button */
+        margin-bottom: -34px; /* Add negative spacing below the button */
+        width: 147px; /* Set width */
+        max-width: 100%; /* Ensure it doesn't exceed the container width */
+        padding-left: 30px; /* Add left padding */
+        padding-right: 30px; /* Add right padding */
+        padding-bottom: 32px; /* Add bottom padding */
+        white-space: nowrap; /* Prevent text wrapping */
+        line-height: 3; /* Set line height */
+        padding-top: -6px; /* Add negative top padding */
+        display: block; /* Display as a block element */
+        transform: translateY(20px); /* Move down slightly */
+        transition: transform 0.3s ease 0.1s; /* Smooth transition for transform */
+    }
+
+    /* Hover effect for biography button */
+    .artist-image-container:hover .biography {
+        transform: translateY(0); /* Move back to original position */
+        text-decoration: none; /* Remove underline */
+        color: #782F37; /* Change text color */
+    }
+
+    /* Adjustments for reversed layout */
+    .artist-profile.reverse .biography {
+        position: relative; /* Position relative for child elements */
+        z-index: 10; /* Set layer priority */
+        border-radius: 8px; /* Add rounded corners */
+        background-color: #E3C975; /* Set background color */
+        border-color: #782F37; /* Set border color */
+        border-style: solid; /* Set border style */
+        border-width: 2px; /* Set border width */
+        margin-bottom: -46px; /* Add negative spacing below the button */
+        width: 142px; /* Set width */
+        max-width: 100%; /* Ensure it doesn't exceed the container width */
+        padding-left: 27px; /* Add left padding */
+        padding-right: 27px; /* Add right padding */
+        padding-bottom: 30px; /* Add bottom padding */
+        padding-top: -5px; /* Add negative top padding */
+        transform: translateY(20px); /* Move down slightly */
+        transition: transform 0.3s ease; /* Smooth transition for transform */
+    }
+
+    /* Hover effect for reversed layout biography button */
+    .artist-profile.reverse .artist-image-container:hover .biography {
+        transform: translateY(0); /* Move back to original position */
+    }
+
+    /* Footer styling */
+    footer {
+        background-color: #782F37; /* Set background color */
+        color: white; /* Set text color */
+        padding: 20px; /* Add padding */
+        z-index: 11; /* Set layer priority */
+        pointer-events: auto; /* Enable interactions */
+    }
+
+    /* General container styling */
+    .container {
+        margin: auto; /* Center the container */
+        padding: 20px; /* Add padding */
+    }
+
+    /* Button styling */
+    button {
+        background-color: #E3C975; /* Set background color */
+    }
+}
+
+/* Media query for screens with a maximum width of 834px and a maximum height of 1194px */
+@media (max-width: 834px) and (max-height: 1194px) {
+    /* Hide the regular navigation bar */
+    .nav-bar {
+        display: none;
+    }
+
+    /* Show the hero section navigation */
+    .nav-bar .container .hero-home {
+        display: block;
+    }
+
+    /* Show the hamburger menu */
+    .navbar-toggler {
+        display: block; /* Display the hamburger menu */
+        position: absolute;
+        top: 30px; /* Position the hamburger menu */
+        right: 10px; /* Align it to the right */
+        z-index: 1100; /* Ensure it appears above other elements */
+        background: none; /* Remove background */
+        border: none; /* Remove border */
+        cursor: pointer; /* Change cursor to pointer */
+        font-size: 35px; /* Adjust size of the icon */
+        color: black; /* Default color */
+        transition: color 0.3s ease-in-out; /* Smooth color transition */
+    }
+
+    /* Position the overlay menu */
+    #overlay-menu ul {
+        position: absolute;
+        top: 10%; /* Position the menu slightly below the top */
+        left: 35%; /* Center the menu horizontally */
+    }
+
+    /* Style the overlay menu links */
+    #overlay-menu ul li a {
+        color: black; /* Set text color */
+        font-size: 50px; /* Increase font size for better visibility */
+        font-weight: bold; /* Make text bold */
+        text-decoration: none; /* Remove underline */
+        transition: color 0.3s ease; /* Smooth color transition */
+    }
+
+    /* Add spacing between overlay menu items */
+    #overlay-menu ul li {
+        margin: 20px 0; /* Add vertical spacing */
+    }
+
+    /* General body styling */
+    body {
+        margin: 0; /* Remove default margin */
+        background-color: white; /* Set background color to white */
+        display: flex; /* Use flexbox for layout */
+        justify-content: flex-end; /* Align content to the right */
+        height: auto; /* Allow height to adjust automatically */
+        align-items: center; /* Center content vertically */
+        position: relative; /* Set position for child elements */
+    }
+
+    /* White screen overlay */
+    .white-screen1 {
+        position: absolute; /* Position the overlay absolutely */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+        width: 100%; /* Cover the full width */
+        height: 100%; /* Cover the full height */
+        background-color: white; /* Set background color to white */
+        z-index: 0; /* Set as the first layer */
+        pointer-events: none; /* Disable interactions */
+    }
+
+    /* Red box background adjustments */
+    .red-box {
+        position: absolute; /* Position the red box absolutely */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+        width: 100%; /* Cover the full width */
+        height: 100%; /* Cover the full height */
+        background-color: #E3C975; /* Set red box color */
+        z-index: 2; /* Set as the third layer */
+        clip-path: polygon(0 0, 44.5% 0, 74% 47%, 0 47%); /* Define custom shape */
+        pointer-events: none; /* Disable interactions */
+    }
+
+    /* Semi-transparent overlay on the red box */
+    .red-box-tint {
+        position: absolute; /* Position the overlay absolutely */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+        width: 100%; /* Cover the full width */
+        height: 100%; /* Cover the full height */
+        background-color: rgba(0, 0, 0, 0.3); /* Add semi-transparent dark overlay */
+        z-index: 3; /* Set as the fourth layer */
+        clip-path: polygon(0 0, 44.5% 0, 74% 47%, 0 47%); /* Match the red box shape */
+        pointer-events: none; /* Disable interactions */
+    }
+
+    /* Background image adjustments */
+    .image-container img {
+        position: absolute; /* Position the image absolutely */
+        top: 1%; /* Add slight top margin */
+        left: 0; /* Align to the left */
+        width: 135%; /* Slightly increase the width */
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Display as a block element */
+        z-index: 4 !important; /* Set as the fifth layer */
+        transition: filter 0.3s ease; /* Add smooth transition on hover */
+        clip-path: polygon(0 12%, 100% 12%, 100% 91%, 0 91%); /* Clip the image */
+    }
+
+    /* Darken the image on hover */
+    .image-tint:hover img {
+        filter: brightness(0.7); /* Reduce brightness on hover */
+    }
+
+    /* Button on top of the background image */
+    .events-button {
+        position: absolute; /* Position the button absolutely */
+        top: 27%; /* Adjust vertical position */
+        left: 80%; /* Adjust horizontal position */
+        transform: translate(-50%, -50%); /* Center the button */
+        padding: 15px 30px; /* Add padding */
+        font-size: 40px; /* Set font size */
+        background-color: #E3C975; /* Button background color */
+        color: #782F37; /* Button text color */
+        border: 2px solid #782F37; /* Add border */
+        font-family: 'Old Standard TT', serif; /* Set font family */
+        font-weight: bold; /* Set font weight */
+        border-radius: 5px; /* Add rounded corners */
+        cursor: pointer; /* Change cursor to pointer */
+        z-index: 10; /* Set as the sixth layer */
+        transition: background-color 0.3s, transform 0.3s; /* Add smooth transitions */
+        text-decoration: none; /* Remove underline */
+        pointer-events: auto; /* Enable interactions */
+    }
+
+    /* Hover effect for the button */
+    .events-button:hover {
+        background-color: #782F37; /* Change background color on hover */
+        transform: translate(-50%, -50%) scale(1.1); /* Scale up on hover */
+        text-decoration: none; /* Remove underline */
+        color: #782F37; /* Keep text color consistent */
+    }
+
+    /* Hover effect for the button inside the image tint */
+    .image-tint:hover .events-button {
+        background-color: #E3C975; /* Change background color on hover */
+        transform: translate(-50%, -50%) scale(1.1); /* Scale up on hover */
+    }
+
+    /* Blue box background adjustments */
+    .blue-box {
+        position: absolute; /* Position the blue box absolutely */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+        width: 100%; /* Cover the full width */
+        height: 100%; /* Cover the full height */
+        background-color: #E3C975; /* Set blue box color */
+        z-index: 6; /* Set as the seventh layer */
+        clip-path: polygon(0 0, 43% 0, 72% 47%, 0 47%); /* Match the red box shape */
+        pointer-events: none; /* Disable interactions */
+    }
+
+    /* Bottom border adjustments */
+    .border-bottom {
+        position: absolute; /* Position the border absolutely */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+        width: 100%; /* Cover the full width */
+        height: 100%; /* Cover the full height */
+        background-color: #E3C975; /* Set border color */
+        z-index: 7; /* Set as the eighth layer */
+        clip-path: polygon(50% 46%, 100% 46%, 100% 47%, 50% 47%); /* Match the red box shape */
+        pointer-events: none; /* Disable interactions */
+    }
+
+    /* White mask adjustments */
+    .white-mask {
+        position: absolute; /* Position the white mask absolutely */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+        width: 100%; /* Cover the full width */
+        height: 100%; /* Cover the full height */
+        background-color: white; /* Set white mask color */
+        z-index: 8; /* Set as the ninth layer */
+        clip-path: polygon(0 0, 41.5% 0, 102% 100%, 0 100%); /* Match the red box shape */
+        pointer-events: none; /* Disable interactions */
+    }
+
+    /* Page content container */
+    .page-content {
+        position: absolute; /* Position the content absolutely */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+        width: 100%; /* Cover the full width */
+        height: 100%; /* Cover the full height */
+        z-index: 9; /* Set as the tenth layer */
+        pointer-events: none; /* Disable interactions */
+    }
+
+    /* Hero section adjustments */
+    .hero-left {
+        flex: 1; /* Allow the hero section to grow */
+        padding: 10% 3%; /* Add padding */
+    }
+
+    /* Hero section heading adjustments */
+    .page-content h1 {
+        font-size: 90px; /* Adjust font size */
+        font-weight: bold; /* Set font weight */
+        margin-bottom: 10px; /* Add bottom margin */
+        color: #782F37; /* Set text color */
+        text-shadow: 3px 3px 0px #E3C975; /* Add text shadow */
+        font-family: 'Old Standard TT', serif; /* Set font family */
+        display: flex; /* Use flexbox for layout */
+        flex-direction: column; /* Stack elements vertically */
+    }
+
+    /* Brand description adjustments */
+    .brand-description {
+        position: absolute; /* Position the description absolutely */
+        top: 30; /* Adjust top position */
+        left: 0; /* Align to the left */
+        margin-top: 60px; /* Add top margin */
+        margin-left: 20px; /* Add left margin */
+        font-size: 25px; /* Adjust font size */
+        color: #782F37; /* Set text color */
+        font-family: 'Old Standard TT', serif; /* Set font family */
+        display: flex; /* Use flexbox for layout */
+    }
+
+    /* Divider adjustments */
+    .divider {
+        position: absolute; /* Position the divider absolutely */
+        top: 20; /* Adjust top position */
+        left: 0; /* Align to the left */
+        width: 380px; /* Adjust width */
+        height: 45px; /* Adjust height */
+        background-color: #782F37; /* Set divider color */
+        margin-bottom: 20px; /* Add bottom margin */
+        clip-path: polygon(0 0, 93% 0, 100% 100%, 0% 100%); /* Define custom shape */
+        border-bottom: 8px solid #E3C975; /* Add bottom border */
+    }
+
+    /* Enable scrolling */
+    html, body {
+        overflow: auto; /* Allow scrolling */
+        min-height: 100vh; /* Ensure full content visibility */
+    }
+    
+    /* Separator sections container */
+    .separator-section {
+        margin-top: 660px; /* Add spacing above the separator section */
+        position: relative; /* Position relative for child elements */
+    }
+
+    /* Main separator symbol */
+    .separator-symbol {
+        transform: rotate(-0.0009993530981313888rad); /* Slight rotation */
+        color: #782F37; /* Dark red color */
+        font-size: 220px; /* Large font size */
+        font-family: "Old Standard TT"; /* Serif font */
+        font-weight: italic; /* Italic text */
+        text-align: center; /* Center-align text */
+        display: flex; /* Use flexbox for layout */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        z-index: 10; /* Layer priority */
+        position: absolute; /* Position absolutely within the container */
+        bottom: 0; /* Align to the bottom */
+        left: 43%; /* Center horizontally */
+        transform: translate(-50%, -50%); /* Adjust position for centering */
+    }
+
+    /* Secondary separator symbol */
+    .separator-symbol2 {
+        transform: rotate(-0.0009993530981313888rad); /* Slight rotation */
+        color: #E3C975; /* Light gold color */
+        font-size: 190px; /* Slightly smaller font size */
+        font-family: "Old Standard TT"; /* Serif font */
+        font-weight: italic; /* Italic text */
+        text-align: center; /* Center-align text */
+        display: flex; /* Use flexbox for layout */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        z-index: 11; /* Higher layer priority */
+        position: absolute; /* Position absolutely within the container */
+        bottom: 35%; /* Position slightly above the main symbol */
+        left: 43%; /* Center horizontally */
+        transform: translate(-50%, -50%); /* Adjust position for centering */
+    }
+
+    /* Reversed main separator symbol */
+    .separator-symbol-reverse {
+        transform: rotate(-0.0009993530981313888rad); /* Slight rotation */
+        color: #782F37; /* Dark red color */
+        font-size: 220px; /* Large font size */
+        font-family: "Old Standard TT"; /* Serif font */
+        font-weight: italic; /* Italic text */
+        text-align: center; /* Center-align text */
+        display: flex; /* Use flexbox for layout */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        z-index: 11; /* Higher layer priority */
+        position: absolute; /* Position absolutely within the container */
+        bottom: 0%; /* Align to the bottom */
+        left: 58.100%; /* Offset horizontally */
+        transform: translate(-50%, -50%) scaleX(-1); /* Flip horizontally */
+    }
+
+    /* Reversed secondary separator symbol */
+    .separator-symbol-reverse2 {
+        transform: rotate(-0.0009993530981313888rad); /* Slight rotation */
+        color: #E3C975; /* Light gold color */
+        font-size: 190px; /* Slightly smaller font size */
+        font-family: "Old Standard TT"; /* Serif font */
+        font-weight: italic; /* Italic text */
+        text-align: center; /* Center-align text */
+        display: flex; /* Use flexbox for layout */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        z-index: 11; /* Higher layer priority */
+        position: absolute; /* Position absolutely within the container */
+        bottom: 35%; /* Position slightly above the reversed main symbol */
+        left: 58.100%; /* Offset horizontally */
+        transform: translate(-50%, -50%) scaleX(-1); /* Flip horizontally */
+    }
+
+    /* Separator information text */
+    .separator-info {
+        font-size: 40px; /* Font size for the text */
+        color: #782F37; /* Dark red color */
+        font-family: "Old Standard TT", serif; /* Serif font */
+        text-align: center; /* Center-align text */
+        margin-top: 0; /* No additional spacing above */
+    }
+
+    /* Main separator symbol at the top */
+    .separator-symbol3 {
+        transform: rotate(-0.0009993530981313888rad); /* Slight rotation */
+        color: #782F37; /* Dark red color */
+        font-size: 220px; /* Large font size */
+        font-family: "Old Standard TT"; /* Serif font */
+        font-weight: italic; /* Italic text */
+        text-align: center; /* Center-align text */
+        display: flex; /* Use flexbox for layout */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        z-index: 10; /* Layer priority */
+        position: absolute; /* Position absolutely within the container */
+        top: 200%; /* Position at the top */
+        left: 58.100%; /* Offset horizontally */
+        transform: translate(-50%, -50%); /* Adjust position for centering */
+    }
+
+    /* Secondary separator symbol at the top */
+    .separator-symbol4 {
+        transform: rotate(-0.0009993530981313888rad); /* Slight rotation */
+        color: #E3C975; /* Light gold color */
+        font-size: 190px; /* Slightly smaller font size */
+        font-family: "Old Standard TT"; /* Serif font */
+        font-weight: italic; /* Italic text */
+        text-align: center; /* Center-align text */
+        display: flex; /* Use flexbox for layout */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        z-index: 11; /* Higher layer priority */
+        position: absolute; /* Position absolutely within the container */
+        top: 200%; /* Position at the top */
+        left: 58.100%; /* Offset horizontally */
+        transform: translate(-50%, -50%); /* Adjust position for centering */
+    }
+
+    /* Reversed main separator symbol at the top */
+    .separator-symbol-reverse3 {
+        transform: rotate(-0.0009993530981313888rad); /* Slight rotation */
+        color: #782F37; /* Dark red color */
+        font-size: 220px; /* Large font size */
+        font-family: "Old Standard TT"; /* Serif font */
+        font-weight: italic; /* Italic text */
+        text-align: center; /* Center-align text */
+        display: flex; /* Use flexbox for layout */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        z-index: 11; /* Higher layer priority */
+        position: absolute; /* Position absolutely within the container */
+        top: 200%; /* Position at the top */
+        left: 43%; /* Offset horizontally */
+        transform: translate(-50%, -50%) scaleX(-1); /* Flip horizontally */
+    }
+
+    /* Reversed secondary separator symbol at the top */
+    .separator-symbol-reverse4 {
+        transform: rotate(-0.0009993530981313888rad); /* Slight rotation */
+        color: #E3C975; /* Light gold color */
+        font-size: 190px; /* Slightly smaller font size */
+        font-family: "Old Standard TT"; /* Serif font */
+        font-weight: italic; /* Italic text */
+        text-align: center; /* Center-align text */
+        display: flex; /* Use flexbox for layout */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        z-index: 11; /* Higher layer priority */
+        position: absolute; /* Position absolutely within the container */
+        top: 200%; /* Position at the top */
+        left: 43%; /* Offset horizontally */
+        transform: translate(-50%, -50%) scaleX(-1); /* Flip horizontally */
+    }
+    
+    /* Container for artist profiles */
+    .profile-container {
+        margin-top: 400px; /* Add spacing above the container */
+        display: flex; /* Use flexbox for layout */
+        justify-content: center; /* Center content horizontally */
+        align-items: center; /* Center content vertically */
+        flex-direction: column; /* Stack items vertically */
+        width: 100%; /* Full width */
+        margin-bottom: 40px; /* Add spacing below the container */
+    }
+
+    /* Individual artist profile */
+    .artist-profile {
+        width: 700px; /* Set width */
+        max-width: 100%; /* Ensure it doesn't exceed the container width */
+        margin-bottom: 120px; /* Add spacing below each profile */
+    }
+
+    /* Reversed layout for artist profile */
+    .artist-profile.reverse {
+        width: 670px; /* Slightly smaller width */
+        max-width: 100%; /* Ensure it doesn't exceed the container width */
+    }
+
+    /* Content inside the artist profile */
+    .artist-content {
+        gap: 20px; /* Add spacing between content items */
+        display: flex; /* Use flexbox for layout */
+    }
+
+    /* Column for artist information */
+    .artist-info-column {
+        display: flex; /* Use flexbox for layout */
+        flex-direction: column; /* Stack items vertically */
+        align-items: stretch; /* Stretch items to fill the column */
+        line-height: normal; /* Set normal line height */
+        width: 54%; /* Set width */
+        margin-left: 0px; /* No left margin */
+    }
+
+    /* Adjustments for reversed layout */
+    .artist-profile.reverse .artist-info-column {
+        width: 50%; /* Adjust width */
+        margin-left: 20px; /* Add left margin */
+    }
+
+    /* Artist biography text */
+    .artist-bio {
+        color: rgba(0, 0, 0, 1); /* Set text color */
+        font-size: 28px; /* Set font size */
+        font-family: "Old Standard TT", serif; /* Set font family */
+        font-weight: 400; /* Set font weight */
+        text-align: right; /* Align text to the right */
+        margin-top: 78px; /* Add spacing above the biography */
+    }
+
+    /* Adjustments for reversed layout */
+    .artist-profile.reverse .artist-bio {
+        text-align: left; /* Align text to the left */
+        margin-top: 141px; /* Add more spacing above the biography */
+    }
+
+    /* Artist name styling */
+    .artist-name {
+        font-size: 43px; /* Set font size */
+        color: rgba(120, 47, 55, 1); /* Set text color */
+        margin-bottom: 20px; /* Add spacing below the name */
+    }
+
+    /* Artist description styling */
+    .artist-description {
+        font-size: 22px; /* Set font size */
+    }
+
+    /* Column for artist image */
+    .artist-image-column {
+        display: flex; /* Use flexbox for layout */
+        flex-direction: column; /* Stack items vertically */
+        align-items: stretch; /* Stretch items to fill the column */
+        line-height: normal; /* Set normal line height */
+        width: 46%; /* Set width */
+        margin-left: 20px; /* Add left margin */
+    }
+
+    /* Adjustments for reversed layout */
+    .artist-profile.reverse .artist-image-column {
+        width: 50%; /* Adjust width */
+        margin-left: 0; /* Remove left margin */
+    }
+
+    /* Container for artist image */
+    .artist-image-container {
+        display: flex; /* Use flexbox for layout */
+        flex-direction: column; /* Stack items vertically */
+        border-radius: 8px; /* Add rounded corners */
+        position: relative; /* Position relative for child elements */
+        aspect-ratio: 0.859; /* Set aspect ratio */
+        flex-grow: 1; /* Allow the container to grow */
+        font-family: "Old Standard TT", serif; /* Set font family */
+        font-size: 20px; /* Set font size */
+        color: rgba(120, 47, 55, 1); /* Set text color */
+        font-weight: 400; /* Set font weight */
+        text-align: center; /* Center-align text */
+        overflow: hidden; /* Hide overflow content */
+        cursor: pointer; /* Change cursor to pointer */
+        max-height: 400px; /* Set maximum height */
+    }
+
+    /* Adjustments for reversed layout */
+    .artist-profile.reverse .artist-image-container {
+        border-radius: 8px; /* Add rounded corners */
+        flex-grow: 1; /* Allow the container to grow */
+        padding-left: 1px; /* Add left padding */
+        padding-right: 1px; /* Add right padding */
+        font-family: "Old Standard TT", serif; /* Set font family */
+        font-size: 20px; /* Set font size */
+        color: rgba(120, 47, 55, 1); /* Set text color */
+        font-weight: 400; /* Set font weight */
+        white-space: nowrap; /* Prevent text wrapping */
+        text-align: center; /* Center-align text */
+        line-height: 3; /* Set line height */
+        width: 100%; /* Full width */
+        overflow: hidden; /* Hide overflow content */
+        cursor: pointer; /* Change cursor to pointer */
+    }
+
+    /* Artist image styling */
+    .artist-image {
+        position: absolute; /* Position absolutely within the container */
+        inset: 0; /* Cover the entire container */
+        height: 100%; /* Full height */
+        width: 100%; /* Full width */
+        object-fit: cover; /* Ensure the image covers the container */
+        object-position: center; /* Center the image */
+    }
+
+    /* Container for artist links */
+    .artist-links {
+        position: absolute; /* Position absolutely within the container */
+        inset: 0; /* Cover the entire container */
+        border-radius: 8px; /* Add rounded corners */
+        background-color: rgba(55, 55, 55, 0); /* Transparent background */
+        display: flex; /* Use flexbox for layout */
+        padding-left: 40px; /* Add left padding */
+        padding-right: 40px; /* Add right padding */
+        padding-top: 0; /* No top padding */
+        padding-bottom: 0; /* No bottom padding */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        justify-content: center; /* Center items vertically */
+        transition: background-color 0.3s ease; /* Smooth transition for background color */
+        opacity: 0; /* Initially hidden */
+        pointer-events: auto; /* Enable interactions */
+    }
+
+    /* Adjustments for reversed layout */
+    .artist-profile.reverse .artist-links {
+        display: flex; /* Use flexbox for layout */
+        flex-direction: column; /* Stack items vertically */
+        border-radius: 8px; /* Add rounded corners */
+        position: absolute; /* Position absolutely within the container */
+        inset: 0; /* Cover the entire container */
+        padding-left: 40px; /* Add left padding */
+        padding-right: 40px; /* Add right padding */
+        padding-top: 0; /* No top padding */
+        padding-bottom: 0; /* No bottom padding */
+        align-items: center; /* Center items horizontally */
+        justify-content: center; /* Center items vertically */
+        transition: background-color 0.3s ease; /* Smooth transition for background color */
+        opacity: 0; /* Initially hidden */
+    }
+
+    /* Hover effect for artist links */
+    .artist-image-container:hover .artist-links {
+        background-color: rgba(55, 55, 55, 0.72); /* Add semi-transparent background */
+        opacity: 1; /* Make links visible */
+    }
+
+    /* Adjustments for reversed layout on hover */
+    .artist-profile.reverse .artist-image-container:hover .artist-links {
+        background-color: rgba(55, 55, 55, 0.72); /* Add semi-transparent background */
+        opacity: 1; /* Make links visible */
+    }
+
+    /* Styling for individual artist links */
+    .artist-link {
+        text-decoration: none; /* Remove underline */
+        color: inherit; /* Inherit text color */
+    }
+
+    /* Styling for personal website link */
+    .personal-website {
+        border-radius: 8px; /* Add rounded corners */
+        background-color: rgba(227, 201, 117, 1); /* Set background color */
+        border-color: rgba(120, 47, 55, 1); /* Set border color */
+        border-style: solid; /* Set border style */
+        border-width: 2px; /* Set border width */
+        width: 147px; /* Set width */
+        max-width: 100%; /* Ensure it doesn't exceed the container width */
+        padding-left: 37px; /* Add left padding */
+        padding-right: 37px; /* Add right padding */
+        padding-top: 6px; /* Add top padding */
+        padding-bottom: 6px; /* Add bottom padding */
+        line-height: 20px; /* Set line height */
+        display: block; /* Display as a block element */
+        transform: translateY(20px); /* Move down slightly */
+        transition: transform 0.3s ease; /* Smooth transition for transform */
+    }
+
+    /* Hover effect for personal website link */
+    .artist-image-container:hover .personal-website {
+        transform: translateY(0); /* Move back to original position */
+        text-decoration: none; /* Remove underline */
+        color: #782F37; /* Change text color */
+    }
+
+    /* Styling for biography button */
+    .biography {
+        z-index: 10; /* Set layer priority */
+        border-radius: 8px; /* Add rounded corners */
+        background-color: rgba(227, 201, 117, 1); /* Set background color */
+        border-color: rgba(120, 47, 55, 1); /* Set border color */
+        border-style: solid; /* Set border style */
+        border-width: 2px; /* Set border width */
+        margin-top: 39px; /* Add spacing above the button */
+        margin-bottom: -34px; /* Add negative spacing below the button */
+        width: 147px; /* Set width */
+        max-width: 100%; /* Ensure it doesn't exceed the container width */
+        padding-left: 30px; /* Add left padding */
+        padding-right: 30px; /* Add right padding */
+        padding-bottom: 32px; /* Add bottom padding */
+        white-space: nowrap; /* Prevent text wrapping */
+        line-height: 3; /* Set line height */
+        padding-top: -6px; /* Add negative top padding */
+        display: block; /* Display as a block element */
+        transform: translateY(20px); /* Move down slightly */
+        transition: transform 0.3s ease 0.1s; /* Smooth transition for transform */
+    }
+
+    /* Hover effect for biography button */
+    .artist-image-container:hover .biography {
+        transform: translateY(0); /* Move back to original position */
+        text-decoration: none; /* Remove underline */
+        color: #782F37; /* Change text color */
+    }
+
+    /* Adjustments for reversed layout */
+    .artist-profile.reverse .biography {
+        position: relative; /* Position relative for child elements */
+        z-index: 10; /* Set layer priority */
+        border-radius: 8px; /* Add rounded corners */
+        background-color: #E3C975; /* Set background color */
+        border-color: #782F37; /* Set border color */
+        border-style: solid; /* Set border style */
+        border-width: 2px; /* Set border width */
+        margin-bottom: -46px; /* Add negative spacing below the button */
+        width: 142px; /* Set width */
+        max-width: 100%; /* Ensure it doesn't exceed the container width */
+        padding-left: 27px; /* Add left padding */
+        padding-right: 27px; /* Add right padding */
+        padding-bottom: 30px; /* Add bottom padding */
+        padding-top: -5px; /* Add negative top padding */
+        transform: translateY(20px); /* Move down slightly */
+        transition: transform 0.3s ease; /* Smooth transition for transform */
+    }
+
+    /* Hover effect for reversed layout biography button */
+    .artist-profile.reverse .artist-image-container:hover .biography {
+        transform: translateY(0); /* Move back to original position */
+    }
+
+    /* Footer styling */
+    footer {
+        background-color: #782F37; /* Set background color */
+        color: white; /* Set text color */
+        padding: 20px; /* Add padding */
+        z-index: 11; /* Set layer priority */
+        pointer-events: auto; /* Enable interactions */
+    }
+
+    /* General container styling */
+    .container {
+        margin: auto; /* Center the container */
+        padding: 20px; /* Add padding */
+    }
+
+    /* Button styling */
+    button {
+        background-color: #E3C975; /* Set background color */
+    }
+}
+
+/* Media query for screens with a maximum width of 414px and a maximum height of 896px */
+@media (max-width: 414px) and (max-height: 896px) {
+    /* Hide the regular navigation bar */
+    .nav-bar {
+        display: none;
+    }
+
+    /* Show the hero section navigation */
+    .nav-bar .container .hero-home {
+        display: block;
+    }
+
+    /* Show the hamburger menu */
+    .navbar-toggler {
+        display: block; /* Display the hamburger menu */
+        top: 10px; /* Adjust vertical position */
+        font-size: 25px; /* Adjust font size for smaller screens */
+    }
+
+    /* Position the overlay menu */
+    #overlay-menu ul {
+        position: absolute;
+        top: 7%; /* Position the menu slightly below the top */
+        left: 33%; /* Center the menu horizontally */
+    }
+
+    /* Style the overlay menu links */
+    #overlay-menu ul li a {
+        font-size: 30px; /* Adjust font size for better visibility */
+    }
+
+    /* Add spacing between overlay menu items */
+    #overlay-menu ul li {
+        margin: 20px 0; /* Add vertical spacing */
+    }
+
+    /* General body styling */
+    body {
+        margin: 0; /* Remove default margin */
+        background-color: white; /* Set background color to white */
+        display: flex; /* Use flexbox for layout */
+        justify-content: flex-end; /* Align content to the right */
+        height: auto; /* Allow height to adjust automatically */
+        align-items: center; /* Center content vertically */
+        position: relative; /* Set position for child elements */
+    }
+
+    /* White screen overlay */
+    .white-screen1 {
+        position: absolute; /* Position the overlay absolutely */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+        width: 100%; /* Cover the full width */
+        height: 100%; /* Cover the full height */
+        background-color: white; /* Set background color to white */
+        z-index: 0; /* Set as the first layer */
+        pointer-events: none; /* Disable interactions */
+    }
+
+    /* Red box background adjustments */
+    .red-box {
+        position: absolute; /* Position the red box absolutely */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+        width: 100%; /* Cover the full width */
+        height: 100%; /* Cover the full height */
+        background-color: #E3C975; /* Set red box color */
+        z-index: 2; /* Set as the third layer */
+        clip-path: polygon(0 0, 44% 0, 80% 30%, 0 30%); /* Define custom shape */
+        pointer-events: none; /* Disable interactions */
+    }
+
+    /* Semi-transparent overlay on the red box */
+    .red-box-tint {
+        position: absolute; /* Position the overlay absolutely */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+        width: 100%; /* Cover the full width */
+        height: 100%; /* Cover the full height */
+        background-color: rgba(0, 0, 0, 0.3); /* Add semi-transparent dark overlay */
+        z-index: 3; /* Set as the fourth layer */
+        clip-path: polygon(0 0, 44% 0, 80% 30%, 0 30%); /* Match the red box shape */
+        pointer-events: none; /* Disable interactions */
+    }
+
+    /* Background image adjustments */
+    .image-container img {
+        position: absolute; /* Position the image absolutely */
+        top: 1%; /* Add slight top margin */
+        left: 0; /* Align to the left */
+        width: 130%; /* Slightly increase the width */
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Display as a block element */
+        z-index: 4 !important; /* Set as the fifth layer */
+        transition: filter 0.3s ease; /* Add smooth transition on hover */
+        clip-path: polygon(0 12%, 100% 12%, 100% 91%, 0 91%); /* Clip the image */
+    }
+
+    /* Darken the image on hover */
+    .image-tint:hover img {
+        filter: brightness(0.7); /* Reduce brightness on hover */
+    }
+
+    /* Button on top of the background image */
+    .events-button {
+        position: absolute; /* Position the button absolutely */
+        top: 18%; /* Adjust vertical position */
+        left: 81%; /* Adjust horizontal position */
+        transform: translate(-50%, -50%); /* Center the button */
+        padding: 15px 30px; /* Add padding */
+        font-size: 10px; /* Adjust font size */
+        background-color: #E3C975; /* Button background color */
+        color: #782F37; /* Button text color */
+        border: 2px solid #782F37; /* Add border */
+        font-family: 'Old Standard TT', serif; /* Set font family */
+        font-weight: bold; /* Set font weight */
+        border-radius: 5px; /* Add rounded corners */
+        cursor: pointer; /* Change cursor to pointer */
+        z-index: 10; /* Set as the sixth layer */
+        transition: background-color 0.3s, transform 0.3s; /* Add smooth transitions */
+        text-decoration: none; /* Remove underline */
+        pointer-events: auto; /* Enable interactions */
+    }
+
+    /* Hover effect for the button */
+    .events-button:hover {
+        background-color: #782F37; /* Change background color on hover */
+        transform: translate(-50%, -50%) scale(1.1); /* Scale up on hover */
+        text-decoration: none; /* Remove underline */
+        color: #782F37; /* Keep text color consistent */
+    }
+
+    /* Hover effect for the button inside the image tint */
+    .image-tint:hover .events-button {
+        background-color: #E3C975; /* Change background color on hover */
+        transform: translate(-50%, -50%) scale(1.1); /* Scale up on hover */
+    }
+
+    /* Blue box background adjustments */
+    .blue-box {
+        position: absolute; /* Position the blue box absolutely */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+        width: 100%; /* Cover the full width */
+        height: 100%; /* Cover the full height */
+        background-color: #E3C975; /* Set blue box color */
+        z-index: 6; /* Set as the seventh layer */
+        clip-path: polygon(0 0, 42% 0, 78% 30%, 0% 82.9%); /* Match the red box shape */
+        pointer-events: none; /* Disable interactions */
+    }
+
+    /* Bottom border adjustments */
+    .border-bottom {
+        position: absolute; /* Position the border absolutely */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+        width: 100%; /* Cover the full width */
+        height: 100%; /* Cover the full height */
+        background-color: #E3C975; /* Set border color */
+        z-index: 10 !important; /* Set as the eighth layer */
+        clip-path: polygon(77.6% 30%, 100% 30%, 100% 30.8%, 76.9% 30.8%); /* Match the red box shape */
+        pointer-events: none; /* Disable interactions */
+    }
+
+    /* White mask adjustments */
+    .white-mask {
+        position: absolute; /* Position the white mask absolutely */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+        width: 100%; /* Cover the full width */
+        height: 100%; /* Cover the full height */
+        background-color: white; /* Set white mask color */
+        z-index: 8; /* Set as the ninth layer */
+        clip-path: polygon(0 0, 40% 0, 160% 100%, 0 100%); /* Match the red box shape */
+        pointer-events: none; /* Disable interactions */
+    }
+
+    /* Page content container */
+    .page-content {
+        position: absolute; /* Position the content absolutely */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+        width: 100%; /* Cover the full width */
+        height: 100%; /* Cover the full height */
+        z-index: 9; /* Set as the tenth layer */
+        pointer-events: none; /* Disable interactions */
+    }
+
+    /* Hero section adjustments */
+    .hero-left {
+        flex: 1; /* Allow the hero section to grow */
+        padding: 10% 3%; /* Add padding */
+    }
+
+    /* Hero section heading adjustments */
+    .page-content h1 {
+        font-size: 45px; /* Adjust font size */
+        font-weight: bold; /* Set font weight */
+        margin-bottom: 10px; /* Add bottom margin */
+        color: #782F37; /* Set text color */
+        text-shadow: 3px 3px 0px #E3C975; /* Add text shadow */
+        font-family: 'Old Standard TT', serif; /* Set font family */
+        display: flex; /* Use flexbox for layout */
+        flex-direction: column; /* Stack elements vertically */
+    }
+
+    /* Brand description adjustments */
+    .brand-description {
+        position: absolute; /* Position the description absolutely */
+        top: 100px; /* Adjust top position */
+        left: 0; /* Align to the left */
+        margin-top: 100px; /* Add top margin */
+        margin-left: 10px; /* Add left margin */
+        font-size: 12px; /* Adjust font size */
+        color: #782F37; /* Set text color */
+        font-family: 'Old Standard TT', serif; /* Set font family */
+        display: flex; /* Use flexbox for layout */
+    }
+
+    /* Divider adjustments */
+    .divider {
+        position: absolute; /* Position the divider absolutely */
+        top: 20; /* Adjust top position */
+        left: 0; /* Align to the left */
+        width: 190px; /* Adjust width */
+        height: 30px; /* Adjust height */
+        background-color: #782F37; /* Set divider color */
+        margin-bottom: 20px; /* Add bottom margin */
+        clip-path: polygon(0 0, 93% 0, 100% 100%, 0% 100%); /* Define custom shape */
+        border-bottom: 4px solid #E3C975; /* Add bottom border */
+    }
+
+    /* Enable scrolling */
+    html, body {
+        overflow: auto; /* Allow scrolling */
+        min-height: 100vh; /* Ensure full content visibility */
+    }
+    
+    /* Separator sections container */
+    .separator-section {
+        margin-top: 660px; /* Add spacing above the separator section */
+        position: relative; /* Position relative for child elements */
+    }
+
+    /* Main separator symbol */
+    .separator-symbol {
+        transform: rotate(-0.0009993530981313888rad); /* Slight rotation */
+        color: #782F37; /* Dark red color */
+        font-size: 120px; /* Font size for the symbol */
+        font-family: "Old Standard TT"; /* Serif font */
+        font-weight: italic; /* Italic text */
+        text-align: center; /* Center-align text */
+        display: flex; /* Use flexbox for layout */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        z-index: 10; /* Layer priority */
+        position: absolute; /* Position absolutely within the container */
+        bottom: 100%; /* Align to the bottom */
+        left: 42%; /* Center horizontally */
+        transform: translate(-50%, -230%); /* Adjust position for centering */
+    }
+
+    /* Secondary separator symbol */
+    .separator-symbol2 {
+        transform: rotate(-0.0009993530981313888rad); /* Slight rotation */
+        color: #E3C975; /* Light gold color */
+        font-size: 90px; /* Smaller font size */
+        font-family: "Old Standard TT"; /* Serif font */
+        font-weight: italic; /* Italic text */
+        text-align: center; /* Center-align text */
+        display: flex; /* Use flexbox for layout */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        z-index: 11; /* Higher layer priority */
+        position: absolute; /* Position absolutely within the container */
+        bottom: 35%; /* Position slightly above the main symbol */
+        left: 42%; /* Center horizontally */
+        transform: translate(-50%, -321%); /* Adjust position for centering */
+    }
+
+    /* Reversed main separator symbol */
+    .separator-symbol-reverse {
+        transform: rotate(-0.0009993530981313888rad); /* Slight rotation */
+        color: #782F37; /* Dark red color */
+        font-size: 120px; /* Font size for the symbol */
+        font-family: "Old Standard TT"; /* Serif font */
+        font-weight: italic; /* Italic text */
+        text-align: center; /* Center-align text */
+        display: flex; /* Use flexbox for layout */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        z-index: 11; /* Higher layer priority */
+        position: absolute; /* Position absolutely within the container */
+        bottom: 0%; /* Align to the bottom */
+        left: 59.100%; /* Offset horizontally */
+        transform: translate(-50%, -230%) scaleX(-1); /* Flip horizontally */
+    }
+
+    /* Reversed secondary separator symbol */
+    .separator-symbol-reverse2 {
+        transform: rotate(-0.0009993530981313888rad); /* Slight rotation */
+        color: #E3C975; /* Light gold color */
+        font-size: 90px; /* Smaller font size */
+        font-family: "Old Standard TT"; /* Serif font */
+        font-weight: italic; /* Italic text */
+        text-align: center; /* Center-align text */
+        display: flex; /* Use flexbox for layout */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        z-index: 11; /* Higher layer priority */
+        position: absolute; /* Position absolutely within the container */
+        bottom: 35%; /* Position slightly above the reversed main symbol */
+        left: 59.100%; /* Offset horizontally */
+        transform: translate(-50%, -321%) scaleX(-1); /* Flip horizontally */
+    }
+
+    /* Separator information text */
+    .separator-info {
+        position: absolute; /* Position absolutely within the container */
+        bottom: 375px; /* Position above the separator symbols */
+        left: 60px; /* Offset horizontally */
+        font-size: 20px; /* Font size for the text */
+        color: #782F37; /* Dark red color */
+        font-family: "Old Standard TT", serif; /* Serif font */
+        text-align: center; /* Center-align text */
+    }
+
+    /* Main separator symbol at the top */
+    .separator-symbol3 {
+        transform: rotate(-0.0009993530981313888rad); /* Slight rotation */
+        color: #782F37; /* Dark red color */
+        font-size: 120px; /* Font size for the symbol */
+        font-family: "Old Standard TT"; /* Serif font */
+        font-weight: italic; /* Italic text */
+        text-align: center; /* Center-align text */
+        display: flex; /* Use flexbox for layout */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        z-index: 10; /* Layer priority */
+        position: absolute; /* Position absolutely within the container */
+        top: 200%; /* Position at the top */
+        left: 59.100%; /* Offset horizontally */
+        transform: translate(-50%, -245%); /* Adjust position for centering */
+    }
+
+    /* Secondary separator symbol at the top */
+    .separator-symbol4 {
+        transform: rotate(-0.0009993530981313888rad); /* Slight rotation */
+        color: #E3C975; /* Light gold color */
+        font-size: 90px; /* Smaller font size */
+        font-family: "Old Standard TT"; /* Serif font */
+        font-weight: italic; /* Italic text */
+        text-align: center; /* Center-align text */
+        display: flex; /* Use flexbox for layout */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        z-index: 11; /* Higher layer priority */
+        position: absolute; /* Position absolutely within the container */
+        top: 200%; /* Position at the top */
+        left: 59.100%; /* Offset horizontally */
+        transform: translate(-50%, -310%); /* Adjust position for centering */
+    }
+
+    /* Reversed main separator symbol at the top */
+    .separator-symbol-reverse3 {
+        transform: rotate(-0.0009993530981313888rad); /* Slight rotation */
+        color: #782F37; /* Dark red color */
+        font-size: 120px; /* Font size for the symbol */
+        font-family: "Old Standard TT"; /* Serif font */
+        font-weight: italic; /* Italic text */
+        text-align: center; /* Center-align text */
+        display: flex; /* Use flexbox for layout */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        z-index: 11; /* Higher layer priority */
+        position: absolute; /* Position absolutely within the container */
+        top: 200%; /* Position at the top */
+        left: 42%; /* Offset horizontally */
+        transform: translate(-50%, -245%) scaleX(-1); /* Flip horizontally */
+    }
+
+    /* Reversed secondary separator symbol at the top */
+    .separator-symbol-reverse4 {
+        transform: rotate(-0.0009993530981313888rad); /* Slight rotation */
+        color: #E3C975; /* Light gold color */
+        font-size: 90px; /* Smaller font size */
+        font-family: "Old Standard TT"; /* Serif font */
+        font-weight: italic; /* Italic text */
+        text-align: center; /* Center-align text */
+        display: flex; /* Use flexbox for layout */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        z-index: 11; /* Higher layer priority */
+        position: absolute; /* Position absolutely within the container */
+        top: 200%; /* Position at the top */
+        left: 42%; /* Offset horizontally */
+        transform: translate(-50%, -310%) scaleX(-1); /* Flip horizontally */
+    }
+    
+    /* Container for artist profiles */
+    .profile-container {
+        display: flex; /* Use flexbox for layout */
+        justify-content: center; /* Center content horizontally */
+        align-items: center; /* Center content vertically */
+        flex-direction: column; /* Stack items vertically */
+        width: 100%; /* Full width */
+        margin-bottom: 40px; /* Add spacing below the container */
+    }
+
+    /* Individual artist profile */
+    .artist-profile {
+        width: 700px; /* Set width */
+        max-width: 100%; /* Ensure it doesn't exceed the container width */
+        margin-bottom: 120px; /* Add spacing below each profile */
+    }
+
+    /* Reversed layout for artist profile */
+    .artist-profile.reverse {
+        width: 670px; /* Slightly smaller width */
+        max-width: 100%; /* Ensure it doesn't exceed the container width */
+    }
+
+    /* Content inside the artist profile */
+    .artist-content {
+        gap: 20px; /* Add spacing between content items */
+        display: flex; /* Use flexbox for layout */
+    }
+
+    /* Column for artist information */
+    .artist-info-column {
+        display: flex; /* Use flexbox for layout */
+        flex-direction: column; /* Stack items vertically */
+        align-items: stretch; /* Stretch items to fill the column */
+        line-height: normal; /* Set normal line height */
+        width: 54%; /* Set width */
+        margin-left: 0px; /* No left margin */
+    }
+
+    /* Adjustments for reversed layout */
+    .artist-profile.reverse .artist-info-column {
+        width: 50%; /* Adjust width */
+        margin-left: 20px; /* Add left margin */
+    }
+
+    /* Artist biography text */
+    .artist-bio {
+        color: rgba(0, 0, 0, 1); /* Set text color */
+        font-size: 28px; /* Set font size */
+        font-family: "Old Standard TT", serif; /* Set font family */
+        font-weight: 400; /* Set font weight */
+        text-align: right; /* Align text to the right */
+        margin-top: 78px; /* Add spacing above the biography */
+    }
+
+    /* Adjustments for reversed layout */
+    .artist-profile.reverse .artist-bio {
+        text-align: left; /* Align text to the left */
+        margin-top: 141px; /* Add more spacing above the biography */
+    }
+
+    /* Artist name styling */
+    .artist-name {
+        font-size: 30px; /* Set font size */
+        color: rgba(120, 47, 55, 1); /* Set text color */
+        margin-bottom: 20px; /* Add spacing below the name */
+    }
+
+    /* Artist description styling */
+    .artist-description {
+        font-size: 14px; /* Set font size */
+    }
+
+    /* Column for artist image */
+    .artist-image-column {
+        display: flex; /* Use flexbox for layout */
+        flex-direction: column; /* Stack items vertically */
+        align-items: stretch; /* Stretch items to fill the column */
+        line-height: normal; /* Set normal line height */
+        width: 40%; /* Set width */
+        margin-left: 20px; /* Add left margin */
+    }
+
+    /* Adjustments for reversed layout */
+    .artist-profile.reverse .artist-image-column {
+        width: 50%; /* Adjust width */
+        margin-left: 0; /* Remove left margin */
+    }
+
+    /* Container for artist image */
+    .artist-image-container {
+        display: flex; /* Use flexbox for layout */
+        flex-direction: column; /* Stack items vertically */
+        border-radius: 8px; /* Add rounded corners */
+        position: relative; /* Position relative for child elements */
+        aspect-ratio: 0.859; /* Set aspect ratio */
+        flex-grow: 1; /* Allow the container to grow */
+        font-family: "Old Standard TT", serif; /* Set font family */
+        font-size: 14px; /* Set font size */
+        color: #782F37; /* Set text color */
+        font-weight: 400; /* Set font weight */
+        text-align: center; /* Center-align text */
+        overflow: hidden; /* Hide overflow content */
+        cursor: pointer; /* Change cursor to pointer */
+        max-height: 200px; /* Set maximum height */
+    }
+
+    /* Adjustments for reversed layout */
+    .artist-profile.reverse .artist-image-container {
+        border-radius: 8px; /* Add rounded corners */
+        flex-grow: 1; /* Allow the container to grow */
+        padding-left: 1px; /* Add left padding */
+        padding-right: 1px; /* Add right padding */
+        font-family: "Old Standard TT", serif; /* Set font family */
+        font-size: 20px; /* Set font size */
+        color: #782F37; /* Set text color */
+        font-weight: 400; /* Set font weight */
+        white-space: nowrap; /* Prevent text wrapping */
+        text-align: center; /* Center-align text */
+        line-height: 3; /* Set line height */
+        width: 100%; /* Full width */
+        overflow: hidden; /* Hide overflow content */
+        cursor: pointer; /* Change cursor to pointer */
+    }
+
+    /* Artist image styling */
+    .artist-image {
+        position: absolute; /* Position absolutely within the container */
+        inset: 0; /* Cover the entire container */
+        height: 100%; /* Full height */
+        width: 100%; /* Full width */
+        object-fit: cover; /* Ensure the image covers the container */
+        object-position: center; /* Center the image */
+    }
+
+    /* Container for artist links */
+    .artist-links {
+        position: absolute; /* Position absolutely within the container */
+        inset: 0; /* Cover the entire container */
+        border-radius: 8px; /* Add rounded corners */
+        background-color: rgba(55, 55, 55, 0); /* Transparent background */
+        display: flex; /* Use flexbox for layout */
+        padding-left: 40px; /* Add left padding */
+        padding-right: 40px; /* Add right padding */
+        padding-top: 0; /* No top padding */
+        padding-bottom: 0; /* No bottom padding */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        justify-content: center; /* Center items vertically */
+        transition: background-color 0.3s ease; /* Smooth transition for background color */
+        opacity: 0; /* Initially hidden */
+        pointer-events: auto; /* Enable interactions */
+    }
+
+    /* Adjustments for reversed layout */
+    .artist-profile.reverse .artist-links {
+        display: flex; /* Use flexbox for layout */
+        flex-direction: column; /* Stack items vertically */
+        border-radius: 8px; /* Add rounded corners */
+        position: absolute; /* Position absolutely within the container */
+        inset: 0; /* Cover the entire container */
+        padding-left: 69px; /* Add left padding */
+        padding-right: 69px; /* Add right padding */
+        padding-top: 100px; /* Add top padding */
+        padding-bottom: 228px; /* Add bottom padding */
+        align-items: center; /* Center items horizontally */
+        justify-content: center; /* Center items vertically */
+        transition: background-color 0.3s ease; /* Smooth transition for background color */
+        opacity: 0; /* Initially hidden */
+    }
+
+    /* Hover effect for artist links */
+    .artist-image-container:hover .artist-links {
+        background-color: rgba(55, 55, 55, 0.72); /* Add semi-transparent background */
+        opacity: 1; /* Make links visible */
+    }
+
+    /* Adjustments for reversed layout on hover */
+    .artist-profile.reverse .artist-image-container:hover .artist-links {
+        background-color: rgba(55, 55, 55, 0.72); /* Add semi-transparent background */
+        opacity: 1; /* Make links visible */
+    }
+
+    /* Styling for individual artist links */
+    .artist-link {
+        text-decoration: none; /* Remove underline */
+        color: inherit; /* Inherit text color */
+    }
+
+    /* Styling for personal website link */
+    .personal-website {
+        border-radius: 8px; /* Add rounded corners */
+        background-color: #E3C975; /* Set background color */
+        border-color: #782F37; /* Set border color */
+        border-style: solid; /* Set border style */
+        border-width: 2px; /* Set border width */
+        width: 160px; /* Set width */
+        max-width: 100%; /* Ensure it doesn't exceed the container width */
+        padding-left: 37px; /* Add left padding */
+        padding-right: 37px; /* Add right padding */
+        padding-top: 6px; /* Add top padding */
+        padding-bottom: 6px; /* Add bottom padding */
+        line-height: 20px; /* Set line height */
+        display: block; /* Display as a block element */
+        transform: translateY(20px); /* Move down slightly */
+        transition: transform 0.3s ease; /* Smooth transition for transform */
+    }
+
+    /* Hover effect for personal website link */
+    .artist-image-container:hover .personal-website {
+        transform: translateY(0); /* Move back to original position */
+        text-decoration: none; /* Remove underline */
+        color: #782F37; /* Change text color */
+        padding-right: 55px; /* Adjust padding */
+    }
+
+    /* Styling for biography button */
+    .biography {
+        z-index: 10; /* Set layer priority */
+        border-radius: 8px; /* Add rounded corners */
+        background-color: rgba(227, 201, 117, 1); /* Set background color */
+        border-color: rgba(120, 47, 55, 1); /* Set border color */
+        border-style: solid; /* Set border style */
+        border-width: 2px; /* Set border width */
+        margin-top: 39px; /* Add spacing above the button */
+        margin-bottom: -34px; /* Add negative spacing below the button */
+        width: 147px; /* Set width */
+        max-width: 100%; /* Ensure it doesn't exceed the container width */
+        padding-left: 30px; /* Add left padding */
+        padding-right: 30px; /* Add right padding */
+        padding-bottom: 32px; /* Add bottom padding */
+        white-space: nowrap; /* Prevent text wrapping */
+        line-height: 3; /* Set line height */
+        padding-top: -6px; /* Add negative top padding */
+        display: block; /* Display as a block element */
+        transform: translateY(20px); /* Move down slightly */
+        transition: transform 0.3s ease 0.1s; /* Smooth transition for transform */
+    }
+
+    /* Hover effect for biography button */
+    .artist-image-container:hover .biography {
+        transform: translateY(0); /* Move back to original position */
+        text-decoration: none; /* Remove underline */
+        color: #782F37; /* Change text color */
+        padding-right: 65px; /* Adjust padding */
+    }
+
+    /* Adjustments for reversed layout */
+    .artist-profile.reverse .biography {
+        position: relative; /* Position relative for child elements */
+        z-index: 10; /* Set layer priority */
+        border-radius: 8px; /* Add rounded corners */
+        background-color: #E3C975; /* Set background color */
+        border-color: #782F37; /* Set border color */
+        border-style: solid; /* Set border style */
+        border-width: 2px; /* Set border width */
+        margin-bottom: -46px; /* Add negative spacing below the button */
+        width: 142px; /* Set width */
+        max-width: 100%; /* Ensure it doesn't exceed the container width */
+        padding-left: 27px; /* Add left padding */
+        padding-right: 27px; /* Add right padding */
+        padding-bottom: 30px; /* Add bottom padding */
+        padding-top: -5px; /* Add negative top padding */
+        transform: translateY(20px); /* Move down slightly */
+        transition: transform 0.3s ease; /* Smooth transition for transform */
+    }
+
+    /* Hover effect for reversed layout biography button */
+    .artist-profile.reverse .artist-image-container:hover .biography {
+        transform: translateY(0); /* Move back to original position */
+        padding-right: 100px; /* Adjust padding */
+    }
+
+    /* Footer styling */
+    footer {
+        background-color: #782F37; /* Set background color */
+        color: white; /* Set text color */
+        padding: 20px; /* Add padding */
+        z-index: 11; /* Set layer priority */
+        pointer-events: auto; /* Enable interactions */
+    }
+
+    /* General container styling */
+    .container {
+        margin: auto; /* Center the container */
+        padding: 20px; /* Add padding */
+    }
+
+    /* Button styling */
+    button {
+        background-color: #E3C975; /* Set background color */
+    }
+}

@@ -1,0 +1,230 @@
+/* Show the regular navigation bar by default */
+.nav-bar {
+    display: block; /* Regular navigation bar is visible */
+}
+
+/* Hide the hamburger menu by default */
+.navbar-toggler,
+#overlay-menu {
+    display: none; /* Hamburger menu and overlay are hidden */
+}
+
+/* Hamburger Menu Button */
+.navbar-toggler {
+    position: absolute;
+    top: -150px;
+    right: 10px;
+    z-index: 1100;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px; /* Adjust size of the icon */
+    color: black; /* Default color */
+    transition: color 0.3s ease-in-out;
+}
+
+/* Ensure the Font Awesome icon inside the button is always visible */
+.navbar-toggler i {
+    color: black; /* Default color for the icon */
+    transition: color 0.3s ease-in-out;
+}
+
+/* Change the icon color when the menu is toggled */
+.navbar-toggler.open i {
+    color: black; /* Change to white when the menu is open */
+}
+
+/* Transform Hamburger to X */
+.navbar-toggler.open .navbar-toggler-icon {
+    background-color: transparent; /* Hide the middle line */
+}
+
+.navbar-toggler.open .navbar-toggler-icon::before {
+    transform: rotate(45deg) translate(5px, 5px);
+    background-color: white; /* Change color to white */
+}
+
+.navbar-toggler.open .navbar-toggler-icon::after {
+    transform: rotate(-45deg) translate(5px, -5px);
+    background-color: white; /* Change color to white */
+}
+
+/* Fullscreen Overlay Menu */
+#overlay-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white; /* Blue background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1050;
+    transition: all 0.3s ease-in-out;
+}
+
+#overlay-menu.hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+#overlay-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+#overlay-menu ul li {
+    margin: 20px 0;
+}
+
+#overlay-menu ul li a {
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#overlay-menu ul li a:hover {
+    color: #E3C975;
+}
+
+.hero-home {
+    text-decoration: none;
+}
+
+.hero-left {
+    flex: 1;
+    margin-bottom: 100px;
+   
+}
+
+.hero-left h1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 10px;
+    font-size: 55px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #782F37;
+    text-shadow: 3px 3px 0px #E3C975;
+    font-family: 'Old Standard TT', serif;
+    margin-bottom: 40px;
+}
+
+/* Divider Styling */
+.divider {
+    position: absolute;
+    top: 50%;
+    left: -60px;
+    width: 230px; /* Make it longer than the text */
+    height: 30px; /* Increase thickness */
+    background-color: #782F37;
+    clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%); /* Slant downward */
+    border-bottom: 4px solid #E3C975; /* Add a border at the bottom */
+}
+
+
+.hero-home2 {
+    text-decoration: none;
+}
+
+.hero-left2 {
+    flex: 1;
+    margin-bottom: 100px;
+   
+}
+
+.hero-left2 h1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 10px;
+    font-size: 55px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #782F37;
+    text-shadow: 3px 3px 0px #E3C975;
+    font-family: 'Old Standard TT', serif;
+    margin-bottom: 40px;
+}
+
+/* Divider Styling */
+.divider2 {
+    position: absolute;
+    top: 50%;
+    left: -60px;
+    width: 230px; /* Make it longer than the text */
+    height: 30px; /* Increase thickness */
+    background-color: #782F37;
+    clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%); /* Slant downward */
+    border-bottom: 4px solid #E3C975; /* Add a border at the bottom */
+}
+
+/* Navigation Styling */
+.nav-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    z-index: 1; /* second layer */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    margin-bottom: 80px;
+}
+
+.nav-bar ul {
+    position: absolute;
+    top: 30%;
+    left: 45%;
+    list-style-type: none;
+    margin: 0;
+    padding:0;
+    color: black;
+}
+
+.nav-bar ul li {
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+    padding: 10px 20px;
+}
+
+.nav-bar li a {
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+    padding: 10px 20px;
+}
+
+.nav-item.contact .nav-link:hover {
+    color: #782F37 !important;
+    font-family: 'Old Standard TT', serif;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+
+footer {
+    background-color: #782F37;
+    color: white;
+    padding: 20px;
+    z-index: 11;
+}
+
+.container {
+    margin: auto;
+    padding: 20px;
+}
+
+button {
+    background-color: #E3C975;
+
+}

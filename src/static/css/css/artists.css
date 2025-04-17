@@ -1,0 +1,1515 @@
+/* Show the regular navigation bar by default */
+.nav-bar {
+    display: block; /* Regular navigation bar is visible */
+}
+
+/* Hide the hamburger menu by default */
+.navbar-toggler,
+#overlay-menu {
+    display: none; /* Hamburger menu and overlay are hidden */
+}
+
+/* Hamburger Menu Button */
+.navbar-toggler {
+    position: absolute; /* Position the button absolutely */
+    top: 50px; /* Adjust vertical position */
+    right: 10px; /* Adjust horizontal position */
+    z-index: 1100; /* Set layer priority */
+    background: none; /* No background */
+    border: none; /* Remove border */
+    cursor: pointer; /* Change cursor to pointer */
+    font-size: 24px; /* Adjust size of the icon */
+    color: black; /* Default color */
+    transition: color 0.3s ease-in-out; /* Smooth transition for color */
+}
+
+/* Ensure the Font Awesome icon inside the button is always visible */
+.navbar-toggler i {
+    color: #782F37; /* Default color for the icon */
+    transition: color 0.3s ease-in-out; /* Smooth transition for color */
+}
+
+/* Change the icon color when the menu is toggled */
+.navbar-toggler.open i {
+    color: #782F37; /* Change to white when the menu is open */
+}
+
+/* Transform Hamburger to X */
+.navbar-toggler.open .navbar-toggler-icon {
+    background-color: transparent; /* Hide the middle line */
+}
+
+.navbar-toggler.open .navbar-toggler-icon::before {
+    transform: rotate(45deg) translate(5px, 5px); /* Rotate and translate */
+    background-color: white; /* Change color to white */
+}
+
+.navbar-toggler.open .navbar-toggler-icon::after {
+    transform: rotate(-45deg) translate(5px, -5px); /* Rotate and translate */
+    background-color: white; /* Change color to white */
+}
+
+/* Fullscreen Overlay Menu */
+#overlay-menu {
+    position: fixed; /* Fix the menu to the viewport */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: white; /* Set background color */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    z-index: 1050; /* Set layer priority */
+    transition: all 0.3s ease-in-out; /* Smooth transition for visibility */
+}
+
+#overlay-menu.hidden {
+    transform: translateY(-100%); /* Move out of view */
+    opacity: 0; /* Make invisible */
+    pointer-events: none; /* Disable interactions */
+}
+
+/* Overlay menu list styling */
+#overlay-menu ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    text-align: center; /* Center-align text */
+}
+
+#overlay-menu ul li {
+    margin: 20px 0; /* Add vertical spacing */
+}
+
+/* Overlay menu list item link styling */
+#overlay-menu ul li a {
+    color: black; /* Set text color */
+    font-size: 24px; /* Set font size */
+    font-weight: bold; /* Set font weight */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth transition for color */
+}
+
+/* Highlight artists link */
+#overlay-menu ul li .artists {
+    color: #782F37; /* Set color for artists link */
+}
+
+/* Hover effect for overlay menu links */
+#overlay-menu ul li a:hover {
+    color: #E3C975; /* Change color on hover */
+}
+
+/* Highlight artists link in the navigation bar */
+.collapse .navbar-nav .artists .nav-link {
+    color: #782F37; /* Set color for artists link */
+    font-family: 'Old Standard TT', serif; /* Set font family */
+    font-weight: bold; /* Set font weight */
+}
+
+/* Hero section styling */
+.hero-left h1 {
+    position: absolute; /* Position the heading absolutely */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    margin-left: 10px; /* Add left margin */
+    font-size: 55px; /* Set font size */
+    font-weight: bold; /* Set font weight */
+    margin-bottom: 10px; /* Add bottom margin */
+    color: #782F37; /* Set text color */
+    text-shadow: 3px 3px 0px #E3C975; /* Add text shadow */
+    font-family: 'Old Standard TT', serif; /* Set font family */
+    margin-bottom: 40px; /* Add additional bottom margin */
+}
+
+/* Divider Styling */
+.divider {
+    position: absolute; /* Position the divider absolutely */
+    top: 70%; /* Adjust vertical position */
+    left: 0; /* Align the divider to the left */
+    width: 230px; /* Set the width of the divider */
+    height: 30px; /* Set the height of the divider */
+    background-color: #782F37; /* Set background color */
+    clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%); /* Create a slanted shape */
+    border-bottom: 4px solid #E3C975; /* Add a gold border at the bottom */
+}
+
+.hero-left2 h1 {
+    position: absolute; /* Position the heading absolutely */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    margin-left: 10px; /* Add left margin */
+    font-size: 55px; /* Set font size */
+    font-weight: bold; /* Set font weight */
+    margin-bottom: 10px; /* Add bottom margin */
+    color: #782F37; /* Set text color */
+    text-shadow: 3px 3px 0px #E3C975; /* Add text shadow */
+    font-family: 'Old Standard TT', serif; /* Set font family */
+    margin-bottom: 40px; /* Add additional bottom margin */
+}
+
+/* Divider Styling */
+.divider2 {
+    position: absolute; /* Position the divider absolutely */
+    top: 70%; /* Adjust vertical position */
+    left: 0; /* Align the divider to the left */
+    width: 230px; /* Make it longer than the text */
+    height: 30px; /* Increase thickness */
+    background-color: #782F37; /* Set background color */
+    clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%); /* Slant downward */
+    border-bottom: 4px solid #E3C975; /* Add a border at the bottom */
+}
+
+/* Navigation Styling */
+.nav-bar {
+    position: absolute; /* Position the navigation bar absolutely */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    height: 20%; /* Set height */
+    background-color: white; /* Set background color */
+    padding: 20px; /* Add padding */
+    z-index: 1; /* Set layer priority */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); /* Define shape */
+}
+
+.nav-bar ul {
+    position: absolute; /* Position the list absolutely */
+    top: 30%; /* Adjust vertical position */
+    left: 45%; /* Adjust horizontal position */
+    list-style-type: none; /* Remove bullet points */
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+    color: black; /* Set text color */
+}
+
+.nav-bar ul li {
+    text-decoration: none; /* Remove underline */
+    color: black; /* Set text color */
+    font-size: 22px; /* Set font size */
+    padding: 10px 20px; /* Add padding */
+}
+
+.nav-bar li a {
+    text-decoration: none; /* Remove underline */
+    color: black; /* Set text color */
+    font-size: 22px; /* Set font size */
+    padding: 10px 20px; /* Add padding */
+}
+
+.nav-item.contact .nav-link:hover {
+    color: #782F37 !important; /* Change text color on hover */
+    font-family: 'Old Standard TT', serif; /* Set font family */
+    font-weight: bold; /* Set font weight */
+}
+
+/* White Screen Styling */
+.white-screen1 {
+    position: absolute; /* Position the white screen absolutely */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: white; /* Set background color */
+    z-index: 0; /* Set layer priority */
+    pointer-events: none; /* Disable interactions */
+}
+
+/* Image Container Styling */
+.image-container img {
+    position: absolute; /* Position the image absolutely */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Ensure image is 100% width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Display as block */
+    z-index: 2; /* Set layer priority */
+    transition: filter 0.3s ease; /* Smooth transition on hover */
+    clip-path: polygon(100% 0%, 100% 63%, 0 63%, 0 0%); /* Clip the image */
+    margin-top: 200px; /* Add top margin */
+    border-top: 20px #E3C975 solid; /* Add a border at the top */
+}
+
+/* Red Box Styling */
+.red-box {
+    position: absolute; /* Position the red box absolutely */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    height: 112.4%; /* Set height */
+    background-color: white; /* Set background color */
+    z-index: 3; /* Set layer priority */
+    clip-path: polygon(20% 0, 32% 0, 66% 100%, 54% 100%); /* Define shape */
+    pointer-events: none; /* Disable interactions */
+}
+
+/* Red Box Border Styling */
+.red-box-border {
+    position: absolute; /* Position the red box border absolutely */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    height: 112.4%; /* Set height */
+    background-color: #E3C975; /* Set background color */
+    z-index: 3; /* Set layer priority */
+    clip-path: polygon(31% 0, 32% 0, 66% 100%, 65% 100%); /* Define shape */
+    pointer-events: none; /* Disable interactions */
+}
+
+/* Secondary Red Box Border Styling */
+.red-box-border2 {
+    position: absolute; /* Position the secondary red box border absolutely */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    height: 110%; /* Set height */
+    background-color: #E3C975; /* Set background color */
+    z-index: 3; /* Set layer priority */
+    clip-path: polygon(20% 0, 21% 0, 44.4% 70.4%, 43.3% 70%); /* Define shape */
+    pointer-events: none; /* Disable interactions */
+}
+
+/* Green Box Styling */
+.green-box {
+    position: absolute; /* Position the green box absolutely */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: #E3C975; /* Set background color */
+    z-index: 3; /* Set layer priority */
+    clip-path: polygon(32% 0, 33% 0, 39.3% 21.5%, 38.5% 21.5%); /* Define shape */
+    pointer-events: none; /* Disable interactions */
+}
+
+/* Green Box Tint Styling */
+.green-box-tint {
+    position: absolute; /* Position the green box tint absolutely */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.2); /* Set semi-transparent dark overlay */
+    z-index: 3; /* Set layer priority */
+    clip-path: polygon(39.282% 21.4%, 100% 21.4%, 100% 23.5%, 39.9% 23.5%); /* Match the red box */
+    pointer-events: none; /* Disable interactions */
+}
+
+/* Secondary Green Box Tint Styling */
+.green-box-tint2 {
+    position: absolute; /* Position the secondary green box tint absolutely */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.2); /* Set semi-transparent dark overlay */
+    z-index: 3; /* Set layer priority */
+    clip-path: polygon(32% 0, 33% 0, 39.9% 23.5%, 39.1% 23.5%); /* Match the red box */
+    pointer-events: none; /* Disable interactions */
+}
+
+/* Green Box Border Styling */
+.green-box-border {
+    position: absolute; /* Position the green box border absolutely */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    height: 110%; /* Set height */
+    background-color: #E3C975; /* Set background color */
+    z-index: 3; /* Set layer priority */
+    clip-path: polygon(0 69.5%, 43.9% 69.5%, 44.6% 71%, 0 71%); /* Define shape */
+    pointer-events: none; /* Disable interactions */
+}
+
+/* Image Cover Styling */
+.image-cover {
+    position: absolute; /* Position the image cover absolutely */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    height: 114%; /* Set height */
+    background-color: white; /* Set semi-transparent dark overlay */
+    z-index: 4; /* Set layer priority */
+    pointer-events: none; /* Disable interactions */
+    clip-path: polygon(0 68.4%, 43.6% 68.4%, 54.6% 100%, 0 100%); /* Define shape */
+}
+
+/* Image Border Styling */
+.image-border {
+    position: absolute; /* Position the image border absolutely */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    height: 114%; /* Set height */
+    background-color: #E3C975; /* Set background color */
+    z-index: 3 !important; /* Set layer priority */
+    clip-path: polygon(65% 97.1%, 100% 97.1%, 100% 98.6%, 65% 98.6%); /* Define shape */
+    pointer-events: none; /* Disable interactions */
+}
+
+.page-content {
+    position: absolute; /* Position the content absolutely */
+    top: 80%; /* Adjust vertical position */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    z-index: 6 !important; /* Set layer priority */
+    pointer-events: none; /* Disable interactions */
+}
+
+.page-content h1 {
+    position: absolute; /* Position the heading absolutely */
+    color: #782F37; /* Set text color */
+    font-family: 'Old Standard TT', serif; /* Set font family */
+    font-weight: bold; /* Set font weight */
+    text-align: left; /* Align text to the left */
+    text-shadow: #E3C975 1px 2px; /* Add text shadow */
+    font-size: 100px; /* Set font size */
+    right: 65%; /* Adjust horizontal position */
+    margin-left: 20px; /* Add left margin */
+}
+
+.page-content p {
+    position: absolute; /* Position the paragraph absolutely */
+    top: 30%; /* Adjust vertical position */
+    font-size: 30px; /* Set font size */
+    left: 0; /* Align to the left */
+    right: 5%; /* Adjust horizontal position */
+    padding: 10px; /* Add padding */
+    margin-left: 80px; /* Add left margin */
+    margin-right: 80px; /* Add right margin */
+}
+
+.page-content2 {
+    position: absolute; /* Position the content absolutely */
+    top: 340%; /* Adjust vertical position */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    height: 80%; /* Set height */
+    z-index: 6 !important; /* Set layer priority */
+    pointer-events: none; /* Disable interactions */
+}
+
+.page-content2 h1 {
+    position: absolute; /* Position the heading absolutely */
+    color: #782F37; /* Set text color */
+    font-family: 'Old Standard TT', serif; /* Set font family */
+    font-weight: bold; /* Set font weight */
+    text-align: left; /* Align text to the left */
+    text-shadow: #E3C975 1px 2px; /* Add text shadow */
+    font-size: 100px; /* Set font size */
+    top: 90%; /* Adjust vertical position */
+    left: 60%; /* Adjust horizontal position */
+}
+
+.page-content2 p {
+    position: absolute; /* Position the paragraph absolutely */
+    top: 158%; /* Adjust vertical position */
+    font-size: 30px; /* Set font size */
+    left: 0; /* Align to the left */
+    right: 5%; /* Adjust horizontal position */
+    padding: 10px; /* Add padding */
+    margin-left: 80px; /* Add left margin */
+    margin-right: 80px; /* Add right margin */
+}
+
+.byron-image {
+    position: absolute; /* Position the image absolutely */
+    top: 342%; /* Adjust vertical position */
+    left: 0%; /* Align to the left */
+    width: 85%; /* Set width */
+    display: block; /* Display as block */
+    z-index: 2; /* Set layer priority */
+    margin-top: 200px; /* Add top margin */
+}
+
+.yellow-box {
+    position: absolute; /* Position the yellow box absolutely */
+    top: 230%; /* Adjust vertical position */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    height: 114%; /* Set height */
+    background-color: #E3C975; /* Set background color */
+    z-index: 3 !important; /* Set layer priority */
+    clip-path: polygon(68% 97.1%, 100% 97.1%, 100% 98.6%, 68% 98.6%); /* Define shape */
+    pointer-events: none; /* Disable interactions */
+}
+
+.yellow-box-border {
+    position: absolute; /* Position the yellow box border absolutely */
+    top: 341%; /* Adjust vertical position */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    height: 112.4%; /* Set height */
+    background-color: #E3C975; /* Set background color */
+    z-index: 3; /* Set layer priority */
+    clip-path: polygon(31% 0, 32% 0, 66% 100%, 65% 100%); /* Define shape */
+    pointer-events: none; /* Disable interactions */
+    transform: scaleX(-1); /* Flip horizontally */
+}
+
+.yellow-box-border2 {
+    position: absolute; /* Position the secondary yellow box border absolutely */
+    top: 341%; /* Adjust vertical position */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    height: 114%; /* Set height */
+    background-color: #E3C975; /* Set background color */
+    z-index: 3 !important; /* Set layer priority */
+    clip-path: polygon(0% 97.1%, 35% 97.1%, 35% 98.6%, 0% 98.6%); /* Define shape */
+    pointer-events: none; /* Disable interactions */
+}
+
+.white-screen2 {
+    position: absolute; /* Position the white screen absolutely */
+    top: 342.48%; /* Adjust vertical position */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    height: 200%; /* Set height */
+    background-color: white; /* Set background color */
+    z-index: 4; /* Set layer priority */
+    pointer-events: none; /* Disable interactions */
+    clip-path: polygon(68.5% 0%, 100% 0%, 100% 63.6%, 30.1% 63.6%); /* Define shape */
+}
+
+.white-screen3 {
+    position: absolute; /* Position the secondary white screen absolutely */
+    top: 342%; /* Adjust vertical position */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    height: 200%; /* Set height */
+    background-color: white; /* Set background color */
+    z-index: 4; /* Set layer priority */
+    pointer-events: none; /* Disable interactions */
+    clip-path: polygon(0% 55.7%, 100% 55.7%, 100% 64%, 0% 64%); /* Define shape */
+}
+
+.artist-info {
+    color: black; /* Set text color */
+    font-family: 'Old Standard TT', serif; /* Set font family */
+    display: flex; /* Use flexbox for layout */
+    justify-content: left; /* Align content to the left */
+    text-align: left; /* Align text to the left */
+    padding-top: 20px; /* Add top padding */
+    margin-bottom: 20px; /* Add bottom margin */
+}
+
+footer {
+    position: absolute; /* Position the footer absolutely */
+    width: 100%; /* Full width */
+    height: 90%; /* Set height */
+    background-color: #782F37; /* Set background color */
+    color: white; /* Set text color */
+    z-index: 11; /* Set layer priority */
+    pointer-events: auto; /* Enable interactions */
+    top: 280%; /* Adjust vertical position */
+}
+
+button {
+    background-color: #E3C975; /* Set button background color */
+}
+
+
+@media (max-width: 1920px) and (max-height: 934px) {
+    /* Hide the hamburger menu for larger screens */
+    .navbar-toggler {
+        display: none; /* Do not display the hamburger menu */
+    }
+
+    /* Hide the divider for larger screens */
+    .divider2 {
+        width: 0; /* Set width to 0 */
+        height: 0; /* Set height to 0 */
+    }
+
+    /* Show the regular navigation bar */
+    .nav-bar {
+        display: block; /* Display the regular navigation bar */
+    }
+
+    /* Adjust the HTML size for larger screens */
+    html {
+        size: 80%; /* Scale down the size */
+    }
+
+    /* Image container styling */
+    .image-container img {
+        position: absolute; /* Position the image absolutely */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+        width: 100%; /* Ensure image is 100% width */
+        height: 143%; /* Set height */
+        display: block; /* Display as block */
+        z-index: 2; /* Set layer priority */
+        transition: filter 0.3s ease; /* Smooth transition on hover */
+        clip-path: polygon(100% 0%, 100% 63%, 0 63%, 0 0%); /* Clip the image */
+        margin-top: 200px; /* Add top margin */
+        border-top: 20px #E3C975 solid; /* Add a border at the top */
+    }
+    
+    /* Byron's image styling */
+    .byron-image {
+        position: absolute; /* Position the image absolutely */
+        top: 342%; /* Adjust vertical position */
+        left: 0%; /* Align to the left */
+        width: 85%; /* Set width */
+        height: 100%; /* Set height */
+        display: block; /* Display as block */
+        z-index: 2; /* Set layer priority */
+        margin-top: 200px; /* Add top margin */
+    }
+}
+
+@media (max-width: 1280px) and (max-height: 832px) {
+    /* Hide the hamburger menu for smaller screens */
+    .navbar-toggler {
+        display: none; /* Do not display the hamburger menu */
+    }
+
+    /* Hide the divider for smaller screens */
+    .divider2 {
+        width: 0; /* Set width to 0 */
+        height: 0; /* Set height to 0 */
+    }
+
+    /* Show the regular navigation bar */
+    .nav-bar {
+        display: block; /* Display the regular navigation bar */
+    }
+
+    /* Divider Styling */
+    .divider {
+        position: absolute; /* Position the divider absolutely */
+        top: 80%; /* Adjust vertical position */
+        left: 0; /* Align to the left */
+        width: 230px; /* Make it longer than the text */
+        height: 30px; /* Increase thickness */
+        background-color: #782F37; /* Set background color */
+        clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%); /* Slant downward */
+        border-bottom: 4px solid #E3C975; /* Add a border at the bottom */
+    }
+
+    /* Navigation Styling */
+    .nav-bar {
+        position: absolute; /* Position the navigation bar absolutely */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+        width: 100%; /* Full width */
+        height: 20%; /* Set height */
+        background-color: white; /* Set background color */
+        padding: 20px; /* Add padding */
+        z-index: 1; /* Set layer priority */
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); /* Define shape */
+    }
+
+    .nav-bar ul {
+        position: absolute; /* Position the list absolutely */
+        top: 30%; /* Adjust vertical position */
+        left: 50%; /* Adjust horizontal position */
+        list-style-type: none; /* Remove bullet points */
+        margin: 0; /* Remove margin */
+        padding: 0; /* Remove padding */
+        color: black; /* Set text color */
+    }
+
+    .nav-bar ul li {
+        text-decoration: none; /* Remove underline */
+        color: black; /* Set text color */
+        font-size: 22px; /* Set font size */
+        padding: 10px 5px; /* Add padding */
+    }
+
+    .nav-bar li a {
+        text-decoration: none; /* Remove underline */
+        color: black; /* Set text color */
+        font-size: 18px; /* Set font size */
+    }
+
+    /* Green Box Styling */
+    .green-box {
+        position: absolute; /* Position the green box absolutely */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        background-color: #E3C975; /* Set background color */
+        z-index: 3; /* Set layer priority */
+        clip-path: polygon(32% 0, 33% 0, 40.2% 24.5%, 39% 24.5%); /* Define shape */
+        pointer-events: none; /* Disable interactions */
+    }
+    
+    /* Green Box Tint Styling */
+    .green-box-tint {
+        position: absolute; /* Position the green box tint absolutely */
+        top: 2.6%; /* Adjust vertical position */
+        left: 0; /* Align to the left */
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        background-color: rgba(0, 0, 0, 0.2); /* Set semi-transparent dark overlay */
+        z-index: 3; /* Set layer priority */
+        clip-path: polygon(39.282% 21.4%, 100% 21.4%, 100% 23.8%, 40% 23.8%); /* Match the green box */
+        pointer-events: none; /* Disable interactions */
+    }
+    
+    /* Secondary Green Box Tint Styling */
+    .green-box-tint2 {
+        position: absolute; /* Position the secondary green box tint absolutely */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        background-color: rgba(0, 0, 0, 0.2); /* Set semi-transparent dark overlay */
+        z-index: 3; /* Set layer priority */
+        clip-path: polygon(32% 0, 33% 0, 40.05% 24%, 39.28% 24%); /* Match the green box */
+        pointer-events: none; /* Disable interactions */
+    }
+
+    /* Image Container Styling */
+    .image-container img {
+        position: absolute; /* Position the image absolutely */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+        width: 100%; /* Ensure image is 100% width */
+        height: 140%; /* Set height */
+        display: block; /* Display as block */
+        z-index: 2; /* Set layer priority */
+        transition: filter 0.3s ease; /* Smooth transition on hover */
+        clip-path: polygon(100% 0%, 100% 63%, 0 63%, 0 0%); /* Clip the image */
+        margin-top: 200px; /* Add top margin */
+        border-top: 20px #E3C975 solid; /* Add a border at the top */
+    }
+
+    /* Page Content Heading Styling */
+    .page-content h1 {
+        position: absolute; /* Position the heading absolutely */
+        color: #782F37; /* Set text color */
+        font-family: 'Old Standard TT', serif; /* Set font family */
+        font-weight: bold; /* Set font weight */
+        text-align: left; /* Align text to the left */
+        text-shadow: #E3C975 1px 2px; /* Add text shadow */
+        font-size: 80px; /* Set font size */
+        left: 4%; /* Adjust horizontal position */
+        right: 0%; /* Adjust horizontal position */
+        margin-left: 20px; /* Add left margin */
+    }
+
+    /* Page Content Paragraph Styling */
+    .page-content p {
+        position: absolute; /* Position the paragraph absolutely */
+        top: 32%; /* Adjust vertical position */
+        font-size: 28px; /* Set font size */
+        left: 0; /* Align to the left */
+        right: 5%; /* Adjust horizontal position */
+        padding: 10px; /* Add padding */
+        margin-left: 60px; /* Add left margin */
+        margin-right: 60px; /* Add right margin */
+    }
+
+    /* Secondary Page Content Paragraph Styling */
+    .page-content2 p {
+        position: absolute; /* Position the paragraph absolutely */
+        top: 158%; /* Adjust vertical position */
+        font-size: 28px; /* Set font size */
+        left: 0; /* Align to the left */
+        right: 5%; /* Adjust horizontal position */
+        padding: 10px; /* Add padding */
+        margin-left: 80px; /* Add left margin */
+        margin-right: 80px; /* Add right margin */
+    }
+
+    /* Footer Styling */
+    footer {
+        position: absolute; /* Position the footer absolutely */
+        width: 100%; /* Full width */
+        height: 90%; /* Set height */
+        background-color: #782F37; /* Set background color */
+        color: white; /* Set text color */
+        z-index: 11; /* Set layer priority */
+        pointer-events: auto; /* Enable interactions */
+        top: 330%; /* Adjust vertical position */
+    }
+}
+
+@media (max-width: 1024px) and (max-height: 1368px) {
+    .nav-bar {
+        display: none; /* Hide the regular navigation bar */
+    }
+
+    .navbar-toggler {
+        display: block; /* Show the hamburger menu */
+    }
+
+    /* Hamburger Menu Button */
+    .navbar-toggler {
+        position: absolute; /* Position the button absolutely */
+        top: 50px; /* Adjust vertical position */
+        right: 15px; /* Adjust horizontal position */
+        z-index: 1100; /* Set layer priority */
+        background: none; /* No background */
+        border: none; /* Remove border */
+        cursor: pointer; /* Change cursor to pointer */
+        font-size: 50px; /* Adjust size of the icon */
+        color: black; /* Default color */
+        transition: color 0.3s ease-in-out; /* Smooth transition for color */
+    }
+
+    #overlay-menu ul {
+        position: absolute; /* Position the menu list absolutely */
+        top: 10%; /* Adjust vertical position */
+        left: 38%; /* Adjust horizontal position */
+    }
+
+    #overlay-menu ul li a {
+        color: black; /* Set text color */
+        font-size: 50px; /* Set font size */
+        font-weight: bold; /* Set font weight */
+        text-decoration: none; /* Remove underline */
+        transition: color 0.3s ease; /* Smooth transition for color */
+    }
+
+    #overlay-menu ul li {
+        margin: 30px 0; /* Add vertical spacing */
+    }
+
+    .hero-left2 h1 {
+        position: absolute; /* Position the heading absolutely */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+        margin-left: 10px; /* Add left margin */
+        font-size: 55px; /* Set font size */
+        font-weight: bold; /* Set font weight */
+        margin-bottom: 10px; /* Add bottom margin */
+        color: #782F37; /* Set text color */
+        text-shadow: 3px 3px 0px #E3C975; /* Add text shadow */
+        font-family: 'Old Standard TT', serif; /* Set font family */
+        margin-bottom: 40px; /* Add additional bottom margin */
+        z-index: 100 !important; /* Set layer priority */
+    }
+
+    /* Divider Styling */
+    .divider2 {
+        position: absolute; /* Position the divider absolutely */
+        top: 9.5%; /* Adjust vertical position */
+        left: 0; /* Align to the left */
+        width: 230px; /* Make it longer than the text */
+        height: 30px; /* Increase thickness */
+        background-color: #782F37; /* Set background color */
+        clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%); /* Slant downward */
+        border-bottom: 4px solid #E3C975; /* Add a border at the bottom */
+        z-index: 100 !important; /* Set layer priority */
+    }
+
+    .red-box {
+        position: absolute; /* Position the red box absolutely */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+        width: 100%; /* Full width */
+        height: 112.4%; /* Set height */
+        background-color: white; /* Set background color */
+        z-index: 3; /* Set layer priority */
+        clip-path: polygon(20% 0, 32% 0, 80% 100%, 68% 100%); /* Custom shape */
+        pointer-events: none; /* Disable interactions */
+    }
+    
+    .red-box-border {
+        position: absolute; /* Position the red box border absolutely */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+        width: 100%; /* Full width */
+        height: 112.4%; /* Set height */
+        background-color: #E3C975; /* Set background color */
+        z-index: 3; /* Set layer priority */
+        clip-path: polygon(31% 0, 32% 0, 55% 46.5%, 54% 46.5%); /* Custom shape */
+        pointer-events: none; /* Disable interactions */
+    }
+    
+    .red-box-border2 {
+        position: absolute; /* Position the secondary red box border absolutely */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+        width: 100%; /* Full width */
+        height: 110%; /* Set height */
+        background-color: #E3C975; /* Set background color */
+        z-index: 3; /* Set layer priority */
+        clip-path: polygon(20% 0, 21% 0, 35% 31%, 34% 31%); /* Custom shape */
+        pointer-events: none; /* Disable interactions */
+    }
+    
+    .green-box {
+        position: absolute; /* Position the green box absolutely */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        background-color: #E3C975; /* Set background color */
+        z-index: 3; /* Set layer priority */
+        clip-path: polygon(32% 0, 33% 0, 39.3% 14.8%, 38.5% 14.8%); /* Custom shape */
+        pointer-events: none; /* Disable interactions */
+    }
+    
+    .green-box-tint {
+        position: absolute; /* Position the green box tint absolutely */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        background-color: rgba(0, 0, 0, 0.2); /* Set semi-transparent dark overlay */
+        z-index: 3; /* Set layer priority */
+        clip-path: polygon(38.4% 14.65%, 100% 14.65%, 100% 16.1%, 39% 16.1%); /* Match the red box */
+        pointer-events: none; /* Disable interactions */
+    }
+    
+    .green-box-tint2 {
+        position: absolute; /* Position the secondary green box tint absolutely */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        background-color: rgba(0, 0, 0, 0.2); /* Set semi-transparent dark overlay */
+        z-index: 3; /* Set layer priority */
+        clip-path: polygon(32% 0, 33% 0, 39.3% 14.64%, 38.5% 14.65%); /* Match the red box */
+        pointer-events: none; /* Disable interactions */
+    }
+    
+    .green-box-border {
+        position: absolute; /* Position the green box border absolutely */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+        width: 100%; /* Full width */
+        height: 110%; /* Set height */
+        background-color: #E3C975; /* Set background color */
+        z-index: 3; /* Set layer priority */
+        clip-path: polygon(0 30%, 34% 30%, 35% 31%, 0 31%); /* Custom shape */
+        pointer-events: none; /* Disable interactions */
+    }
+    
+    .image-cover {
+        position: absolute; /* Position the image cover absolutely */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+        width: 100%; /* Full width */
+        height: 60%; /* Set height */
+        background-color: white; /* Set background color */
+        z-index: 4; /* Set layer priority */
+        pointer-events: none; /* Disable interactions */
+        clip-path: polygon(0 56.8%, 34.8% 56.8%, 42% 85%, 0 85%); /* Define shape */
+    }
+    
+    .image-border {
+        position: absolute; /* Position the image border absolutely */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+        width: 100%; /* Full width */
+        height: 114%; /* Set height */
+        background-color: #E3C975; /* Set background color */
+        z-index: 3 !important; /* Set layer priority */
+        clip-path: polygon(54% 44.5%, 100% 44.5%, 100% 45.8%, 54.5% 45.8%); /* Custom shape */
+        pointer-events: none; /* Disable interactions */
+    }
+
+    .page-content {
+        position: absolute; /* Position the content absolutely */
+        top: 35%; /* Adjust vertical position */
+        left: 0; /* Align to the left */
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        z-index: 6 !important; /* Set layer priority */
+        pointer-events: none; /* Disable interactions */
+    }
+    
+    .page-content h1 {
+        position: absolute; /* Position the heading absolutely */
+        color: #782F37; /* Set text color */
+        font-family: 'Old Standard TT', serif; /* Set font family */
+        font-weight: bold; /* Set font weight */
+        text-align: left; /* Align text to the left */
+        text-shadow: #E3C975 1px 2px; /* Add text shadow */
+        font-size: 50px; /* Set font size */
+        left: 7%; /* Adjust horizontal position */
+        right: 0; /* Adjust horizontal position */
+        margin-left: 20px; /* Add left margin */
+    }
+    
+    .page-content p {
+        position: absolute; /* Position the paragraph absolutely */
+        top: 20%; /* Adjust vertical position */
+        font-size: 25px; /* Set font size */
+        left: 0; /* Align to the left */
+        right: 5%; /* Adjust horizontal position */
+        padding: 10px; /* Add padding */
+        margin-left: 80px; /* Add left margin */
+        margin-right: 80px; /* Add right margin */
+    }
+    
+    .page-content2 {
+        position: absolute; /* Position the content absolutely */
+        top: 200%; /* Adjust vertical position */
+        left: 0; /* Align to the left */
+        width: 100%; /* Full width */
+        height: 80%; /* Set height */
+        z-index: 6 !important; /* Set layer priority */
+        pointer-events: none; /* Disable interactions */
+    }
+    
+    .page-content2 h1 {
+        position: absolute; /* Position the heading absolutely */
+        color: #782F37; /* Set text color */
+        font-family: 'Old Standard TT', serif; /* Set font family */
+        font-weight: bold; /* Set font weight */
+        text-align: left; /* Align text to the left */
+        text-shadow: #E3C975 1px 2px; /* Add text shadow */
+        font-size: 50px; /* Set font size */
+        top: 60%; /* Adjust vertical position */
+        left: 60%; /* Adjust horizontal position */
+    }
+    
+    .page-content2 p {
+        position: absolute; /* Position the paragraph absolutely */
+        top: 105%; /* Adjust vertical position */
+        font-size: 25px; /* Set font size */
+        left: 0; /* Align to the left */
+        right: 5%; /* Adjust horizontal position */
+        padding: 10px; /* Add padding */
+        margin-left: 80px; /* Add left margin */
+        margin-right: 80px; /* Add right margin */
+    }
+    
+    .byron-image {
+        position: absolute; /* Position the image absolutely */
+        top: 210%; /* Adjust vertical position */
+        left: 0%; /* Align to the left */
+        width: 85%; /* Set width */
+        display: block; /* Display as block */
+        z-index: 2; /* Set layer priority */
+        margin-top: 200px; /* Add top margin */
+    }
+    
+    .yellow-box {
+        position: absolute; /* Position the yellow box absolutely */
+        top: 100%; /* Adjust vertical position */
+        left: 0; /* Align to the left */
+        width: 100%; /* Full width */
+        height: 114%; /* Set height */
+        background-color: #E3C975; /* Set background color */
+        z-index: 3 !important; /* Set layer priority */
+        clip-path: polygon(68% 97.1%, 100% 97.1%, 100% 98.6%, 68% 98.6%); /* Define shape */
+        pointer-events: none; /* Disable interactions */
+    }
+    
+    .yellow-box-border {
+        position: absolute; /* Position the yellow box border absolutely */
+        top: 211%; /* Adjust vertical position */
+        left: 0; /* Align to the left */
+        width: 100%; /* Full width */
+        height: 112.4%; /* Set height */
+        background-color: #E3C975; /* Set background color */
+        z-index: 3; /* Set layer priority */
+        clip-path: polygon(31% 0, 32% 0, 65% 50%, 64% 50%); /* Define shape */
+        pointer-events: none; /* Disable interactions */
+        transform: scaleX(-1); /* Flip horizontally */
+    }
+    
+    .yellow-box-border2 {
+        position: absolute; /* Position the secondary yellow box border absolutely */
+        top: 155.7%; /* Adjust vertical position */
+        left: 0; /* Align to the left */
+        width: 100%; /* Full width */
+        height: 114%; /* Set height */
+        background-color: #E3C975; /* Set background color */
+        z-index: 3 !important; /* Set layer priority */
+        clip-path: polygon(0% 97.1%, 36% 97.1%, 36% 98.6%, 0% 98.6%); /* Define shape */
+        pointer-events: none; /* Disable interactions */
+    }
+    
+    .white-screen2 {
+        position: absolute; /* Position the white screen absolutely */
+        top: 212.392%; /* Adjust vertical position */
+        left: 0; /* Align to the left */
+        width: 100%; /* Full width */
+        height: 100%; /* Set height */
+        background-color: white; /* Set background color */
+        z-index: 4; /* Set layer priority */
+        pointer-events: none; /* Disable interactions */
+        clip-path: polygon(68.2% 0%, 100% 0%, 100% 63.7%, 30.6% 63.6%); /* Define shape */
+    }
+    
+    .white-screen3 {
+        position: absolute; /* Position the secondary white screen absolutely */
+        top: 342%; /* Adjust vertical position */
+        left: 0; /* Align to the left */
+        width: 100%; /* Full width */
+        height: 200%; /* Set height */
+        background-color: white; /* Set background color */
+        z-index: 4; /* Set layer priority */
+        pointer-events: none; /* Disable interactions */
+        clip-path: polygon(0% 55.7%, 100% 55.7%, 100% 64%, 0% 64%); /* Define shape */
+    }
+    
+    .artist-info {
+        color: black; /* Set text color */
+        font-family: 'Old Standard TT', serif; /* Set font family */
+        display: flex; /* Use flexbox for layout */
+        justify-content: left; /* Align content to the left */
+        text-align: left; /* Align text to the left */
+        padding-top: 20px; /* Add top padding */
+        margin-bottom: 20px; /* Add bottom margin */
+    }
+    
+    footer {
+        position: absolute; /* Position the footer absolutely */
+        width: 100%; /* Full width */
+        height: 90%; /* Set height */
+        background-color: #782F37; /* Set background color */
+        color: white; /* Set text color */
+        z-index: 11; /* Set layer priority */
+        pointer-events: auto; /* Enable interactions */
+        top: 220%; /* Adjust vertical position */
+    }
+}
+
+@media (max-width: 834px) and (max-height: 1194px) {
+    .nav-bar {
+        display: none; /* Hide the regular navigation bar */
+    }
+
+    .navbar-toggler {
+        display: block; /* Show the hamburger menu */
+    }
+
+    /* Hamburger Menu Button */
+    .navbar-toggler {
+        position: absolute; /* Position the button absolutely */
+        top: 40px; /* Adjust vertical position */
+        right: 15px; /* Adjust horizontal position */
+        z-index: 1100; /* Set layer priority */
+        background: none; /* No background */
+        border: none; /* Remove border */
+        cursor: pointer; /* Change cursor to pointer */
+        font-size: 50px; /* Adjust size of the icon */
+        color: black; /* Default color */
+        transition: color 0.3s ease-in-out; /* Smooth transition for color */
+    }
+
+    #overlay-menu ul {
+        position: absolute; /* Position the menu list absolutely */
+        top: 10%; /* Adjust vertical position */
+        left: 35%; /* Adjust horizontal position */
+    }
+
+    #overlay-menu ul li a {
+        color: black; /* Set text color */
+        font-size: 50px; /* Set font size */
+        font-weight: bold; /* Set font weight */
+        text-decoration: none; /* Remove underline */
+        transition: color 0.3s ease; /* Smooth transition for color */
+    }
+
+    #overlay-menu ul li {
+        margin: 30px 0; /* Add vertical spacing */
+    }
+
+    .hero-left2 h1 {
+        position: absolute; /* Position the heading absolutely */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+        margin-left: 10px; /* Add left margin */
+        font-size: 45px; /* Set font size */
+        font-weight: bold; /* Set font weight */
+        margin-bottom: 10px; /* Add bottom margin */
+        color: #782F37; /* Set text color */
+        text-shadow: 3px 3px 0px #E3C975; /* Add text shadow */
+        font-family: 'Old Standard TT', serif; /* Set font family */
+        margin-bottom: 40px; /* Add additional bottom margin */
+        z-index: 100 !important; /* Set layer priority */
+    }
+
+    /* Divider Styling */
+    .divider2 {
+        position: absolute; /* Position the divider absolutely */
+        top: 9.5%; /* Adjust vertical position */
+        left: 0; /* Align to the left */
+        width: 190px; /* Make it longer than the text */
+        height: 30px; /* Increase thickness */
+        background-color: #782F37; /* Set background color */
+        clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%); /* Slant downward */
+        border-bottom: 4px solid #E3C975; /* Add a border at the bottom */
+        z-index: 100 !important; /* Set layer priority */
+    }
+
+    .green-box {
+        position: absolute; /* Position the green box absolutely */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        background-color: #E3C975; /* Set background color */
+        z-index: 3; /* Set layer priority */
+        clip-path: polygon(32% 0, 33% 0, 40.5% 17%, 39.5% 17%); /* Custom shape */
+        pointer-events: none; /* Disable interactions */
+    }
+    
+    .green-box-tint {
+        position: absolute; /* Position the green box tint absolutely */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent dark overlay */
+        z-index: 3; /* Set layer priority */
+        clip-path: polygon(39.3% 16.75%, 100% 16.75%, 100% 18.4%, 40% 18.4%); /* Match the green box */
+        pointer-events: none; /* Disable interactions */
+    }
+    
+    .green-box-tint2 {
+        position: absolute; /* Position the secondary green box tint absolutely */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent dark overlay */
+        z-index: 3; /* Set layer priority */
+        clip-path: polygon(32% 0, 33% 0, 40.5% 16.76%, 39.5% 16.76%); /* Match the green box */
+        pointer-events: none; /* Disable interactions */
+    }
+
+    .page-content2 {
+        position: absolute; /* Position the content absolutely */
+        top: 270%; /* Adjust vertical position */
+        left: 0; /* Align to the left */
+        width: 100%; /* Full width */
+        height: 80%; /* Set height */
+        z-index: 6 !important; /* Set layer priority */
+        pointer-events: none; /* Disable interactions */
+    }
+    
+    .page-content2 h1 {
+        position: absolute; /* Position the heading absolutely */
+        color: #782F37; /* Set text color */
+        font-family: 'Old Standard TT', serif; /* Set font family */
+        font-weight: bold; /* Set font weight */
+        text-align: left; /* Align text to the left */
+        text-shadow: #E3C975 1px 2px; /* Add text shadow */
+        font-size: 50px; /* Set font size */
+        top: 60%; /* Adjust vertical position */
+        left: 60%; /* Adjust horizontal position */
+    }
+    
+    .page-content2 p {
+        position: absolute; /* Position the paragraph absolutely */
+        top: 105%; /* Adjust vertical position */
+        font-size: 25px; /* Set font size */
+        left: 0; /* Align to the left */
+        right: 5%; /* Adjust horizontal position */
+        padding: 10px; /* Add padding */
+        margin-left: 80px; /* Add left margin */
+        margin-right: 80px; /* Add right margin */
+    }
+    
+    .byron-image {
+        position: absolute; /* Position the image absolutely */
+        top: 281%; /* Adjust vertical position */
+        left: 0%; /* Align to the left */
+        width: 85%; /* Set width */
+        display: block; /* Display as block */
+        z-index: 2; /* Set layer priority */
+        margin-top: 200px; /* Add top margin */
+    }
+    
+    .yellow-box {
+        position: absolute; /* Position the yellow box absolutely */
+        top: 170%; /* Adjust vertical position */
+        left: 0; /* Align to the left */
+        width: 100%; /* Full width */
+        height: 114%; /* Set height */
+        background-color: #E3C975; /* Set background color */
+        z-index: 3 !important; /* Set layer priority */
+        clip-path: polygon(68% 97.1%, 100% 97.1%, 100% 98.6%, 68% 98.6%); /* Custom shape */
+        pointer-events: none; /* Disable interactions */
+    }
+    
+    .yellow-box-border {
+        position: absolute; /* Position the yellow box border absolutely */
+        top: 282%; /* Adjust vertical position */
+        left: 0; /* Align to the left */
+        width: 100%; /* Full width */
+        height: 112.4%; /* Set height */
+        background-color: #E3C975; /* Set background color */
+        z-index: 3; /* Set layer priority */
+        clip-path: polygon(31% 0, 32% 0, 65% 50%, 64% 50%); /* Custom shape */
+        pointer-events: none; /* Disable interactions */
+        transform: scaleX(-1); /* Flip horizontally */
+    }
+    
+    .yellow-box-border2 {
+        position: absolute; /* Position the secondary yellow box border absolutely */
+        top: 226%; /* Adjust vertical position */
+        left: 0; /* Align to the left */
+        width: 100%; /* Full width */
+        height: 114%; /* Set height */
+        background-color: #E3C975; /* Set background color */
+        z-index: 3 !important; /* Set layer priority */
+        clip-path: polygon(0% 97.1%, 36% 97.1%, 36% 98.6%, 0% 98.6%); /* Custom shape */
+        pointer-events: none; /* Disable interactions */
+    }
+    
+    .white-screen2 {
+        position: absolute; /* Position the white screen absolutely */
+        top: 282.392%; /* Adjust vertical position */
+        left: 0; /* Align to the left */
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        background-color: white; /* Set background color */
+        z-index: 4; /* Set layer priority */
+        pointer-events: none; /* Disable interactions */
+        clip-path: polygon(68.8% 0%, 100% 0%, 100% 63.7%, 30.8% 64.6%); /* Define shape */
+    }
+    
+    .white-screen3 {
+        position: absolute; /* Position the secondary white screen absolutely */
+        top: 342%; /* Adjust vertical position */
+        left: 0; /* Align to the left */
+        width: 100%; /* Full width */
+        height: 200%; /* Set height */
+        background-color: white; /* Set background color */
+        z-index: 4; /* Set layer priority */
+        pointer-events: none; /* Disable interactions */
+        clip-path: polygon(0% 55.7%, 100% 55.7%, 100% 64%, 0% 64%); /* Define shape */
+    }
+    
+    .artist-info {
+        color: black; /* Set text color */
+        font-family: 'Old Standard TT', serif; /* Set font family */
+        display: flex; /* Use flexbox for layout */
+        justify-content: left; /* Align content to the left */
+        text-align: left; /* Align text to the left */
+        padding-top: 20px; /* Add top padding */
+        margin-bottom: 20px; /* Add bottom margin */
+    }
+    
+    footer {
+        position: absolute; /* Position the footer absolutely */
+        width: 100%; /* Full width */
+        height: 90%; /* Set height */
+        background-color: #782F37; /* Set background color */
+        color: white; /* Set text color */
+        z-index: 11; /* Set layer priority */
+        pointer-events: auto; /* Enable interactions */
+        top: 260%; /* Adjust vertical position */
+    }
+
+}
+
+@media (max-width: 414px) and (max-height: 896px) {
+    .nav-bar {
+        display: none; /* Hide the regular navigation bar */
+    }
+
+    .navbar-toggler {
+        display: block; /* Show the hamburger menu */
+    }
+
+    /* Hamburger Menu Button */
+    .navbar-toggler {
+        position: absolute; /* Position the button absolutely */
+        top: 40px; /* Adjust vertical position */
+        right: 15px; /* Adjust horizontal position */
+        z-index: 1100; /* Set layer priority */
+        background: none; /* No background */
+        border: none; /* Remove border */
+        cursor: pointer; /* Change cursor to pointer */
+        font-size: 50px; /* Adjust size of the icon */
+        color: black; /* Default color */
+        transition: color 0.3s ease-in-out; /* Smooth transition for color */
+    }
+
+    #overlay-menu ul {
+        position: absolute; /* Position the menu list absolutely */
+        top: 10%; /* Adjust vertical position */
+        left: 25%; /* Adjust horizontal position */
+    }
+
+    #overlay-menu ul li a {
+        color: black; /* Set text color */
+        font-size: 40px; /* Set font size */
+        font-weight: bold; /* Set font weight */
+        text-decoration: none; /* Remove underline */
+        transition: color 0.3s ease; /* Smooth transition for color */
+    }
+
+    #overlay-menu ul li {
+        margin: 20px 0; /* Add vertical spacing */
+    }
+
+    .hero-left2 h1 {
+        position: absolute; /* Position the heading absolutely */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+        margin-left: 10px; /* Add left margin */
+        font-size: 45px; /* Set font size */
+        font-weight: bold; /* Set font weight */
+        margin-bottom: 10px; /* Add bottom margin */
+        color: #782F37; /* Set text color */
+        text-shadow: 3px 3px 0px #E3C975; /* Add text shadow */
+        font-family: 'Old Standard TT', serif; /* Set font family */
+        margin-bottom: 40px; /* Add additional bottom margin */
+        z-index: 100 !important; /* Set layer priority */
+    }
+
+    /* Divider Styling */
+    .divider2 {
+        position: absolute; /* Position the divider absolutely */
+        top: 11.5%; /* Adjust vertical position */
+        left: 0; /* Align to the left */
+        width: 190px; /* Make it longer than the text */
+        height: 30px; /* Increase thickness */
+        background-color: #782F37; /* Set background color */
+        clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%); /* Slant downward */
+        border-bottom: 4px solid #E3C975; /* Add a border at the bottom */
+        z-index: 100 !important; /* Set layer priority */
+    }
+
+    .page-content {
+        top: 25%; /* Adjust vertical position */
+    }
+
+    .page-content p {
+        font-size: 18px; /* Set font size */
+        top: 10%; /* Adjust vertical position */
+    }
+
+    .red-box {
+        width: 0; /* Hide the red box */
+        height: 0; /* Hide the red box */
+    }
+    
+    .image-container img {
+        width: 0; /* Hide the image */
+        height: 0; /* Hide the image */
+    }   
+
+    .red-box-border {
+        width: 0; /* Hide the red box border */
+        height: 0; /* Hide the red box border */
+    }
+    
+    .red-box-border2 {
+        width: 0; /* Hide the secondary red box border */
+        height: 0; /* Hide the secondary red box border */
+    }
+    
+    .green-box {
+        width: 0; /* Hide the green box */
+        height: 0; /* Hide the green box */
+    }
+    
+    .green-box-tint {
+        width: 0; /* Hide the green box tint */
+        height: 0; /* Hide the green box tint */
+    }
+    
+    .green-box-tint2 {
+        width: 0; /* Hide the secondary green box tint */
+        height: 0; /* Hide the secondary green box tint */
+    }
+    
+    .green-box-border {
+        width: 0; /* Hide the green box border */
+        height: 0; /* Hide the green box border */
+    }
+    
+    .image-cover {
+        width: 0; /* Hide the image cover */
+        height: 0; /* Hide the image cover */
+    }
+    
+    .image-border {
+        width: 0; /* Hide the image border */
+        height: 0; /* Hide the image border */
+    }
+    
+    .page-content2 {
+        position: absolute; /* Position the content absolutely */
+        top: 350%; /* Adjust vertical position */
+        left: 0; /* Align to the left */
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        z-index: 6 !important; /* Set layer priority */
+        pointer-events: none; /* Disable interactions */
+    }
+    
+    .page-content2 h1 {
+        position: absolute; /* Position the heading absolutely */
+        color: #782F37; /* Set text color */
+        font-family: 'Old Standard TT', serif; /* Set font family */
+        font-weight: bold; /* Set font weight */
+        text-align: left; /* Align text to the left */
+        text-shadow: #E3C975 1px 2px; /* Add text shadow */
+        font-size: 50px; /* Set font size */
+        top: 60%; /* Adjust vertical position */
+        left: 5%; /* Adjust horizontal position */
+    }
+    
+    .page-content2 p {
+        position: absolute; /* Position the paragraph absolutely */
+        top: 78%; /* Adjust vertical position */
+        font-size: 18px; /* Set font size */
+        left: 0; /* Align to the left */
+        right: 5%; /* Adjust horizontal position */
+        padding: 10px; /* Add padding */
+        margin-left: 80px; /* Add left margin */
+        margin-right: 80px; /* Add right margin */
+    }
+    
+    .byron-image {
+        width: 0; /* Hide the Byron image */
+        height: 0; /* Hide the Byron image */
+    }
+    
+    .yellow-box {
+        width: 0; /* Hide the yellow box */
+        height: 0; /* Hide the yellow box */
+    }
+    
+    .yellow-box-border {
+        width: 0; /* Hide the yellow box border */
+        height: 0; /* Hide the yellow box border */
+    }
+    
+    .yellow-box-border2 {
+        width: 0; /* Hide the secondary yellow box border */
+        height: 0; /* Hide the secondary yellow box border */
+    }
+    
+    .white-screen2 {
+        width: 0; /* Hide the white screen */
+        height: 0; /* Hide the white screen */
+    }
+    
+    .white-screen3 {
+        width: 0; /* Hide the secondary white screen */
+        height: 0; /* Hide the secondary white screen */
+    }
+    
+    .artist-info {
+        color: black; /* Set text color */
+        font-family: 'Old Standard TT', serif; /* Set font family */
+        display: flex; /* Use flexbox for layout */
+        justify-content: left; /* Align content to the left */
+        text-align: left; /* Align text to the left */
+        padding-top: 20px; /* Add top padding */
+        margin-bottom: 20px; /* Add bottom margin */
+    }
+    
+    footer {
+        position: absolute; /* Position the footer absolutely */
+        width: 100%; /* Full width */
+        height: 90%; /* Set height */
+        background-color: #782F37; /* Set background color */
+        color: white; /* Set text color */
+        z-index: 11; /* Set layer priority */
+        pointer-events: auto; /* Enable interactions */
+        top: 305%; /* Adjust vertical position */
+    }
+}
