@@ -136,6 +136,8 @@
 }
 .collapse .navbar-nav .archives .nav-link {
     color: #782F37; /* Set text color */
+    font-family: 'Old Standard TT', serif; /* Set font family */
+    font-weight: bold; /* Set font weight */
 }
 
 /* Navigation Styling */
@@ -179,7 +181,6 @@
     color: #782F37 !important; /* Change color on hover */
     font-family: 'Old Standard TT', serif; /* Set font family */
     font-weight: bold; /* Set font weight */
-    font-size: 25px; /* Set font size */
 }
 
 /* Body Styling */

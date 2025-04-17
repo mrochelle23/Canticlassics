@@ -105,6 +105,8 @@
 /* Highlight artists link in the navigation bar */
 .collapse .navbar-nav .artists .nav-link {
     color: #782F37; /* Set color for artists link */
+    font-family: 'Old Standard TT', serif; /* Set font family */
+    font-weight: bold; /* Set font weight */
 }
 
 /* Hero section styling */
@@ -201,7 +203,6 @@
     color: #782F37 !important; /* Change text color on hover */
     font-family: 'Old Standard TT', serif; /* Set font family */
     font-weight: bold; /* Set font weight */
-    font-size: 25px; /* Set font size */
 }
 
 /* White Screen Styling */

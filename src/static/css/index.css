@@ -104,6 +104,11 @@
     color: #E3C975; /* Change color on hover */
 }
 
+.collapse .navbar-nav .home .nav-link {
+    color: #782F37; /* Set color for events link */
+    font-family: 'Old Standard TT', serif; /* Set font family */
+    font-weight: bold; /* Set font weight */
+}
 /* General body styling */
 body {
     margin: 0; /* Remove default margin */
@@ -171,7 +176,6 @@ body {
     color: #782F37 !important; /* Change text color on hover */
     font-family: 'Old Standard TT', serif; /* Set font family */
     font-weight: bold; /* Make text bold */
-    font-size: 20px; /* Set font size */
 }
 
 /* Red box background styling */
