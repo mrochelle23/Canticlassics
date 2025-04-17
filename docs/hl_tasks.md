@@ -1,5 +1,4 @@
 # Overview
-
 This document provides a high-level overview of the current tasks for the Canti Classics website redesign project, with a breakdown of tasks assigned to each team member. The tasks are divided into completed and uncompleted categories, outlining key milestones and deadlines.
 
 # Joan
@@ -222,4 +221,3 @@ This document provides a high-level overview of the current tasks for the Canti 
 - Description: Write unit tests in python
 - Expected time to complete: Completed
 - Responsible: Kyle
-
