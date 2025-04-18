@@ -98,4 +98,4 @@ This section links to relevant artifacts such as diagrams, mockups, and document
 * [Implementation Plan](implementation_plan/implementation_plan.md)
 * [Functional Specification](functional_specification/functional_specification.md)
 * [Software Requirements Specification (Midterm)](software_requirements_specification.md)
-* [Burn Down Chart (Midterm)](docs/burn_down_chart_midterm/burn_down_chart_midterm.pdf)
+* [Burn Down Chart (Midterm)](../docs/burn_down_chart_midterm/burn_down_chart_midterm.pdf)
