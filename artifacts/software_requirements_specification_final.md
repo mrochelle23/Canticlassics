@@ -89,7 +89,7 @@ This section documents the test cases to validate both functional and non-functi
 
 This section links to relevant artifacts such as diagrams, mockups, and documentation.
 
-* [Extended Use Case Descritpion](use_case_diagram/extended_use_case_description.md)
+* [Extended Use Case Diagram](use_case_diagram/extended_use_case_description.md)
 * [UML Diagram](use_case_diagram/UML-Diagram.png)
 * [Object Diagram (UML)](object_diagram/object_diagram.pdf)
 * [Sequence Diagram](sequence_diagram/sequence_diagram.pdf)
