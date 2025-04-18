@@ -97,3 +97,4 @@ This section links to relevant artifacts such as diagrams, mockups, and document
 * [Wireframe (Figma)](https://www.figma.com/design/0Xzhok5Oy4v0Unploml0uV/Laptop-Wireframe?node-id=0-1&p=f&t=iGpN02jtw0xpjcEC-0)
 * [Implementation Plan](implementation_plan/implementation_plan.md)
 * [Functional Specification](functional_specification/functional_specification.md)
+* [Software Requirements Specification (Midterm)](software_requirements_specification.md)
