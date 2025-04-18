@@ -74,7 +74,7 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### 4. Set Environment Variables
+### 4. Set Environment Variables (Optional)
 Create a `.env` file in the root directory with the following:
 ```bash
 FLASK_APP=app.py
