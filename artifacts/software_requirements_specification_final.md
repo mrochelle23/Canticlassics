@@ -99,3 +99,5 @@ This section links to relevant artifacts such as diagrams, mockups, and document
 * [Functional Specification](functional_specification/functional_specification.md)
 * [Software Requirements Specification (Midterm)](software_requirements_specification.md)
 * [Burn Down Chart (Midterm)](../docs/burn_down_chart_midterm/burn_down_chart_midterm.pdf)
+* [Burn Down Chart (Final)](../docs/burn_down_chart_final/burn_down_chart_final.pdf)
+* [High-Level Tasks](../docs/hl_tasks.md)
