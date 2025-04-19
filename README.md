@@ -21,7 +21,7 @@ The Boostrapers Team will redesign the Canti Classics website. Our goal is to mo
 ## Project Structure
 ```
 Canticlassics/ 
-├── src/ 
+├── src/
 │ ├── static/ # CSS, JavaScript, and images 
 │ │ ├── audio/
 │ │ │ ├── audio-sample.ogg
@@ -50,9 +50,10 @@ Canticlassics/
 │ │ └── unsubscribe.html
 │ ├── app.py # Core Flask application
 │ ├── requirements.txt # Project dependencies
-│ ├── README.md # You're here!
+│ ├── README.md
 ├── tests/ # Unit test script
 │ ├── test_app.py
+└── README.md # You're here!
 ```
 ## Getting Started
 

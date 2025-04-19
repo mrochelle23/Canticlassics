@@ -17,7 +17,7 @@
 ## Project Structure
 ```
 Canticlassics/ 
-├── src/ 
+├── src/
 │ ├── static/ # CSS, JavaScript, and images 
 │ │ ├── audio/
 │ │ │ ├── audio-sample.ogg
@@ -49,6 +49,7 @@ Canticlassics/
 │ ├── README.md # You're here!
 ├── tests/ # Unit test script
 │ ├── test_app.py
+└── README.md
 ```
 ## Getting Started
 
