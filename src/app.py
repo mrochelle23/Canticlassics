@@ -150,7 +150,7 @@ def submit_form():
                 <tr>
                     <td align="center" style="font-size: 12px; color: #782F37; padding: 5px;">
                         <p style="margin: 0; color: white;">© 2025 Canti Classics. All Rights Reserved.</p>
-                        <p style="margin: 0;"><a href="http://127.0.0.1:5000/#contact"; style="color: white; text-decoration: none;">Subscribe to Our Newsletter</a></p>
+                        <p style="margin: 0;"><a href="https://canticlassics.onrender.com/#contact"; style="color: white; text-decoration: none;">Subscribe to Our Newsletter</a></p>
                     </td>
                 </tr>
             </table>
@@ -223,7 +223,7 @@ def add_user():
                 <tr>
                     <td align="center" style="font-size: 12px; color: #782F37; padding: 5px;">
                         <p style="margin: 0; color: white;">© 2025 Canti Classics. All Rights Reserved.</p>
-                        <p style="margin: 0;"><a href="http://127.0.0.1:5000/unsubscribe?email={email}" style="color: white; text-decoration: none;">Unsubscribe</a></p>
+                        <p style="margin: 0;"><a href="https://canticlassics.onrender.com/unsubscribe?email={email}" style="color: white; text-decoration: none;">Unsubscribe</a></p>
                     </td>
                 </tr>
             </table>
@@ -303,7 +303,7 @@ def confirm_unsubscribe():
                 <tr>
                     <td align="center" style="font-size: 12px; color: white; padding: 5px;">
                         <p style="margin: 0; color: white">© 2025 Canti Classics. All Rights Reserved.</p>
-                        <p style="margin: 0;"><a href="http://127.0.0.1:5000/#contact" style="color: white; text-decoration: none;">Resubscribe</a></p>
+                        <p style="margin: 0;"><a href="https://canticlassics.onrender.com/#contact" style="color: white; text-decoration: none;">Resubscribe</a></p>
                     </td>
                 </tr>
                 """
